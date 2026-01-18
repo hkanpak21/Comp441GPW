@@ -22,20 +22,31 @@ from .base import TokenLevelWatermarker, DetectionResult
 
 @dataclass
 class GPWConfig:
-    """Configuration for GPW watermarking."""
-    alpha: float = 1.2          # Logit bias strength
-    omega: float = 10.0         # Cosine frequency parameter
+    """Configuration for GPW watermarking.
+    
+    With normalized projections (s has unit variance), omega controls
+    how many cosine cycles we span. Recommended:
+    - omega=1.0-3.0 for gentle bias (more robust, lower detectability)
+    - omega=5.0-10.0 for stronger signal (higher detectability, less robust)
+    
+    alpha controls logit bias strength. Higher = more detectable but may hurt quality.
+    """
+    alpha: float = 2.0          # Logit bias strength
+    omega: float = 2.0          # Cosine frequency (works well with normalized s)
     salted: bool = True         # Enable context-keyed phase (GPW-SP)
-    ctx_mode: str = "prev_token"  # "prev_token" | "ngram" | "rolling"
+    ctx_mode: str = "ngram"     # "prev_token" | "ngram" | "rolling"
     ngram: int = 4              # n-gram size for ctx_mode="ngram"
 
 
 @dataclass
 class SRConfig:
-    """Configuration for Semantic Representation coupling."""
+    """Configuration for Semantic Representation coupling.
+    
+    Optimized defaults from Optuna on C4 dataset.
+    """
     enabled: bool = False       # Enable SR coupling
-    lambda_couple: float = 0.2  # Coupling strength
-    rank: int = 8               # Low-rank approximation dimension
+    lambda_couple: float = 0.09 # Coupling strength (optimized)
+    rank: int = 32              # Low-rank approximation dimension (optimized)
 
 
 def _hmac_like(key: bytes, msg: bytes) -> bytes:
@@ -77,12 +88,27 @@ def derive_secret_direction_w(key: bytes, d: int, device: str) -> torch.Tensor:
 
 
 @torch.no_grad()
-def precompute_projections(E: torch.Tensor, w: torch.Tensor) -> torch.Tensor:
-    """Precompute projections s = E @ w. Always computes in float32."""
+def precompute_projections(E: torch.Tensor, w: torch.Tensor, normalize: bool = True) -> torch.Tensor:
+    """Precompute projections s = E @ w. Always computes in float32.
+    
+    Args:
+        E: Embedding matrix [V, d]
+        w: Secret direction [d]
+        normalize: If True, normalize s to have zero mean and unit std.
+                   This makes omega model-agnostic across different embedding sizes.
+    """
     # Convert to float32 for computation
     E_f32 = E.float()
     w_f32 = w.float()
     s = E_f32 @ w_f32
+    
+    # Normalize to make omega parameter transferable across models
+    if normalize:
+        s_mean = s.mean()
+        s_std = s.std()
+        if s_std > 1e-8:
+            s = (s - s_mean) / s_std
+    
     return s  # Keep as float32
 
 
@@ -195,6 +221,10 @@ class GPWWatermark(TokenLevelWatermarker):
     - GPW: gpw_cfg.salted=False, sr_cfg.enabled=False
     - GPW-SP: gpw_cfg.salted=True, sr_cfg.enabled=False
     - GPW-SP+SR: gpw_cfg.salted=True, sr_cfg.enabled=True
+    
+    Key insight: Projections s = E @ w are normalized to have zero mean and unit
+    variance. This makes the omega parameter transferable across different model sizes.
+    With normalized s, omega=2.0 typically works well.
     """
     
     def __init__(
@@ -210,7 +240,7 @@ class GPWWatermark(TokenLevelWatermarker):
             model=model,
             tokenizer=tokenizer,
             gamma=0.5,  # Not used in GPW but required by base
-            delta=gpw_cfg.alpha if gpw_cfg else 1.2,
+            delta=gpw_cfg.alpha if gpw_cfg else 2.0,
             z_threshold=4.0,
             device=device
         )
@@ -218,6 +248,9 @@ class GPWWatermark(TokenLevelWatermarker):
         self.gpw_cfg = gpw_cfg or GPWConfig()
         self.sr_cfg = sr_cfg or SRConfig()
         self.hash_key = hash_key or hashlib.sha256(b"gpw-default-key").digest()
+        
+        # Cache for diagnostics
+        self._last_s_stats = None
     
     @torch.no_grad()
     def generate(
@@ -395,14 +428,49 @@ class GPWWatermark(TokenLevelWatermarker):
             "sr_rank": self.sr_cfg.rank if self.sr_cfg.enabled else None,
             "z_threshold": self.z_threshold,
         }
+    
+    @torch.no_grad()
+    def diagnose(self) -> Dict[str, Any]:
+        """Diagnostic info about projection distribution.
+        
+        Call this after initialization to verify the watermark is configured correctly.
+        """
+        E = get_token_embedding_matrix(self.model).to(self.device).float()
+        V, d_embed = E.shape
+        w = derive_secret_direction_w(self.hash_key, d_embed, device=self.device)
+        
+        # Raw projections (before normalization)
+        s_raw = (E @ w).float()
+        
+        # Normalized projections (what we actually use)
+        s_norm = precompute_projections(E, w, normalize=True)
+        
+        # Cosine scores at phi=0
+        g = pancake_score(s_norm, self.gpw_cfg.omega, 0.0)
+        
+        return {
+            "embedding_dim": d_embed,
+            "vocab_size": V,
+            "s_raw_mean": float(s_raw.mean().cpu()),
+            "s_raw_std": float(s_raw.std().cpu()),
+            "s_raw_min": float(s_raw.min().cpu()),
+            "s_raw_max": float(s_raw.max().cpu()),
+            "s_norm_mean": float(s_norm.mean().cpu()),
+            "s_norm_std": float(s_norm.std().cpu()),
+            "cosine_score_mean": float(g.mean().cpu()),
+            "cosine_score_std": float(g.std().cpu()),
+            "omega": self.gpw_cfg.omega,
+            "alpha": self.gpw_cfg.alpha,
+            "effective_omega_range": f"[-{self.gpw_cfg.omega * 3:.1f}, {self.gpw_cfg.omega * 3:.1f}] (3σ)",
+        }
 
 
 def create_gpw_variant(
     model,
     tokenizer,
     variant: str = "GPW-SP",
-    alpha: float = 1.2,
-    omega: float = 10.0,
+    alpha: float = None,
+    omega: float = None,
     hash_key: bytes = None,
     device: str = "cuda"
 ) -> GPWWatermark:
@@ -412,23 +480,30 @@ def create_gpw_variant(
         model: Language model
         tokenizer: Tokenizer
         variant: "GPW", "GPW-SP", or "GPW-SP+SR"
-        alpha: Logit bias strength
-        omega: Cosine frequency
+        alpha: Logit bias strength (None = use default 2.0)
+        omega: Cosine frequency (None = use default 2.0, works with normalized projections)
         hash_key: Secret key
         device: Device
         
     Returns:
         Configured GPWWatermark instance
+        
+    Note: With normalized projections, omega=2.0 works well across different model sizes.
+    Increase omega (e.g., 5-10) for stronger signal, decrease for more robustness.
     """
+    # Default parameters that work well with normalized projections
+    a = alpha if alpha is not None else 2.0
+    w = omega if omega is not None else 2.0
+    
     if variant == "GPW":
-        gpw_cfg = GPWConfig(alpha=alpha, omega=omega, salted=False)
+        gpw_cfg = GPWConfig(alpha=a, omega=w, salted=False)
         sr_cfg = SRConfig(enabled=False)
     elif variant == "GPW-SP":
-        gpw_cfg = GPWConfig(alpha=alpha, omega=omega, salted=True)
+        gpw_cfg = GPWConfig(alpha=a, omega=w, salted=True, ctx_mode="ngram", ngram=4)
         sr_cfg = SRConfig(enabled=False)
     elif variant == "GPW-SP+SR":
-        gpw_cfg = GPWConfig(alpha=alpha, omega=omega, salted=True)
-        sr_cfg = SRConfig(enabled=True, lambda_couple=0.2, rank=8)
+        gpw_cfg = GPWConfig(alpha=a, omega=w, salted=True, ctx_mode="ngram", ngram=3)
+        sr_cfg = SRConfig(enabled=True, lambda_couple=0.1, rank=16)
     else:
         raise ValueError(f"Unknown variant: {variant}. Use 'GPW', 'GPW-SP', or 'GPW-SP+SR'")
     
