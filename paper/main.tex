@@ -1,0 +1,91 @@
+%%%%%%%% ICML 2021 EXAMPLE LATEX SUBMISSION FILE %%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+
+% Recommended, but optional, packages for figures and better typesetting:
+\usepackage{microtype}
+\usepackage{graphicx}
+%\usepackage{subfigure}
+\usepackage{booktabs} % for professional tables
+\usepackage{amsmath,amssymb}
+
+% hyperref makes hyperlinks in the resulting PDF.
+\usepackage{hyperref}
+
+% Attempt to make hyperref and algorithmic work together better:
+\newcommand{\theHalgorithm}{\arabic{algorithm}}
+
+% Use the following line for the initial blind version submitted for review:
+\usepackage[accepted]{comp541}
+
+% The \icmltitle you define below is probably too long as a header.
+% Therefore, a short form for the running title is supplied here:
+\icmltitlerunning{GPW-SP: Gaussian Pancakes Watermarking with Salted Phase}
+
+\begin{document}
+
+\twocolumn[
+\icmltitle{GPW-SP: Gaussian Pancakes Watermarking with Salted Phase}
+
+% List of affiliations: The first argument should be a (short)
+% identifier you will use later to specify author affiliations
+% Academic affiliations should list Department, University, City, Region, Country
+% Industry affiliations should list Company, City, Region, Country
+
+\icmlsetsymbol{equal}{*}
+
+\begin{icmlauthorlist}
+\icmlauthor{Halil İbrahim Kanpak}{equal,to}
+\icmlauthor{Mehmet Kantar}{equal,to}
+\icmlauthor{Melih Okşak}{equal,to}
+\end{icmlauthorlist}
+
+\icmlaffiliation{to}{College of Engineering, Koç University, Istanbul, Turkey}
+
+\icmlcorrespondingauthor{Halil İbrahim Kanpak}{hkanpak21@ku.edu.tr}
+\icmlcorrespondingauthor{Mehmet Kantar}{mkantar21@ku.edu.tr}
+\icmlcorrespondingauthor{Melih Okşak}{moksak20@ku.edu.tr}
+
+% You may provide any keywords that you
+% find helpful for describing your paper; these are used to populate
+% the "keywords" metadata in the PDF but will not be shown in the document
+\icmlkeywords{Watermarking, LLM, GPW-SP, Gaussian Pancakes}
+
+\vskip 0.3in
+]
+
+% this must go after the closing bracket ] following \twocolumn[ ...
+
+% This command actually creates the footnote in the first column
+% listing the affiliations and the copyright notice.
+% The command takes one argument, which is text to display at the start of the footnote.
+% The \icmlEqualContribution command is standard text for equal contribution.
+% Remove it (just {}) if you do not need this facility.
+
+%\printAffiliationsAndNotice{}  % leave blank if no need to mention equal contribution
+\printAffiliationsAndNotice{\icmlEqualContribution} % otherwise use the standard text.
+
+\begin{abstract}
+We study private watermarking for autoregressive language models, where a provider embeds a key-dependent statistical signal during decoding and later verifies provenance using a secret key.
+We introduce \emph{Gaussian Pancakes Watermarking with Salted Phase} (GPW-SP), a lightweight sampling-time method that biases token selection via a smooth periodic function of token embedding projections onto a secret direction.
+To reduce predictability, GPW-SP incorporates a context-dependent salted phase derived from a keyed pseudorandom function, producing position-varying preferences without modifying model weights.
+
+GPW-SP is implemented as a modular logits-bias component compatible with standard decoding schemes and evaluated using calibrated hypothesis testing at low false positive rates.
+In a GPT-2 pilot on C4 prompts, phase salting substantially improves clean detectability over an unsalted variant (AUC $0.964$ vs.\ $0.878$, TPR@1\%FPR $0.70$ vs.\ $0.28$).
+Under meaning-preserving edits, detectability degrades smoothly, remaining robust to moderate synonym replacement and word deletion, while stronger paraphrasing and text mixing significantly reduce detection power.
+
+Overall, GPW-SP provides an efficient geometry-based watermark baseline and a reproducible evaluation protocol aligned with recent watermarking benchmarks, reporting robustness curves under transformations.
+\end{abstract}
+
+\input{1. Introduction}
+\input{2. Background}
+\input{3. Method}
+\input{4. Experiments}
+\input{5. Conclusion}
+
+\bibliography{references}
+\bibliographystyle{comp541}
+
+\input{6. Appendix}
+
+\end{document}

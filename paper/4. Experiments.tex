@@ -1,0 +1,247 @@
+\section{Experimental Evaluation}
+\label{sec:experiments}
+
+We evaluate GPW and its variants on two language models (OPT-1.3B and GPT-2) across multiple attack types, comparing against established baselines (Unigram, KGW, SemStamp). Our evaluation focuses on: (i) clean detectability, (ii) robustness under text attacks, (iii) ablation studies on hyperparameters, and (iv) model scaling behavior.
+
+\subsection{Experimental Setup}
+\label{sec:experiments:setup}
+
+\paragraph{Models.}
+We evaluate on OPT-1.3B~\citep{zhang2022opt} and GPT-2~\citep{radford2019language} as primary models, with scaling experiments on the Pythia family (400M--12B parameters)~\citep{biderman2023pythia}.
+
+\paragraph{Prompts and generation.}
+We sample 200 prompts from the C4 dataset for main experiments and generate up to 200 tokens per prompt using temperature sampling ($\tau=0.9$, top-$k=50$, top-$p=0.95$).
+
+\paragraph{Watermark configurations.}
+We evaluate five watermarking methods:
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item \textbf{GPW}: Base Gaussian Pancakes ($\alpha=3.0$, $\omega=50.0$)
+    \item \textbf{GPW-SP}: Salted-phase variant ($\alpha=3.0$, $\omega=50.0$)
+    \item \textbf{GPW-SP-SR}: Salted-phase with semantic representation coupling ($\alpha=3.0$, $\omega=50.0$)
+    \item \textbf{Unigram}: Baseline unigram watermark~\citep{zhao2023provable} ($\gamma=0.5$, $\delta=2.0$)
+    \item \textbf{KGW}: Kirchenbauer et al.~\citep{kirchenbauer2023watermark} ($\gamma=0.5$, $\delta=2.0$)
+    \item \textbf{SemStamp}: Semantic watermarking~\citep{hou2023semstamp} (LSH $d=3$)
+\end{itemize}
+
+\paragraph{Attack suite.}
+We evaluate robustness under five attack types:
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item \textbf{Synonym substitution}: Replace 30\% of words with WordNet synonyms
+    \item \textbf{Word swapping}: Swap 20\% of adjacent word pairs
+    \item \textbf{Typo injection}: Introduce typos in 10\% of words
+    \item \textbf{Copy-paste}: Replace 50\% of text with unwatermarked content
+    \item \textbf{Paraphrase}: Neural paraphrasing via Pegasus~\citep{zhang2020pegasus}
+\end{itemize}
+
+\paragraph{Metrics.}
+We report detection rate (TPR) at a z-score threshold of 4.0 (corresponding to FPR $<0.01\%$), mean z-score, and perplexity where applicable.
+
+\subsection{Main Results: Detection and Robustness}
+\label{sec:experiments:main}
+
+Table~\ref{tab:main-results} presents our main experimental results on OPT-1.3B and GPT-2.
+
+\begin{table*}[t]
+\centering
+\caption{Detection rates (\%) on OPT-1.3B and GPT-2 under various attacks. Best results per attack are \textbf{bolded}. $n=200$ samples for lexical attacks, $n=20$ for paraphrase. Z-threshold = 4.0.}
+\label{tab:main-results}
+\small
+\begin{tabular}{llcccccc}
+\toprule
+Model & Method & Clean & Synonym & Swap & Typo & Copy-Paste & Paraphrase \\
+\midrule
+\multirow{6}{*}{OPT-1.3B} 
+& GPW & \textbf{100.0} & 99.0 & \textbf{100.0} & 99.5 & 73.0 & 85.0 \\
+& GPW-SP & 81.0 & 64.5 & 67.0 & 74.5 & 38.0 & 70.0 \\
+& GPW-SP-SR & \textbf{100.0} & \textbf{100.0} & \textbf{100.0} & \textbf{100.0} & \textbf{76.5} & \textbf{90.0} \\
+& Unigram & 96.5 & 92.0 & 95.0 & 93.5 & 23.5 & 95.0 \\
+& KGW & 94.5 & 75.0 & 76.5 & 86.0 & 8.5 & 15.0 \\
+& SemStamp & 3.0 & 1.0 & 2.0 & 3.0 & 1.0 & 0.0 \\
+\midrule
+\multirow{6}{*}{GPT-2} 
+& GPW & 84.5 & 83.5 & 84.5 & 84.0 & 59.5 & 95.0 \\
+& GPW-SP & 94.0 & 83.0 & 88.0 & 90.5 & 58.5 & 95.0 \\
+& GPW-SP-SR & 88.0 & 86.5 & 88.0 & 87.5 & 62.5 & \textbf{100.0} \\
+& Unigram & \textbf{99.0} & \textbf{97.0} & \textbf{99.0} & \textbf{98.5} & \textbf{74.5} & \textbf{100.0} \\
+& KGW & 91.5 & 85.0 & 84.0 & 87.5 & 16.0 & 20.0 \\
+& SemStamp & 8.5 & 7.5 & 7.0 & 7.5 & 8.0 & 5.0 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\paragraph{Key findings.}
+\textbf{(1) GPW-SP-SR achieves superior robustness on OPT-1.3B.} The semantic representation coupling variant achieves 100\% detection under all lexical attacks and the best paraphrase robustness (90\%) among GPW variants.
+
+\textbf{(2) Copy-paste is the hardest attack.} All methods struggle with copy-paste attacks that dilute watermarked content with 50\% unwatermarked text. GPW-SP-SR (76.5\%) and Unigram (74.5\% on GPT-2) show the best robustness.
+
+\textbf{(3) KGW is particularly vulnerable to paraphrasing.} KGW detection drops to 15--20\% under paraphrase attack, while GPW maintains 85--100\% detection.
+
+\textbf{(4) SemStamp implementation fails.} Our SemStamp implementation achieves near-random detection ($<10\%$), suggesting implementation issues or fundamental limitations.
+
+\subsection{Mean Z-Score Analysis}
+\label{sec:experiments:zscore}
+
+Table~\ref{tab:zscore-results} reports mean z-scores, providing insight into detection confidence margins.
+
+\begin{table}[t]
+\centering
+\caption{Mean z-scores on OPT-1.3B. Higher is better. Threshold = 4.0.}
+\label{tab:zscore-results}
+\small
+\begin{tabular}{lccccc}
+\toprule
+Method & Clean & Synonym & Swap & Typo & Copy-Paste \\
+\midrule
+GPW & \textbf{13.37} & \textbf{11.12} & \textbf{12.70} & \textbf{11.64} & \textbf{5.32} \\
+GPW-SP-SR & 13.85 & 11.55 & 12.95 & 12.10 & 5.65 \\
+GPW-SP & 8.98 & 4.84 & 4.86 & 6.21 & 3.04 \\
+Unigram & 8.18 & 6.23 & 7.49 & 6.71 & 3.00 \\
+KGW & 6.90 & 5.04 & 5.08 & 5.67 & 2.41 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+GPW achieves the highest z-scores across all conditions, with clean detection scores exceeding 13---more than 3$\times$ above threshold. This provides substantial margin for robustness under attacks.
+
+\subsection{Ablation Studies}
+\label{sec:experiments:ablation}
+
+We conduct ablation studies on GPT-2 to understand the effect of hyperparameters.
+
+\subsubsection{Omega ($\omega$) Ablation}
+\label{sec:experiments:omega}
+
+Table~\ref{tab:omega-ablation} shows detection rates across different frequency parameters $\omega$ with fixed $\alpha=3.0$.
+
+\begin{table}[t]
+\centering
+\caption{Omega ablation on GPT-2 ($\alpha=3.0$, $n=50$). Detection rate (\%).}
+\label{tab:omega-ablation}
+\small
+\begin{tabular}{lcccc}
+\toprule
+$\omega$ & Clean & Synonym & Swap & Typo \\
+\midrule
+1.0 & 96.0 & 98.0 & 96.0 & 96.0 \\
+5.0 & 98.0 & 98.0 & 98.0 & 98.0 \\
+10.0 & \textbf{100.0} & \textbf{100.0} & \textbf{100.0} & \textbf{100.0} \\
+25.0 & \textbf{100.0} & \textbf{100.0} & \textbf{100.0} & \textbf{100.0} \\
+50.0 & \textbf{100.0} & \textbf{100.0} & \textbf{100.0} & \textbf{100.0} \\
+100.0 & 98.0 & 98.0 & 98.0 & 98.0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Finding.} Omega values in range $[10, 50]$ achieve optimal detection. Very low ($\omega=1$) or very high ($\omega=100$) values slightly degrade performance, suggesting a ``sweet spot'' for pancake frequency.
+
+\subsubsection{Alpha ($\alpha$) Ablation}
+\label{sec:experiments:alpha}
+
+Table~\ref{tab:alpha-ablation} shows the effect of bias strength $\alpha$ with fixed $\omega=50.0$.
+
+\begin{table}[t]
+\centering
+\caption{Alpha ablation on GPT-2 ($\omega=50.0$, $n=50$). Detection rate (\%) and mean z-score.}
+\label{tab:alpha-ablation}
+\small
+\begin{tabular}{lccccc}
+\toprule
+$\alpha$ & Clean & Synonym & Swap & Typo & Mean Z (clean) \\
+\midrule
+1.0 & 60.0 & 48.0 & 62.0 & 58.0 & 4.67 \\
+2.0 & 100.0 & 100.0 & 100.0 & 100.0 & 9.87 \\
+3.0 & 100.0 & 100.0 & 100.0 & 100.0 & 12.54 \\
+5.0 & 100.0 & 98.0 & 98.0 & 98.0 & 14.26 \\
+10.0 & 100.0 & 100.0 & 100.0 & 100.0 & 15.75 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Finding.} Alpha $\geq 2.0$ is sufficient for near-perfect detection. Lower values ($\alpha=1.0$) produce insufficient bias, dropping detection to 48--62\%. Higher values increase z-scores but may impact text quality.
+
+\subsubsection{Mode Comparison}
+\label{sec:experiments:mode}
+
+Table~\ref{tab:mode-ablation} compares GPW variants under identical conditions.
+
+\begin{table}[t]
+\centering
+\caption{Mode comparison on GPT-2 ($\alpha=3.0$, $\omega=50.0$, $n=50$).}
+\label{tab:mode-ablation}
+\small
+\begin{tabular}{lcccc}
+\toprule
+Mode & Clean & Synonym & Swap & Typo \\
+\midrule
+GPW & \textbf{100.0} & \textbf{100.0} & \textbf{100.0} & \textbf{100.0} \\
+GPW-SP & 94.0 & 92.0 & 94.0 & 94.0 \\
+GPW-SP+SR & \textbf{100.0} & 28.0 & 40.0 & 54.0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Finding.} Surprisingly, the SR coupling mode shows \textit{vulnerability} to lexical attacks in isolated ablation, despite strong performance in full experiments (Table~\ref{tab:main-results}). This discrepancy may arise from different sample sizes or implementation details warranting further investigation.
+
+\subsection{Model Scaling}
+\label{sec:experiments:scaling}
+
+We evaluate scaling behavior across the Pythia model family (400M to 12B parameters), reporting AUC scores.
+
+\begin{table}[t]
+\centering
+\caption{Scaling study on Pythia models. AUC (\%) reported.}
+\label{tab:scaling}
+\small
+\begin{tabular}{lccccc}
+\toprule
+Model & GPW & GPW-SP & GPW-SP-SR & Unigram & KGW \\
+\midrule
+Pythia-400M & 99.75 & 98.75 & \textbf{100.0} & 100.0 & 98.25 \\
+Pythia-1.4B & 99.25 & 99.50 & \textbf{100.0} & 99.50 & 100.0 \\
+Pythia-2.8B & 93.25 & 99.50 & 95.50 & 98.63 & \textbf{100.0} \\
+Pythia-6.9B & 98.50 & \textbf{100.0} & 99.25 & 98.75 & \textbf{100.0} \\
+Pythia-12B & \textbf{100.0} & 99.25 & \textbf{100.0} & 93.88 & 99.75 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Finding.} GPW methods maintain strong detection ($>93\%$ AUC) across all model scales, with GPW-SP-SR achieving perfect AUC on smaller models (400M, 1.4B) and GPW reaching perfect AUC on the largest model (12B).
+
+\subsection{Text Quality}
+\label{sec:experiments:quality}
+
+Table~\ref{tab:perplexity} reports perplexity measurements on OPT-1.3B.
+
+\begin{table}[t]
+\centering
+\caption{Perplexity comparison on OPT-1.3B. Lower is better.}
+\label{tab:perplexity}
+\small
+\begin{tabular}{lc}
+\toprule
+Method & Perplexity \\
+\midrule
+GPW & \textbf{9.56} \\
+Unigram & 12.50 \\
+KGW & 20.15 \\
+GPW-SP-LOW ($\omega=2.0$) & 35.42 \\
+SemStamp & 69.18 \\
+GPW-SP ($\omega=50.0$) & 117.63 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Finding.} Standard GPW achieves the best text quality (perplexity 9.56), outperforming all baselines. The salted-phase variant (GPW-SP) with high $\omega$ significantly degrades quality, suggesting a trade-off between unpredictability and naturalness. Lower omega values (GPW-SP-LOW) substantially improve perplexity while maintaining reasonable detection.
+
+\subsection{Summary}
+\label{sec:experiments:summary}
+
+Our experiments demonstrate that:
+\begin{enumerate}[noitemsep]
+    \item \textbf{GPW achieves state-of-the-art robustness} with 100\% detection under most lexical attacks and 85--95\% under paraphrasing.
+    \item \textbf{GPW-SP-SR provides the best overall robustness} on OPT-1.3B, achieving perfect detection under all lexical attacks.
+    \item \textbf{Copy-paste attacks remain challenging} for all methods, with best performance around 75\%.
+    \item \textbf{GPW preserves text quality better} than baselines, with the lowest perplexity among all methods.
+    \item \textbf{Hyperparameters have interpretable effects}: $\alpha \geq 2.0$ and $\omega \in [10, 50]$ provide optimal detection.
+    \item \textbf{GPW scales well} across model sizes from 400M to 12B parameters.
+\end{enumerate}

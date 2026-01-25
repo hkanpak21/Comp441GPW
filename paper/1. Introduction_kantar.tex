@@ -1,0 +1,46 @@
+\section{Introduction}
+\label{sec:introduction}
+
+Large Language Models (LLMs) can now produce text that often reads like human writing.
+This brings real benefits in productivity and accessibility, but it also makes it easier to generate spam, impersonation, plagiarism, and large-scale disinformation.
+In many deployments, a central question is not only whether text \emph{looks} machine-written, but whether it can be \emph{attributed}: did it come from a particular model, system, or provider?
+A practical response is \emph{provenance}, meaning mechanisms that allow a downstream party to check whether a piece of text likely came from a specific generator.
+
+Text watermarking is one approach to provenance.
+Instead of classifying text after it is written (which is brittle under paraphrasing and domain shift), a watermark is embedded \emph{during generation} by slightly modifying the sampling behavior of the model.
+A verifier who knows a secret key can later test whether the watermark signal is present.
+In most watermarking schemes, the model weights are unchanged; only the token selection rule is modified.
+This has two practical advantages: it can be deployed without retraining, and it can be implemented as a small, modular component (e.g., a logits processor) that plugs into existing decoding pipelines.
+
+Recent work has also emphasized that watermark conclusions can vary significantly across prompt sets, decoding parameters, and transformation attacks.
+This motivates benchmark-driven evaluation: reporting not only ``clean'' detectability, but robustness under realistic editing pipelines and model-based attacks, ideally as curves over attack strength using standardized suites and tooling (e.g., WaterBench, WaterPark, MarkLLM).
+
+Designing useful watermarks for LLM text is hard because the channel is adversarial and messy.
+Text is easy to edit: lexical substitutions, paraphrasing, summarization, translation, truncation, and concatenation can weaken a watermark.
+Generation itself is stochastic: decoding settings such as temperature, top-$k$, and nucleus (top-$p$) introduce randomness, so a watermark can only create a \emph{statistical bias}, not a deterministic signature.
+Detection therefore resembles hypothesis testing: the verifier chooses a threshold for an extremely low false positive rate and accumulates evidence across tokens.
+
+These constraints create a tension between three goals:
+(i) \emph{utility} (text quality and diversity remain high),
+(ii) \emph{detectability} (high true positive rate at very low false positive rate),
+and (iii) \emph{robustness} (survive realistic transformations).
+Stronger bias typically improves detectability but can degrade quality or create artifacts; weaker bias can be unreliable, especially on short outputs.
+
+\paragraph{Our approach: Gaussian Pancakes Watermarking with Salted Phase (GPW-SP).}
+We propose a watermark tied to the \emph{geometry} of the model's token embedding space.
+We derive a secret direction $w$ from a key, project each token embedding onto $w$, and apply a periodic score function (cosine) to the projection coordinate.
+At each generation step we add a small additive bias to logits proportional to this score, making tokens near ``high-score bands'' slightly more likely.
+To avoid a fixed global pattern, GPW-SP uses a \emph{salted phase}: at each step we derive a phase shift from a keyed pseudorandom function applied to a short fingerprint of the local context.
+This makes the preferred bands move with context, improving unpredictability and calibration.
+
+\paragraph{Semantic coupling (SR) and payloads.}
+We also consider an optional \emph{semantic representation} coupling term (SR) that makes the watermark direction depend weakly on the model's hidden state.
+Empirically this introduces a tunable robustness trade-off: certain settings improve resilience to heavy lexical edits while potentially weakening paraphrase robustness.
+Beyond one-bit detection, the same mechanism can encode a short payload by segment-wise phase shifts, optionally protected by error-correcting codes.
+
+\paragraph{Contributions.}
+Our contributions are:
+(i) GPW-SP, a simple embedding-geometry watermark that requires no retraining and integrates as a logits-bias module;
+(ii) a private detection procedure framed as a calibrated hypothesis test with user-chosen false positive rates;
+(iii) optional extensions for semantic coupling (SR) and payload encoding; and
+(iv) an evaluation protocol with robustness curves under common text transformations, plus practical stress tests such as deletion and splicing/mixing.

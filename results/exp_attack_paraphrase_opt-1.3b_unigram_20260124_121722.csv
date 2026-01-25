@@ -1,1 +1,0 @@
-sample_id,prompt,original_text,attacked_text,z_score_original,z_score_attacked,is_watermarked_original,is_watermarked_attacked,num_tokens,generation_time,attack_time,detection_time_original,detection_time_attacked

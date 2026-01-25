@@ -1,0 +1,275 @@
+\section{Background and Problem Setup}
+\label{sec:background}
+
+\subsection{Watermarking for autoregressive LMs (private provenance)}
+We consider an autoregressive language model that, given a prefix $x_{1:t-1}$, outputs logits
+$\ell_t \in \mathbb{R}^{|\mathcal{V}|}$ and induces a next-token distribution
+$p_t = \mathrm{softmax}(\ell_t/\tau)$ (temperature $\tau$).
+A \emph{watermarked sampler} modifies \emph{inference-time} sampling—most commonly by adding a
+key-dependent bias $b_t \in \mathbb{R}^{|\mathcal{V}|}$ to the logits—without changing model weights:
+\[
+\tilde{\ell}_t = \ell_t + b_t,\qquad \tilde{p}_t = \mathrm{softmax}(\tilde{\ell}_t/\tau).
+\]
+The verifier, given the secret key $k$, tests whether a candidate text contains statistical evidence
+that it was sampled from $\tilde{p}_t$ rather than $p_t$ \citep{kirchenbauer2023watermark}.
+
+We focus on \textbf{private detection} in a Kerckhoffs-style setting: the watermarking algorithm is public,
+but the key is secret.
+This matches common provenance deployments where only the provider (or an authorized auditor) can verify.
+Because decoding is stochastic, watermarking induces a \emph{bias} rather than a deterministic signature,
+so detection is naturally framed as hypothesis testing:
+\[
+H_0:\ \text{text is unwatermarked}\quad \text{vs.}\quad H_1:\ \text{text is watermarked},
+\]
+with calibration to achieve a target false positive rate (FPR), typically extremely low.
+Accordingly, we report detection power as $\mathrm{TPR}$ at fixed low $\mathrm{FPR}$ (e.g., 1\% and below),
+along with threshold-free metrics such as AUC where appropriate \citep{kirchenbauer2023watermark}.
+
+\subsection{Threat model and attack surfaces}
+We distinguish \emph{benign} post-processing (copy-editing, formatting, truncation) from \emph{adversarial}
+post-processing aimed at watermark removal while preserving meaning and fluency.
+Our primary focus is the realistic and widely studied \textbf{black-box / key-hidden} setting: the attacker
+may know the watermarking algorithm and can transform text or query the model, but does not know $k$.
+This is analogous to the security guarantees of \textbf{undetectable backdoors} \citep{goldwasser2024plantingundetectablebackdoorsmachine}, 
+which demonstrate that it is possible to embed statistical signals that are computationally indistinguishable 
+from the natural distribution to any adversary lacking the verification key.
+
+We organize transformations into a parameterized family $\mathcal{A}(\cdot;\,\gamma)$ where $\gamma$
+controls \emph{attack strength}. Following standard robustness practice, we evaluate robustness as a
+\emph{curve} over $\gamma$, rather than a single point \citep{tu-etal-2024-waterbench,liang-etal-2025-watermark,zhao2025sokwatermarkingaigeneratedcontent}.
+We consider the following commonly used attack families:
+\begin{itemize}
+    \item \textbf{Lexical edits} (e.g., synonym substitution, word deletion, minor phrase edits),
+          parameterized by replacement/deletion rate.
+    \item \textbf{Model-based paraphrasing} (rewrite via another LLM or paraphraser), parameterized by
+          decoding strength and/or rewrite aggressiveness.
+    \item \textbf{Summarization / expansion} (compress or elaborate while preserving meaning), parameterized by target length ratio.
+    \item \textbf{Translation / back-translation} (cross-lingual perturbations), parameterized by language and round-trip pipeline.
+    \item \textbf{Truncation / cropping / concatenation} (drop or splice spans), parameterized by keep ratio and splice pattern.
+\end{itemize}
+We also treat \textbf{model extraction via distillation} as a first-class threat model: an attacker trains
+a student on mixtures of watermarked/unwatermarked teacher outputs (optionally after paraphrasing the training data)
+and then generates from the student \citep{pan2025distillation}.
+
+\subsection{Evaluation goals and reporting protocol}
+A watermark is judged along three coupled axes:
+\textbf{utility} (fluency and diversity),
+\textbf{detectability} (high $\mathrm{TPR}$ at very low $\mathrm{FPR}$),
+and \textbf{robustness} (resistance to the attacks)\cite{zhao2025sokwatermarkingaigeneratedcontent}.
+These goals compete: increasing watermark strength often improves detectability but may introduce quality costs or
+statistical artifacts, while robustness to stronger paraphrasing typically requires more structure, redundancy,
+or semantic coupling \citep{pang2024nofreelunch}.
+
+To reduce evaluation variance and enable apples-to-apples comparison, we follow benchmark practice:
+(i) match prompts and decoding settings across methods,
+(ii) calibrate detection thresholds on \emph{null} (unwatermarked) samples at a target $\mathrm{FPR}$,
+and (iii) report robustness as curves over attack strength \citep{tu-etal-2024-waterbench,pan-etal-2024-markllm,liang-etal-2025-watermark}.
+
+\paragraph{Robustness--utility trade-offs and unified robustness platforms.}
+Recent work formalizes ``no free lunch'' trade-offs: robustness, detectability, and quality cannot all be jointly optimized,
+and strong robustness to powerful paraphrasing typically comes with noticeable costs \citep{pang2024nofreelunch}.
+In parallel, unified robustness platforms such as WaterPark systematize attack suites and enable comprehensive,
+comparable stress testing across watermarkers \citep{liang-etal-2025-watermark}.
+
+\paragraph{Distillation and watermark inheritance.}
+Model extraction motivates studying whether watermark evidence persists when teacher outputs are reused as training data.
+Recent work shows inheritance can hold in some settings but can be weakened substantially by paraphrasing training data
+or by post-distillation neutralization strategies, motivating explicit inheritance-curve reporting \citep{pan2025distillation}.
+
+\subsection{Positioning and baseline set for experiments}
+\label{sec:background:positioning}
+Our method is a sampling-time watermark (no retraining), but it changes the \emph{carrier} from discrete token partitions
+to a smooth, key-dependent structure in embedding geometry with a context-dependent salted phase.
+This is intended to reduce brittleness under meaning-preserving edits while maintaining low deployment overhead.
+To support clear empirical positioning, our primary comparison set includes:
+\textbf{KGW} (vocabulary partition) \citep{kirchenbauer2023watermark}, 
+\textbf{Unigram} (provable robustness) \citep{zhao2024provable}, 
+\textbf{RDF / distortion-free} (distribution-preserving) \citep{kuditipudi2024robust}, 
+and \textbf{SemStamp/SIR} (representative semantic schemes family) \citep{liu2024sir}.
+We evaluate all methods under matched prompts/decoding, robustness curves over standardized edits,
+and inheritance curves under distillation, using benchmark/toolkit-aligned pipelines \citep{tu-etal-2024-waterbench,pan-etal-2024-markllm,liang-etal-2025-watermark}.
+
+\section{Method}
+\label{sec:method}
+
+We describe our watermarking sampler as a sequence of increasingly structured designs.
+We start from a naive ``Gaussian pancakes'' sampler, then add a salted phase for unpredictability.
+Throughout, we focus on \textbf{private detection}: a verifier with a secret key can test a text, while an attacker who does not know the key should not be able to reliably predict or remove the watermark without substantially rewriting the text.
+
+\subsection{Problem setup and notation}
+We consider an autoregressive language model with vocabulary $\mathcal{V}$.
+At generation step $t$, given a prefix $x_{1:t-1}$, the model outputs logits
+$\ell_t \in \mathbb{R}^{|\mathcal{V}|}$,
+and a base distribution
+$p_t(i) = \mathrm{softmax}(\ell_t/\tau)_i$,
+with temperature $\tau>0$.
+Let $E\in\mathbb{R}^{|\mathcal{V}|\times d}$ be the model's token embedding matrix, where token $i$ has embedding $e_i\in\mathbb{R}^d$.
+
+A watermarking sampler produces a modified distribution $q_t$ that is close to $p_t$ (to preserve quality) but biased in a way that can be tested with the key.
+We implement watermarking as an \emph{additive logit bias}:
+\[
+\ell'_t(i) = \ell_t(i) + b_t(i),
+\qquad
+q_t(i) \propto \exp(\ell'_t(i)/\tau).
+\]
+We choose $b_t(i)$ so that (i) the text remains natural, and (ii) a verifier can accumulate evidence across tokens.
+
+\subsection{Stage 1: Gaussian Pancakes Watermarking (GPW)}
+\label{sec:method:gpw}
+
+\paragraph{Keyed secret direction.}
+Given a secret key $K$, we derive a pseudorandom unit vector $w\in\mathbb{R}^d$:
+\[
+g \leftarrow \mathcal{N}(0,I_d)\ \text{seeded by }K,
+\qquad
+w = \frac{g}{\|g\|}.
+\]
+Intuition: $w$ defines a hidden axis in embedding space known only to the verifier.
+
+\paragraph{Token projection.}
+For each vocabulary token $i$, we compute and cache its projection on the secret axis:
+\[
+s_i = \langle e_i, w\rangle.
+\]
+This is computed once and reused for all generations.
+
+\paragraph{Periodic ``pancake'' score.}
+We define a periodic score on the projection coordinate:
+\[
+g(i) = \cos(\omega s_i),
+\]
+where $\omega>0$ controls frequency.
+Large $\omega$ yields many thin alternating bands; smaller $\omega$ yields fewer thick bands.
+We refer to these bands as ``pancakes'' because the cosine creates parallel high-score slices along $w$.
+This geometry is inspired by the hard-to-learn ``parallel pancakes'' distributions constructed in statistical query lower bounds \citep{diakonikolas2017statisticalquerylowerbounds}. We have seen similar ideas in the context of planting undetectable backdoors in machine learning models \citep{goldwasser2024plantingundetectablebackdoorsmachine} and also in the context of differential privacy \citep{sun2025gpmgaussianpancakemechanism}. 
+
+
+
+\paragraph{Logit bias and sampling.}
+Given strength $\alpha \ge 0$, we bias logits toward high-score tokens:
+\[
+\ell'_t(i) = \ell_t(i) + \alpha \, g(i)
+\quad\Rightarrow\quad
+q_t(i) \propto p_t(i)\exp(\alpha g(i)).
+\]
+We then sample from $q_t$ using the same decoding settings as usual (temperature, top-$k$, top-$p$, etc.).
+
+\paragraph{Why the naive design works (and where it fails).}
+Under the base model distribution, the cosine score behaves like noise that averages to near zero over many tokens (especially when prompts vary).
+Under the biased distribution, tokens with higher $g(i)$ become more likely, so the sum of scores tends to be positive.
+However, the naive scheme has two weaknesses:
+(1) the preference pattern is \emph{static} across positions, which can be exploited if an attacker can estimate the pattern from many samples; and
+(2) because it is static, it can create small but consistent distortions that may be easier to wash out with paraphrasing.
+These motivate the next stage.
+
+\subsection{Stage 2: Salted-phase Gaussian Pancakes (GPW-SP)}
+\label{sec:method:salt}
+
+To prevent a static and predictable pattern, we make the cosine \emph{phase} depend on the local context through the secret key.
+
+\paragraph{Salted phase from context.}
+At each time step $t$, we compute a phase $\phi_t \in [0,2\pi)$:
+\[
+\phi_t = 2\pi \cdot \mathrm{Unif}\big(\mathrm{PRF}_K(\mathrm{ctx}_t)\big),
+\]
+where $\mathrm{PRF}_K(\cdot)$ is a keyed pseudorandom function and $\mathrm{ctx}_t$ is a short fingerprint of context.
+In practice, $\mathrm{ctx}_t$ can be:
+(i) the previous token $x_{t-1}$,
+(ii) a hash of the last $n$ tokens,
+or (iii) a rolling hash of the prefix (to reduce collisions).
+The output of the PRF is converted to a uniform real in $[0,1)$ and then scaled to $[0,2\pi)$.
+
+\paragraph{Salted pancake score.}
+We now define a time-varying score:
+\[
+g_t(i) = \cos(\omega s_i + \phi_t).
+\]
+This makes the ``preferred'' bands move with context, so the watermark no longer corresponds to a fixed global partition.
+
+\paragraph{Watermarked sampling distribution.}
+We bias logits using the salted score:
+\[
+\ell'_t(i) = \ell_t(i) + \alpha \, g_t(i),
+\qquad
+q_t(i) \propto p_t(i)\exp(\alpha g_t(i)).
+\]
+Implementation is still simple: cache $s_i$, compute $\phi_t$ each step, evaluate $g_t(i)$, and add $\alpha g_t(i)$ to logits.
+
+\paragraph{Optional efficiency restriction (top-$k$ / nucleus).}
+To reduce computation and limit distortion, we can apply the bias only to a candidate set $\mathcal{C}_t$ (e.g., top-$k$ tokens under $\ell_t$ or the nucleus set under $p_t$):
+\[
+\ell'_t(i) = \ell_t(i) + \alpha \, g_t(i)\cdot \mathbb{I}[i\in \mathcal{C}_t].
+\]
+This preserves the same structure while improving speed and keeping the watermark inside the model's likely choices.
+
+\paragraph{Detection statistic.}
+Given a candidate text $x_{1:T}$ and key $K$, the verifier:
+\begin{enumerate}
+    \item Reconstructs $w$ from $K$.
+    \item For each token $x_t$, computes $\phi_t$ from $\mathrm{ctx}_t$ and $K$.
+    \item Computes per-token alignment
+    \[
+    a_t = \cos(\omega s_{x_t} + \phi_t).
+    \]
+    \item Aggregates
+    \[
+    S(x_{1:T}) = \sum_{t=1}^T a_t.
+    \]
+\end{enumerate}
+
+\paragraph{Hypothesis test and calibration.}
+We test
+\[
+H_0:\text{text is unwatermarked}
+\quad\text{vs.}\quad
+H_1:\text{text is generated by GPW-SP under key }K.
+\]
+Under $H_0$, $S$ is approximately centered near $0$ and concentrates as $T$ grows.
+Under $H_1$, the bias makes $\mathbb{E}[a_t] > 0$, so $S$ tends to be larger.
+In practice we normalize
+\[
+Z(x_{1:T}) = \frac{S(x_{1:T}) - \mu_0(T)}{\sigma_0(T)},
+\]
+where $\mu_0(T),\sigma_0(T)$ are estimated from a held-out corpus of human or non-watermarked text under the same tokenizer and preprocessing.
+We then choose a threshold $z_\star$ such that $\Pr_{H_0}(Z\ge z_\star)$ matches a target false positive rate.
+As an alternative view, we also report \emph{random-key $p$-values}: we evaluate $S$ under many random keys and compute the fraction that produce a score at least as large as the observed one.
+
+\subsection{Payload encoding (optional extension)}
+\label{sec:method:payload}
+
+GPW-SP can be used for either \emph{presence detection} (one-bit: watermarked or not) or for embedding a short payload.
+
+\paragraph{Segment-wise phase shifts.}
+Let a payload be $m\in\{0,1\}^k$.
+We encode it (optionally) with an error-correcting code (ECC) to obtain a codeword $c\in\{0,1\}^L$.
+We then divide generation into segments of length $R$ tokens.
+For segment index $j$, we set
+\[
+\Delta_j = \pi \, c_j,
+\]
+and use
+\[
+g_t(i) = \cos(\omega s_i + \phi_t + \Delta_j),
+\qquad \text{for } t \in \text{segment } j.
+\]
+This makes the watermark statistic favor one of two phase hypotheses per segment.
+The verifier tests both hypotheses and decodes the resulting bit sequence.
+
+\paragraph{Decoding.}
+Given a text, the verifier computes for each segment $j$ two correlation scores (for $\Delta_j=0$ and $\Delta_j=\pi$), selects the higher-scoring hypothesis as the recovered bit $\hat{c}_j$, then ECC-decodes $\hat{c}$ to obtain $\hat{m}$.
+We can also add repetition (use multiple segments per bit) to increase robustness to deletions and truncation.
+
+\subsection{Summary of parameters}
+Our sampler uses a small set of interpretable parameters:
+\begin{itemize}
+    \item $\alpha$ (strength): larger values increase detectability but may affect quality.
+    \item $\omega$ (frequency): controls pancake ``thinness'' and the granularity of the periodic pattern.
+    \item Choice of $\mathrm{ctx}_t$ for salted phase: trades off unpredictability vs.\ stability.
+    \item Optional restriction set $\mathcal{C}_t$ (top-$k$/top-$p$): reduces compute and limits distortion.
+\end{itemize}
+
+\subsection{What we implement and evaluate}
+In experiments, we evaluate:
+(i) the base GPW sampler (static phase) as a simple baseline; and
+(ii) GPW-SP (salted phase) as our main presence-detection method.
+(iii) GPW-SP-SR which also encodes the semantic representation of the language model to increase the robustness of the watermark.

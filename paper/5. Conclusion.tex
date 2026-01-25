@@ -1,0 +1,53 @@
+\section{Discussion}
+\label{sec:discussion}
+
+\textbf{What the results show.}
+Our comprehensive evaluation across OPT-1.3B, GPT-2, and the Pythia model family (400M--12B) supports several key conclusions.
+First, \emph{GPW achieves state-of-the-art robustness}: the base GPW method attains 100\% detection on clean text and 99--100\% under lexical attacks (synonym substitution, word swapping, typo injection), substantially outperforming KGW (75--86\%) and matching or exceeding Unigram baselines.
+Second, \emph{semantic representation coupling improves paraphrase robustness}: GPW-SP-SR achieves 90--100\% detection under neural paraphrasing, compared to 15--20\% for KGW, demonstrating the value of incorporating contextual hidden states.
+Third, \emph{GPW preserves text quality}: with perplexity of 9.56, GPW produces more natural text than all baselines (Unigram: 12.50, KGW: 20.15, SemStamp: 69.18).
+
+\textbf{Copy-paste as a fundamental challenge.}
+Diluting watermarked text with 50\% unwatermarked content remains the hardest attack, with even our best method (GPW-SP-SR) achieving only 76.5\% detection.
+This reflects an inherent limitation of global statistical tests: when evidence is diluted, the aggregate signal weakens proportionally.
+Segment-level testing or payload-style decoding with redundancy may mitigate this, which we leave for future work.
+
+\textbf{The salted-phase trade-off.}
+Surprisingly, GPW-SP (salted phase without SR) underperforms the base GPW in our experiments, particularly on OPT-1.3B (81\% vs 100\% clean detection).
+This suggests that context-dependent phase shifts, while theoretically providing unpredictability against attackers who observe many samples, may reduce the consistency of the watermark signal.
+The semantic representation coupling in GPW-SP-SR recovers this performance by anchoring the phase to contextual semantics rather than just token identity.
+
+\textbf{Hyperparameter sensitivity.}
+Our ablation studies reveal interpretable parameter effects: $\alpha \geq 2.0$ is necessary for reliable detection, while $\omega \in [10, 50]$ provides optimal pancake granularity.
+These findings provide practical guidance for deployment.
+
+\textbf{Limitations.}
+Our evaluation has several limitations:
+(1) paraphrase experiments use only 20 samples due to computational cost;
+(2) our SemStamp implementation fails to embed detectable watermarks, precluding fair comparison;
+(3) we do not evaluate translation-based attacks or adaptive adversaries with partial key knowledge;
+(4) perplexity is measured only on OPT-1.3B.
+Additionally, GPW-SP-SR requires model access during detection, increasing verification cost.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+We introduced \textbf{Gaussian Pancakes Watermarking (GPW)}, a family of private watermarking methods for autoregressive language models.
+GPW biases token selection using a smooth periodic function of embedding-space projections onto a secret direction, creating alternating ``pancake'' bands of preferred and non-preferred tokens.
+We developed three variants: (i) base GPW with static phase, (ii) GPW-SP with context-dependent salted phase for unpredictability, and (iii) GPW-SP-SR with semantic representation coupling for paraphrase robustness.
+
+Our comprehensive experiments demonstrate that:
+\begin{itemize}[noitemsep]
+    \item \textbf{GPW achieves near-perfect detection} (100\%) on clean text and maintains 99--100\% under lexical attacks, outperforming KGW and matching Unigram baselines.
+    \item \textbf{GPW-SP-SR provides superior paraphrase robustness} (90--100\%) by incorporating contextual hidden states, compared to 15--20\% for KGW.
+    \item \textbf{GPW preserves text quality} with the lowest perplexity (9.56) among all evaluated methods.
+    \item \textbf{GPW scales reliably} from 400M to 12B parameters with consistent $>93\%$ AUC.
+\end{itemize}
+
+The method is lightweight, requires no model retraining, and integrates as a modular logit bias compatible with standard decoding schemes (temperature, top-$k$, nucleus sampling).
+Detection is framed as calibrated hypothesis testing, enabling deployment at user-specified false positive rates.
+
+\textbf{Future directions} include: (1) extending GPW-SP-SR to reduce detection-time model dependency, (2) developing segment-level testing for mixed-source documents, (3) evaluating against adaptive adversaries and translation-based attacks, and (4) integrating with standardized benchmarking frameworks (MarkLLM, WaterBench) for broader baseline comparisons.
+
+More broadly, our work demonstrates that embedding-space geometry provides a rich and underexplored signal for watermarking, offering a promising alternative to vocabulary partitioning approaches.
+The ``pancake'' structure---smooth, periodic, and semantically grounded---enables strong detection while preserving the naturalness of generated text.

@@ -1,0 +1,19 @@
+\section{Introduction}
+\label{sec:introduction}
+
+
+While Large Language Models (LLMs) enhance productivity, they also facilitate spam, plagiarism, and disinformation. This necessitates detection of machine-written text and/or attribution of that text to a specific model. Unlike brittle post-hoc classifiers that fail under paraphrasing or domain shift \cite{zhao2025sokwatermarkingaigeneratedcontent}, \emph{watermarking} embeds a signal during generation by modifying sampling behavior . With a secret key, a verifier can detect or or attribute this signal to a source without model retraining, often via a modular logits processor.
+
+
+Designing effective watermarks is challenging because the channel is adversarial and stochastic. Text is easily edited through paraphrasing or truncation, and decoding methods like nucleus sampling introduce randomness. Consequently, watermarking creates a \emph{statistical bias} rather than a deterministic signature, framing detection as a hypothesis test. This creates a fundamental tension between \emph{utility} (text quality), \emph{detectability} (true positive rate), and \emph{robustness} (resistance to transformation). 
+Recent work has also emphasized that watermark conclusions can vary significantly across prompt sets, decoding parameters, and transformation attacks.
+This motivates benchmark-driven evaluation: reporting not only ``clean'' detectability, but robustness under realistic editing pipelines and model-based attacks, ideally as curves over attack strength using standardized suites and tooling (e.g., WaterBench, WaterPark, MarkLLM).
+
+\paragraph{Our approach: Gaussian Pancakes Watermarking with Salted Phase (GPW-SP).}
+We propose GPW-SP, a watermark tied to the geometry of the model's token embedding space. It projects embeddings onto a secret keyed direction $w$ and applies a periodic cosine score to bias logits. To ensure unpredictability, we use a \emph{salted phase}---a context-dependent shift derived from a pseudorandom function. 
+
+\paragraph {Our contributions}: (i) GPW-SP, a simple embedding-geometry watermark
+that requires no retraining and integrates as a logits-bias module; (ii) a private detection procedure
+framed as a calibrated hypothesis test with user-chosen false positive rates; (iii) optional extensions for
+semantic coupling (SR) and payload encoding; and (iv) an evaluation protocol with robustness curves
+under common text transformations, plus practical stress tests such as deletion and splicing/mixing.

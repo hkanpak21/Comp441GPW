@@ -1,7 +1,0 @@
-model,watermarker,attack,sample_idx,z_score,p_value,is_detected,perplexity
-opt-1.3b,gpw_sp_sr,paraphrase,0,0.9324023432845426,0.17556431712274184,0,-1
-opt-1.3b,gpw_sp_sr,paraphrase,1,-1.136133808680128,0.8720497162798098,0,-1
-opt-1.3b,gpw_sp_sr,paraphrase,2,0.5271215253901321,0.29905459981070004,0,-1
-opt-1.3b,gpw_sp_sr,paraphrase,3,0.06369780204061963,0.4746054274561001,0,-1
-opt-1.3b,gpw_sp_sr,paraphrase,4,-0.9123861511962154,0.8192172614222071,0,-1
-opt-1.3b,gpw_sp_sr,paraphrase,5,-0.5540646468246123,0.7102326980699364,0,-1

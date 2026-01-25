@@ -1,7 +1,0 @@
-sample_id,prompt,original_text,attacked_text,z_score_original,z_score_attacked,is_watermarked_original,is_watermarked_attacked,num_tokens,generation_time,detection_time_original,detection_time_attacked
-0,Google has announced that it will be shutting down its smart-messaging service Allo which it launche," this product,” a spokeswoman for the company said in an email to the AP. She did not disclose any reasons behind the shutdown, but explained that the service is winding down.
-
-Allo, a version of Mess","this product,” a spokeswoman for the company said in an email to the AP. She did not disclose any reasons behind the shutdown, but explained that the Robert William Service is wind down. Allo, a versi",4.74692883171144,3.336177648269499,True,False,120,3.930480480194092,0.0023276805877685547,0.002122640609741211
-1,Two bedrooms home on a corner lot. Two car detached garage. Nice covered front porch. Seller will no," The property needs paint, interior and exterior carpet and floor, some interior painting and light fixtures. Water, power and septic are included. The pool and cabana have been fully updated.
-
-School","The property needs paint, interior and exterior carpet and floor, some interior house painting and light fixtures. Water, power and septic are included. The pool and cabana have been fully updated. Sc",5.659799760886717,4.381780460041329,True,True,120,1.7901692390441895,0.001211404800415039,0.0009350776672363281

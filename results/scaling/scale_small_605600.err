@@ -1,7 +1,0 @@
-/home/hkanpak21/.conda/envs/thor310/lib/python3.10/site-packages/transformers/utils/hub.py:127: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
-  warnings.warn(
-Traceback (most recent call last):
-  File "<string>", line 9, in <module>
-  File "/scratch/hkanpak21/Comp441GPW/experiment_scripts/exp_model_scaling.py", line 32, in <module>
-    from watermarkers.gpw import GPWWatermarker
-ImportError: cannot import name 'GPWWatermarker' from 'watermarkers.gpw' (/scratch/hkanpak21/Comp441GPW/watermarkers/gpw.py)

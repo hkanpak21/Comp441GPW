@@ -14,33 +14,37 @@ venv/
 ENV/
 env/
 
-# IDE
+# IDE and Editor
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
+.DS_Store
 
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# Large data files
-generated_texts/*.pkl
-paraphrased_texts/*.pkl
+# Large data and results
+results/
+logs/
+generated_texts/
+paraphrased_texts/
+datasets/
+*.pkl
+*.csv
+*.json
+!README.md
+!*.ipynb
+!package.json
 
-# Logs
-logs/*.out
-logs/*.err
-logs/efficient/*.out
-logs/efficient/*.err
+# Local tool settings
+.claude/
 
-# Model checkpoints (if any)
-*.pt
-*.pth
-*.ckpt
-checkpoints/
-
-# Temporary files
+# Temporary files and logs
 *.tmp
-.DS_Store
+*.log
+*.out
+*.err
+smoke_test_output.log
 
