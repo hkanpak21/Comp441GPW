@@ -1,0 +1,14 @@
+{
+  "experiment": "swap_attack",
+  "model": "opt-1.3b",
+  "watermark": "unigram",
+  "swap_rate": 0.1,
+  "num_samples": 200,
+  "total_time": 600.2157018184662,
+  "original_mean_z_score": 6.482558054015386,
+  "original_detection_rate": 0.95,
+  "attacked_mean_z_score": 5.930074585391659,
+  "attacked_detection_rate": 0.92,
+  "z_score_drop": 0.5524834686237273,
+  "detection_rate_drop": 0.03
+}

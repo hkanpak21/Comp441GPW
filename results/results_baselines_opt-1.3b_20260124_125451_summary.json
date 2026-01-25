@@ -1,0 +1,31 @@
+{
+  "model": "opt-1.3b",
+  "num_samples": 200,
+  "total_experiments": 1197,
+  "human": {
+    "mean_perplexity": 17.41,
+    "false_positive_rates": {
+      "unigram": 0.07,
+      "kgw": 0.015,
+      "gpw_sp": 0.015
+    },
+    "mean_z_scores": {
+      "unigram": 0.479,
+      "kgw": 0.032,
+      "gpw_sp": 0.096
+    }
+  },
+  "ai_clean": {
+    "mean_perplexity": 31.72,
+    "false_positive_rates": {
+      "unigram": 0.0603,
+      "kgw": 0.0101,
+      "gpw_sp": 0.0
+    },
+    "mean_z_scores": {
+      "unigram": 0.417,
+      "kgw": 0.134,
+      "gpw_sp": -0.007
+    }
+  }
+}

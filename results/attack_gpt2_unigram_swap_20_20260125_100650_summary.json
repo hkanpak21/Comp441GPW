@@ -1,0 +1,11 @@
+{
+  "model": "gpt2",
+  "watermarker": "unigram",
+  "detector": "unigram",
+  "attack": "swap_20",
+  "n_samples": 200,
+  "detection_rate": 99.0,
+  "mean_z_score": 10.05377687468949,
+  "is_baseline": false,
+  "timestamp": "20260125_100650"
+}

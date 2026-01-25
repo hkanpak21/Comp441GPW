@@ -1,0 +1,1375 @@
+================================================================================
+EXPERIMENT: Paraphrase Attack on Watermarked Text
+================================================================================
+Model: opt-1.3b
+Watermark: unigram
+Num samples: 200
+Paraphrase model: tuner007/pegasus_paraphrase
+Device: cuda
+================================================================================
+
+[1/6] Loading C4 dataset...
+Loading C4 RealNewsLike dataset...
+This may take a few minutes for the first download...
+Attempting to load C4 realnewslike dataset...
+/home/hkanpak21/.cache/huggingface/modules/datasets_modules/datasets/c4/584d57ebe81c209b6c7f31727066d2c4b4bba37cb7092cdd83083d5ec11207db/c4.py:53: FutureWarning: Dataset 'c4' is deprecated and will be deleted. Use 'allenai/c4' instead.
+  warnings.warn(
+Dataset loaded successfully!
+Collecting 200 samples...
+
+✓ Loaded 200 C4 samples
+  Example prompt: Google has announced that it will be shutting down its smart-messaging service Allo which it launche...
+✓ Loaded 200 prompts
+
+[2/6] Loading model: opt-1.3b...
+Loading model: facebook/opt-1.3b...
+✓ Model loaded: 1315.8M parameters
+
+[3/6] Loading watermarker: unigram...
+Detected model vocab size: 50272 (tokenizer vocab size: 50265)
+✓ Watermarker loaded: UnigramWatermark
+
+[4/6] Loading attack: Paraphrase (Pegasus)...
+  This may take a few minutes to download the paraphrase model...
+✓ Attack loaded: PegasusAttack
+✓ CSV logger setup: ../results/exp_attack_paraphrase_opt-1.3b_unigram_20260124_122229.csv
+
+[5/6] Generating and attacking 200 samples...
+  NOTE: Paraphrase attack is slow, this will take a while...
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+Some weights of PegasusForConditionalGeneration were not initialized from the model checkpoint at tuner007/pegasus_paraphrase and are newly initialized: ['model.decoder.embed_positions.weight', 'model.encoder.embed_positions.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+  Progress: 5/200 | Elapsed: 0.3min | Est. remaining: 13.3min
+  Progress: 10/200 | Elapsed: 0.7min | Est. remaining: 13.9min
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [0,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [1,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [2,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [3,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [4,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [5,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [6,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [7,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [8,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [9,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [10,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [11,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [12,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [13,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [14,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [15,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [16,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [17,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [18,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [19,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [20,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [21,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [22,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [23,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [24,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [25,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [26,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [27,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [28,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [29,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [30,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [162,0,0], thread: [31,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [96,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [97,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [98,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [99,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [100,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [101,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [102,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [103,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [104,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [105,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [106,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [107,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [108,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [109,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [110,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [111,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [112,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [113,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [114,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [115,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [116,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [117,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [118,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [119,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [120,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [121,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [122,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [123,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [124,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [125,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [126,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [175,0,0], thread: [127,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [32,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [33,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [34,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [35,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [36,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [37,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [38,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [39,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [40,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [41,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [42,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [43,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [44,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [45,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [46,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [47,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [48,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [49,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [50,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [51,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [52,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [53,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [54,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [55,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [56,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [57,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [58,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [59,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [60,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [61,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [62,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [211,0,0], thread: [63,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [0,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [1,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [2,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [3,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [4,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [5,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [6,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [7,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [8,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [9,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [10,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [11,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [12,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [13,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [14,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [15,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [16,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [17,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [18,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [19,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [20,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [21,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [22,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [23,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [24,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [25,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [26,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [27,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [28,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [29,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [30,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [31,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [64,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [65,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [66,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [67,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [68,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [69,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [70,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [71,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [72,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [73,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [74,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [75,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [76,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [77,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [78,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [79,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [80,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [81,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [82,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [83,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [84,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [85,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [86,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [87,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [88,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [89,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [90,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [91,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [92,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [93,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [94,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [207,0,0], thread: [95,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [32,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [33,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [34,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [35,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [36,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [37,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [38,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [39,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [40,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [41,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [42,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [43,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [44,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [45,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [46,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [47,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [48,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [49,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [50,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [51,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [52,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [53,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [54,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [55,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [56,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [57,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [58,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [59,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [60,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [61,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [62,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [187,0,0], thread: [63,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [64,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [65,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [66,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [67,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [68,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [69,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [70,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [71,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [72,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [73,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [74,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [75,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [76,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [77,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [78,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [79,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [80,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [81,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [82,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [83,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [84,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [85,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [86,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [87,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [88,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [89,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [90,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [91,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [92,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [93,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [94,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [218,0,0], thread: [95,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [32,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [33,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [34,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [35,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [36,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [37,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [38,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [39,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [40,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [41,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [42,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [43,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [44,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [45,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [46,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [47,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [48,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [49,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [50,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [51,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [52,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [53,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [54,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [55,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [56,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [57,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [58,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [59,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [60,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [61,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [62,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [166,0,0], thread: [63,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [64,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [65,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [66,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [67,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [68,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [69,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [70,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [71,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [72,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [73,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [74,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [75,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [76,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [77,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [78,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [79,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [80,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [81,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [82,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [83,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [84,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [85,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [86,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [87,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [88,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [89,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [90,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [91,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [92,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [93,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [94,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [222,0,0], thread: [95,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [32,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [33,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [34,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [35,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [36,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [37,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [38,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [39,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [40,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [41,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [42,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [43,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [44,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [45,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [46,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [47,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [48,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [49,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [50,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [51,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [52,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [53,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [54,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [55,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [56,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [57,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [58,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [59,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [60,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [61,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [62,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1290: indexSelectLargeIndex: block: [219,0,0], thread: [63,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+  ✗ Error on sample 9: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 10: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 11: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 12: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 13: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 15/200 | Elapsed: 0.8min | Est. remaining: 9.9min
+  ✗ Error on sample 14: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 15: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 16: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 17: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 18: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 20/200 | Elapsed: 0.8min | Est. remaining: 7.3min
+  ✗ Error on sample 19: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 20: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 21: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 22: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 23: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 25/200 | Elapsed: 0.8min | Est. remaining: 5.7min
+  ✗ Error on sample 24: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 25: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 26: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 27: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 28: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 30/200 | Elapsed: 0.8min | Est. remaining: 4.6min
+  ✗ Error on sample 29: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 30: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 31: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 32: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 33: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 35/200 | Elapsed: 0.8min | Est. remaining: 3.8min
+  ✗ Error on sample 34: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 35: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 36: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 37: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 38: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 40/200 | Elapsed: 0.8min | Est. remaining: 3.2min
+  ✗ Error on sample 39: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 40: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 41: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 42: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 43: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 45/200 | Elapsed: 0.8min | Est. remaining: 2.8min
+  ✗ Error on sample 44: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 45: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 46: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 47: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 48: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 50/200 | Elapsed: 0.8min | Est. remaining: 2.4min
+  ✗ Error on sample 49: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 50: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 51: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 52: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 53: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 55/200 | Elapsed: 0.8min | Est. remaining: 2.1min
+  ✗ Error on sample 54: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 55: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 56: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 57: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 58: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 60/200 | Elapsed: 0.8min | Est. remaining: 1.9min
+  ✗ Error on sample 59: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 60: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 61: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 62: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 63: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 65/200 | Elapsed: 0.8min | Est. remaining: 1.7min
+  ✗ Error on sample 64: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 65: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 66: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 67: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 68: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 70/200 | Elapsed: 0.8min | Est. remaining: 1.5min
+  ✗ Error on sample 69: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 70: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 71: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 72: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 73: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 75/200 | Elapsed: 0.8min | Est. remaining: 1.4min
+  ✗ Error on sample 74: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 75: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 76: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 77: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 78: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 80/200 | Elapsed: 0.8min | Est. remaining: 1.2min
+  ✗ Error on sample 79: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 80: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 81: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 82: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 83: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 85/200 | Elapsed: 0.8min | Est. remaining: 1.1min
+  ✗ Error on sample 84: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 85: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 86: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 87: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 88: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 90/200 | Elapsed: 0.8min | Est. remaining: 1.0min
+  ✗ Error on sample 89: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 90: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 91: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 92: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 93: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 95/200 | Elapsed: 0.8min | Est. remaining: 0.9min
+  ✗ Error on sample 94: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 95: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 96: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 97: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 98: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 100/200 | Elapsed: 0.8min | Est. remaining: 0.8min
+  ✗ Error on sample 99: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 100: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 101: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 102: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 103: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 105/200 | Elapsed: 0.8min | Est. remaining: 0.7min
+  ✗ Error on sample 104: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 105: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 106: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 107: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 108: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 110/200 | Elapsed: 0.8min | Est. remaining: 0.7min
+  ✗ Error on sample 109: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 110: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 111: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 112: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 113: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 115/200 | Elapsed: 0.8min | Est. remaining: 0.6min
+  ✗ Error on sample 114: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 115: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 116: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 117: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 118: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 120/200 | Elapsed: 0.8min | Est. remaining: 0.5min
+  ✗ Error on sample 119: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 120: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 121: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 122: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 123: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 125/200 | Elapsed: 0.8min | Est. remaining: 0.5min
+  ✗ Error on sample 124: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 125: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 126: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 127: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 128: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 130/200 | Elapsed: 0.8min | Est. remaining: 0.4min
+  ✗ Error on sample 129: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 130: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 131: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 132: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 133: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 135/200 | Elapsed: 0.8min | Est. remaining: 0.4min
+  ✗ Error on sample 134: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 135: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 136: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 137: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 138: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 140/200 | Elapsed: 0.8min | Est. remaining: 0.4min
+  ✗ Error on sample 139: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 140: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 141: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 142: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 143: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 145/200 | Elapsed: 0.8min | Est. remaining: 0.3min
+  ✗ Error on sample 144: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 145: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 146: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 147: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 148: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 150/200 | Elapsed: 0.8min | Est. remaining: 0.3min
+  ✗ Error on sample 149: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 150: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 151: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 152: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 153: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 155/200 | Elapsed: 0.8min | Est. remaining: 0.2min
+  ✗ Error on sample 154: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 155: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 156: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 157: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 158: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 160/200 | Elapsed: 0.8min | Est. remaining: 0.2min
+  ✗ Error on sample 159: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 160: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 161: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 162: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 163: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 165/200 | Elapsed: 0.8min | Est. remaining: 0.2min
+  ✗ Error on sample 164: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 165: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 166: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 167: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 168: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 170/200 | Elapsed: 0.8min | Est. remaining: 0.1min
+  ✗ Error on sample 169: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 170: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 171: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 172: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 173: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 175/200 | Elapsed: 0.8min | Est. remaining: 0.1min
+  ✗ Error on sample 174: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 175: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 176: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 177: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 178: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 180/200 | Elapsed: 0.8min | Est. remaining: 0.1min
+  ✗ Error on sample 179: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 180: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 181: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 182: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 183: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 185/200 | Elapsed: 0.8min | Est. remaining: 0.1min
+  ✗ Error on sample 184: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 185: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 186: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 187: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 188: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 190/200 | Elapsed: 0.8min | Est. remaining: 0.0min
+  ✗ Error on sample 189: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 190: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 191: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 192: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 193: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 195/200 | Elapsed: 0.8min | Est. remaining: 0.0min
+  ✗ Error on sample 194: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 195: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 196: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 197: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  ✗ Error on sample 198: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  Progress: 200/200 | Elapsed: 0.8min | Est. remaining: 0.0min
+  ✗ Error on sample 199: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+[6/6] Computing aggregate metrics...
+✓ Aggregate metrics saved to: ../results/exp_attack_paraphrase_opt-1.3b_unigram_20260124_122229_summary.json
+
+================================================================================
+EXPERIMENT COMPLETE
+================================================================================
+Total samples: 9
+Total time: 0.8 minutes
+Avg attack time: 2.16s per sample
+
+Original Detection Rate: 77.8%
+Attacked Detection Rate: 33.3%
+Detection Rate Drop: 44.4%
+
+Results saved to:
+  - ../results/exp_attack_paraphrase_opt-1.3b_unigram_20260124_122229.csv
+  - ../results/exp_attack_paraphrase_opt-1.3b_unigram_20260124_122229_summary.json
+================================================================================

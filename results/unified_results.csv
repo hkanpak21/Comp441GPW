@@ -1,0 +1,195 @@
+Model,Watermarker,Variant,Alpha,Omega,Z_Threshold,Attack,Detection_Rate,Detection_Count,Total_Samples,Mean_Z_Score,Perplexity,Notes
+OPT-1.3B,No Watermark,Control,-,-,-,clean,0.0,0,200,0.50,-,Baseline - 0% false positive rate
+OPT-1.3B,No Watermark,Control,-,-,-,synonym_30,0.0,0,200,0.53,-,Baseline - 0% false positive rate
+OPT-1.3B,No Watermark,Control,-,-,-,swap_20,0.0,0,200,0.55,-,Baseline - 0% false positive rate
+OPT-1.3B,No Watermark,Control,-,-,-,typo_10,0.0,0,200,0.47,-,Baseline - 0% false positive rate
+OPT-1.3B,No Watermark,Control,-,-,-,copypaste_50,0.0,0,200,0.46,-,Baseline - 0% false positive rate
+OPT-1.3B,GPW,GPW (non-salted),3.0,50.0,4.0,clean,100.0,200,200,13.37,9.56,BEST: Near-perfect detection with high omega
+OPT-1.3B,GPW,GPW (non-salted),3.0,50.0,4.0,synonym_30,99.0,198,200,11.12,9.56,Excellent robustness to synonym substitution
+OPT-1.3B,GPW,GPW (non-salted),3.0,50.0,4.0,swap_20,100.0,200,200,12.70,9.56,Perfect robustness to word swapping
+OPT-1.3B,GPW,GPW (non-salted),3.0,50.0,4.0,typo_10,99.5,199,200,11.64,9.56,Excellent robustness to typos
+OPT-1.3B,GPW,GPW (non-salted),3.0,50.0,4.0,copypaste_50,73.0,146,200,5.32,9.56,Good copypaste robustness - best among all methods
+OPT-1.3B,GPW-SP,GPW-SP (salted),3.0,50.0,4.0,clean,81.0,162,200,8.98,117.63,Salted phase hurts detection significantly; high perplexity
+OPT-1.3B,GPW-SP,GPW-SP (salted),3.0,50.0,4.0,synonym_30,64.5,129,200,4.84,117.63,Poor synonym robustness with salted phase
+OPT-1.3B,GPW-SP,GPW-SP (salted),3.0,50.0,4.0,swap_20,67.0,134,200,4.86,117.63,Poor swap robustness with salted phase
+OPT-1.3B,GPW-SP,GPW-SP (salted),3.0,50.0,4.0,typo_10,74.5,149,200,6.21,117.63,Moderate typo robustness
+OPT-1.3B,GPW-SP,GPW-SP (salted),3.0,50.0,4.0,copypaste_50,38.0,76,200,3.04,117.63,Weak copypaste robustness
+OPT-1.3B,GPW-SP-LOW,GPW-SP (salted low-omega),3.0,2.0,4.0,clean,90.5,181,200,9.75,35.42,Lower omega improves salted variant detection
+OPT-1.3B,GPW-SP-LOW,GPW-SP (salted low-omega),3.0,2.0,4.0,synonym_30,75.0,150,200,5.16,35.42,Better than high-omega salted
+OPT-1.3B,GPW-SP-LOW,GPW-SP (salted low-omega),3.0,2.0,4.0,swap_20,75.5,151,200,5.18,35.42,Better than high-omega salted
+OPT-1.3B,GPW-SP-LOW,GPW-SP (salted low-omega),3.0,2.0,4.0,typo_10,84.5,169,200,6.68,35.42,Good typo robustness
+OPT-1.3B,GPW-SP-LOW,GPW-SP (salted low-omega),3.0,2.0,4.0,copypaste_50,36.0,72,200,3.13,35.42,Similar copypaste as high-omega salted
+OPT-1.3B,GPW-SP-SR,GPW-SP+SR (salted+SR coupling),3.0,50.0,4.0,clean,94.0,47,50,10.16,-,Excellent clean detection with SR coupling
+OPT-1.3B,GPW-SP-SR,GPW-SP+SR (salted+SR coupling),3.0,50.0,4.0,synonym_30,0.0,0,50,0.08,-,VERY WEAK: SR coupling completely breaks under synonym attack
+OPT-1.3B,GPW-SP-SR,GPW-SP+SR (salted+SR coupling),3.0,50.0,4.0,swap_20,0.0,0,50,0.29,-,VERY WEAK: SR coupling completely breaks under swap attack
+OPT-1.3B,GPW-SP-SR,GPW-SP+SR (salted+SR coupling),3.0,50.0,4.0,typo_10,2.0,1,50,0.57,-,VERY WEAK: SR coupling nearly breaks under typo attack
+OPT-1.3B,GPW-SP-SR,GPW-SP+SR (salted+SR coupling),3.0,50.0,4.0,copypaste_50,8.0,4,50,0.70,-,WEAK: Poor copypaste robustness with SR coupling
+OPT-1.3B,Unigram,Unigram baseline,0.5,2.0,4.0,clean,96.5,193,200,8.18,12.50,Strong baseline method
+OPT-1.3B,Unigram,Unigram baseline,0.5,2.0,4.0,synonym_30,92.0,184,200,6.23,12.50,Good synonym robustness
+OPT-1.3B,Unigram,Unigram baseline,0.5,2.0,4.0,swap_20,95.0,190,200,7.49,12.50,Good swap robustness
+OPT-1.3B,Unigram,Unigram baseline,0.5,2.0,4.0,typo_10,93.5,187,200,6.71,12.50,Good typo robustness
+OPT-1.3B,Unigram,Unigram baseline,0.5,2.0,4.0,copypaste_50,23.5,47,200,3.00,12.50,WEAK: Poor copypaste robustness
+OPT-1.3B,KGW,KGW baseline,0.5,2.0,4.0,clean,94.5,189,200,6.90,20.15,Standard KGW watermarking
+OPT-1.3B,KGW,KGW baseline,0.5,2.0,4.0,synonym_30,75.0,150,200,5.04,20.15,Moderate synonym robustness
+OPT-1.3B,KGW,KGW baseline,0.5,2.0,4.0,swap_20,76.5,153,200,5.08,20.15,Moderate swap robustness
+OPT-1.3B,KGW,KGW baseline,0.5,2.0,4.0,typo_10,86.0,172,200,5.67,20.15,Good typo robustness
+OPT-1.3B,KGW,KGW baseline,0.5,2.0,4.0,copypaste_50,8.5,17,200,2.41,20.15,VERY WEAK: Worst copypaste robustness
+OPT-1.3B,SEMSTAMP,SEMSTAMP (LSH d=3),N/A,N/A,4.0,clean,3.0,3,100,0.42,69.18,BROKEN: Watermark not embedded properly
+OPT-1.3B,SEMSTAMP,SEMSTAMP (LSH d=3),N/A,N/A,4.0,synonym_30,1.0,1,100,0.28,69.18,BROKEN: Near-zero detection
+OPT-1.3B,SEMSTAMP,SEMSTAMP (LSH d=3),N/A,N/A,4.0,swap_20,2.0,2,100,0.20,69.18,BROKEN: Near-zero detection
+OPT-1.3B,SEMSTAMP,SEMSTAMP (LSH d=3),N/A,N/A,4.0,typo_10,3.0,3,100,0.23,69.18,BROKEN: Near-zero detection
+OPT-1.3B,SEMSTAMP,SEMSTAMP (LSH d=3),N/A,N/A,4.0,copypaste_50,1.0,1,100,0.16,69.18,BROKEN: Near-zero detection
+GPT-2,No Watermark,Control,-,-,-,clean,0.0,0,200,~0.5,-,Baseline - expected 0% false positive rate
+GPT-2,No Watermark,Control,-,-,-,synonym_30,0.0,0,200,~0.5,-,Baseline - expected 0% false positive rate
+GPT-2,No Watermark,Control,-,-,-,swap_20,0.0,0,200,~0.5,-,Baseline - expected 0% false positive rate
+GPT-2,No Watermark,Control,-,-,-,typo_10,0.0,0,200,~0.5,-,Baseline - expected 0% false positive rate
+GPT-2,No Watermark,Control,-,-,-,copypaste_50,0.0,0,200,~0.5,-,Baseline - expected 0% false positive rate
+GPT-2,GPW,GPW (non-salted),3.0,50.0,4.0,clean,84.5,169,200,10.86,-,Good detection
+GPT-2,GPW,GPW (non-salted),3.0,50.0,4.0,synonym_30,83.5,167,200,9.48,-,Good synonym robustness
+GPT-2,GPW,GPW (non-salted),3.0,50.0,4.0,swap_20,84.5,169,200,10.84,-,Good swap robustness
+GPT-2,GPW,GPW (non-salted),3.0,50.0,4.0,typo_10,84.0,168,200,10.04,-,Good typo robustness
+GPT-2,GPW,GPW (non-salted),3.0,50.0,4.0,copypaste_50,59.5,119,200,4.65,-,Moderate copypaste robustness
+GPT-2,GPW-SP,GPW-SP (salted),3.0,50.0,4.0,clean,94.0,188,200,11.74,-,Excellent clean detection
+GPT-2,GPW-SP,GPW-SP (salted),3.0,50.0,4.0,synonym_30,83.0,166,200,6.34,-,Good synonym robustness
+GPT-2,GPW-SP,GPW-SP (salted),3.0,50.0,4.0,swap_20,88.0,176,200,6.42,-,Good swap robustness
+GPT-2,GPW-SP,GPW-SP (salted),3.0,50.0,4.0,typo_10,90.5,181,200,8.11,-,Good typo robustness
+GPT-2,GPW-SP,GPW-SP (salted),3.0,50.0,4.0,copypaste_50,58.5,117,200,4.17,-,Moderate copypaste robustness
+GPT-2,GPW-SP-LOW,GPW-SP (salted low-omega),3.0,2.0,4.0,clean,97.5,195,200,11.54,-,Excellent clean detection
+GPT-2,GPW-SP-LOW,GPW-SP (salted low-omega),3.0,2.0,4.0,synonym_30,89.5,179,200,6.53,-,Good synonym robustness
+GPT-2,GPW-SP-LOW,GPW-SP (salted low-omega),3.0,2.0,4.0,swap_20,89.5,179,200,6.31,-,Good swap robustness
+GPT-2,GPW-SP-LOW,GPW-SP (salted low-omega),3.0,2.0,4.0,typo_10,92.5,185,200,8.06,-,Good typo robustness
+GPT-2,GPW-SP-LOW,GPW-SP (salted low-omega),3.0,2.0,4.0,copypaste_50,57.0,114,200,4.17,-,Moderate copypaste robustness
+GPT-2,GPW-SP-SR,GPW-SP+SR (salted+SR coupling),3.0,50.0,4.0,clean,86.0,43,50,10.82,-,Good clean detection
+GPT-2,GPW-SP-SR,GPW-SP+SR (salted+SR coupling),3.0,50.0,4.0,synonym_30,6.0,3,50,1.81,-,VERY WEAK: SR breaks under synonym attack
+GPT-2,GPW-SP-SR,GPW-SP+SR (salted+SR coupling),3.0,50.0,4.0,swap_20,28.0,14,50,2.93,-,WEAK: SR breaks under swap attack
+GPT-2,GPW-SP-SR,GPW-SP+SR (salted+SR coupling),3.0,50.0,4.0,typo_10,14.0,7,50,2.01,-,WEAK: SR breaks under typo attack
+GPT-2,GPW-SP-SR,GPW-SP+SR (salted+SR coupling),3.0,50.0,4.0,copypaste_50,12.0,6,50,1.95,-,WEAK: SR breaks under copypaste attack
+GPT-2,Unigram,Unigram baseline,0.5,2.0,4.0,clean,99.0,198,200,10.81,-,Excellent clean detection
+GPT-2,Unigram,Unigram baseline,0.5,2.0,4.0,synonym_30,97.0,194,200,8.90,-,Excellent synonym robustness
+GPT-2,Unigram,Unigram baseline,0.5,2.0,4.0,swap_20,99.0,198,200,10.05,-,Excellent swap robustness
+GPT-2,Unigram,Unigram baseline,0.5,2.0,4.0,typo_10,98.5,197,200,9.18,-,Excellent typo robustness
+GPT-2,Unigram,Unigram baseline,0.5,2.0,4.0,copypaste_50,74.5,149,200,4.68,-,Good copypaste robustness
+GPT-2,KGW,KGW baseline,0.5,2.0,4.0,clean,91.5,183,200,7.80,-,Good clean detection
+GPT-2,KGW,KGW baseline,0.5,2.0,4.0,synonym_30,85.0,170,200,5.68,-,Good synonym robustness
+GPT-2,KGW,KGW baseline,0.5,2.0,4.0,swap_20,84.0,168,200,5.69,-,Good swap robustness
+GPT-2,KGW,KGW baseline,0.5,2.0,4.0,typo_10,87.5,175,200,6.37,-,Good typo robustness
+GPT-2,KGW,KGW baseline,0.5,2.0,4.0,copypaste_50,16.0,32,200,2.59,-,WEAK: Poor copypaste robustness
+GPT-2,SEMSTAMP,SEMSTAMP (LSH d=3),N/A,N/A,4.0,clean,8.5,17,200,0.11,18.38,BROKEN: Near-random detection
+GPT-2,SEMSTAMP,SEMSTAMP (LSH d=3),N/A,N/A,4.0,synonym_30,7.5,15,200,-0.00,18.38,BROKEN: Zero z-score
+GPT-2,SEMSTAMP,SEMSTAMP (LSH d=3),N/A,N/A,4.0,swap_20,7.0,14,200,0.08,18.38,BROKEN: Near-zero z-score
+GPT-2,SEMSTAMP,SEMSTAMP (LSH d=3),N/A,N/A,4.0,typo_10,7.5,15,200,0.04,18.38,BROKEN: Near-zero z-score
+GPT-2,SEMSTAMP,SEMSTAMP (LSH d=3),N/A,N/A,4.0,copypaste_50,8.0,16,200,0.05,18.38,BROKEN: Near-zero z-score
+Qwen-7B,No Watermark,Control,-,-,-,clean,-,-,-,-,-,Job timed out - needs resubmit
+Qwen-7B,GPW,GPW (non-salted),-,-,4.0,clean,-,-,-,-,-,Job timed out - needs resubmit
+Qwen-7B,GPW-SP,GPW-SP (salted),-,-,4.0,clean,-,-,-,-,-,Job timed out - needs resubmit
+Qwen-7B,GPW-SP-SR,GPW-SP+SR (salted+SR coupling),-,-,4.0,clean,-,-,-,-,-,Job timed out - needs resubmit
+Qwen-7B,Unigram,Unigram baseline,-,-,4.0,clean,-,-,-,-,-,Job timed out - needs resubmit
+Qwen-7B,KGW,KGW baseline,-,-,4.0,clean,-,-,-,-,-,Job timed out - needs resubmit
+Pythia-400M,Unigram,Unigram baseline,-,-,-,AUC,100.0,-,-,-,21.46,Pythia model family; AUC=1.0; TPR@1%=1.0; Avg_Attacked_TPR=0.88
+Pythia-400M,KGW,KGW baseline,-,-,-,AUC,98.25,-,-,-,30.57,Pythia model family; AUC=0.9825; TPR@1%=0.9; Avg_Attacked_TPR=0.98
+Pythia-400M,SEMSTAMP,SEMSTAMP,-,-,-,AUC,72.63,-,-,-,22.57,Pythia model family; AUC=0.7263; TPR@1%=0.05; Avg_Attacked_TPR=0.04
+Pythia-400M,GPW,GPW,-,-,-,AUC,99.75,-,-,-,18.90,Pythia model family; AUC=0.9975; TPR@1%=1.0; Avg_Attacked_TPR=0.89
+Pythia-400M,GPW-SP,GPW-SP,-,-,-,AUC,98.75,-,-,-,27.66,Pythia model family; AUC=0.9875; TPR@1%=0.9; Avg_Attacked_TPR=0.8
+Pythia-400M,GPW-SP-SR,GPW-SP+SR,-,-,-,AUC,98.5,-,-,-,25.36,Pythia model family; AUC=0.985; TPR@1%=0.9; Avg_Attacked_TPR=0.4
+Pythia-1.4B,Unigram,Unigram baseline,-,-,-,AUC,99.5,-,-,-,24.83,Pythia model family; AUC=0.995; TPR@1%=0.9; Avg_Attacked_TPR=0.9
+Pythia-1.4B,KGW,KGW baseline,-,-,-,AUC,100.0,-,-,-,33.86,Pythia model family; AUC=1.0; TPR@1%=1.0; Avg_Attacked_TPR=0.98
+Pythia-1.4B,SEMSTAMP,SEMSTAMP,-,-,-,AUC,68.0,-,-,-,28.46,Pythia model family; AUC=0.68; TPR@1%=0.05; Avg_Attacked_TPR=0.03
+Pythia-1.4B,GPW,GPW,-,-,-,AUC,99.25,-,-,-,20.59,Pythia model family; AUC=0.9925; TPR@1%=0.9; Avg_Attacked_TPR=0.92
+Pythia-1.4B,GPW-SP,GPW-SP,-,-,-,AUC,99.5,-,-,-,23.89,Pythia model family; AUC=0.995; TPR@1%=0.95; Avg_Attacked_TPR=0.7
+Pythia-1.4B,GPW-SP-SR,GPW-SP+SR,-,-,-,AUC,100.0,-,-,-,22.48,Pythia model family; AUC=1.0; TPR@1%=1.0; Avg_Attacked_TPR=0.28
+Pythia-2.8B,Unigram,Unigram baseline,-,-,-,AUC,98.63,-,-,-,31.91,Pythia model family; AUC=0.9863; TPR@1%=0.95; Avg_Attacked_TPR=0.96
+Pythia-2.8B,KGW,KGW baseline,-,-,-,AUC,100.0,-,-,-,32.14,Pythia model family; AUC=1.0; TPR@1%=1.0; Avg_Attacked_TPR=0.9
+Pythia-2.8B,SEMSTAMP,SEMSTAMP,-,-,-,AUC,73.5,-,-,-,27.13,Pythia model family; AUC=0.735; TPR@1%=0.25; Avg_Attacked_TPR=0.06
+Pythia-2.8B,GPW,GPW,-,-,-,AUC,93.25,-,-,-,23.72,Pythia model family; AUC=0.9325; TPR@1%=0.75; Avg_Attacked_TPR=0.92
+Pythia-2.8B,GPW-SP,GPW-SP,-,-,-,AUC,99.5,-,-,-,26.89,Pythia model family; AUC=0.995; TPR@1%=0.95; Avg_Attacked_TPR=0.77
+Pythia-2.8B,GPW-SP-SR,GPW-SP+SR,-,-,-,AUC,98.75,-,-,-,26.47,Pythia model family; AUC=0.9875; TPR@1%=0.95; Avg_Attacked_TPR=0.35
+Pythia-6.9B,Unigram,Unigram baseline,-,-,-,AUC,98.75,-,-,6.46,32.28,Pythia model family; AUC=0.9875; TPR@1%=0.9
+Pythia-6.9B,KGW,KGW baseline,-,-,-,AUC,100.0,-,-,5.77,34.62,Pythia model family; AUC=1.0; TPR@1%=1.0
+Pythia-6.9B,GPW,GPW,-,-,-,AUC,98.5,-,-,3.85,25.37,Pythia model family; AUC=0.985; TPR@1%=0.9
+Pythia-6.9B,GPW-SP,GPW-SP,-,-,-,AUC,100.0,-,-,5.02,25.00,Pythia model family; AUC=1.0; TPR@1%=1.0
+Pythia-6.9B,GPW-SP-SR,GPW-SP+SR,-,-,-,AUC,94.5,-,-,3.97,25.30,Pythia model family; AUC=0.945; TPR@1%=0.9
+Pythia-12B,Unigram,Unigram baseline,-,-,-,AUC,93.88,-,-,6.64,25.34,Pythia model family; AUC=0.9388; TPR@1%=0.9
+Pythia-12B,KGW,KGW baseline,-,-,-,AUC,99.75,-,-,5.09,36.03,Pythia model family; AUC=0.9975; TPR@1%=0.95
+Pythia-12B,GPW,GPW,-,-,-,AUC,100.0,-,-,5.11,22.45,Pythia model family; AUC=1.0; TPR@1%=1.0
+Pythia-12B,GPW-SP,GPW-SP,-,-,-,AUC,99.25,-,-,4.72,23.27,Pythia model family; AUC=0.9925; TPR@1%=0.9
+Pythia-12B,GPW-SP-SR,GPW-SP+SR,-,-,-,AUC,100.0,-,-,4.75,24.41,Pythia model family; AUC=1.0; TPR@1%=1.0
+GPT-2,GPW-Ablation,omega=1.0 (ablation),3.0,1.0,4.0,clean,96.0,48,50,14.64,-,ABLATION: Omega study - low omega still works well
+GPT-2,GPW-Ablation,omega=1.0 (ablation),3.0,1.0,4.0,synonym_30,98.0,49,50,14.19,-,ABLATION: Omega study - good attack robustness
+GPT-2,GPW-Ablation,omega=1.0 (ablation),3.0,1.0,4.0,swap_20,96.0,48,50,14.27,-,ABLATION: Omega study
+GPT-2,GPW-Ablation,omega=1.0 (ablation),3.0,1.0,4.0,typo_10,96.0,48,50,14.36,-,ABLATION: Omega study
+GPT-2,GPW-Ablation,omega=5.0 (ablation),3.0,5.0,4.0,clean,98.0,49,50,12.55,-,ABLATION: Omega study
+GPT-2,GPW-Ablation,omega=5.0 (ablation),3.0,5.0,4.0,synonym_30,98.0,49,50,9.59,-,ABLATION: Omega study
+GPT-2,GPW-Ablation,omega=5.0 (ablation),3.0,5.0,4.0,swap_20,98.0,49,50,12.59,-,ABLATION: Omega study
+GPT-2,GPW-Ablation,omega=5.0 (ablation),3.0,5.0,4.0,typo_10,98.0,49,50,11.63,-,ABLATION: Omega study
+GPT-2,GPW-Ablation,omega=10.0 (ablation),3.0,10.0,4.0,clean,100.0,50,50,13.93,-,ABLATION: BEST omega - 100% detection all attacks
+GPT-2,GPW-Ablation,omega=10.0 (ablation),3.0,10.0,4.0,synonym_30,100.0,50,50,11.90,-,ABLATION: BEST omega - 100% detection all attacks
+GPT-2,GPW-Ablation,omega=10.0 (ablation),3.0,10.0,4.0,swap_20,100.0,50,50,13.75,-,ABLATION: BEST omega - 100% detection all attacks
+GPT-2,GPW-Ablation,omega=10.0 (ablation),3.0,10.0,4.0,typo_10,100.0,50,50,12.59,-,ABLATION: BEST omega - 100% detection all attacks
+GPT-2,GPW-Ablation,omega=25.0 (ablation),3.0,25.0,4.0,clean,100.0,50,50,12.88,-,ABLATION: Omega study - 100% detection
+GPT-2,GPW-Ablation,omega=25.0 (ablation),3.0,25.0,4.0,synonym_30,100.0,50,50,11.21,-,ABLATION: Omega study - 100% detection
+GPT-2,GPW-Ablation,omega=25.0 (ablation),3.0,25.0,4.0,swap_20,100.0,50,50,12.88,-,ABLATION: Omega study - 100% detection
+GPT-2,GPW-Ablation,omega=25.0 (ablation),3.0,25.0,4.0,typo_10,100.0,50,50,12.03,-,ABLATION: Omega study - 100% detection
+GPT-2,GPW-Ablation,omega=50.0 (ablation),3.0,50.0,4.0,clean,100.0,50,50,12.54,-,ABLATION: Omega study - 100% detection (default)
+GPT-2,GPW-Ablation,omega=50.0 (ablation),3.0,50.0,4.0,synonym_30,100.0,50,50,10.82,-,ABLATION: Omega study - 100% detection (default)
+GPT-2,GPW-Ablation,omega=50.0 (ablation),3.0,50.0,4.0,swap_20,100.0,50,50,12.56,-,ABLATION: Omega study - 100% detection (default)
+GPT-2,GPW-Ablation,omega=50.0 (ablation),3.0,50.0,4.0,typo_10,100.0,50,50,11.62,-,ABLATION: Omega study - 100% detection (default)
+GPT-2,GPW-Ablation,omega=100.0 (ablation),3.0,100.0,4.0,clean,98.0,49,50,13.71,-,ABLATION: Too high omega starts to hurt
+GPT-2,GPW-Ablation,omega=100.0 (ablation),3.0,100.0,4.0,synonym_30,98.0,49,50,11.98,-,ABLATION: Too high omega starts to hurt
+GPT-2,GPW-Ablation,omega=100.0 (ablation),3.0,100.0,4.0,swap_20,98.0,49,50,13.69,-,ABLATION: Too high omega starts to hurt
+GPT-2,GPW-Ablation,omega=100.0 (ablation),3.0,100.0,4.0,typo_10,98.0,49,50,12.93,-,ABLATION: Too high omega starts to hurt
+GPT-2,GPW-Ablation,alpha=1.0 (ablation),1.0,50.0,4.0,clean,60.0,30,50,4.67,-,ABLATION: WEAK alpha - insufficient bias strength
+GPT-2,GPW-Ablation,alpha=1.0 (ablation),1.0,50.0,4.0,synonym_30,48.0,24,50,3.98,-,ABLATION: WEAK alpha - only 48% detection under attack
+GPT-2,GPW-Ablation,alpha=1.0 (ablation),1.0,50.0,4.0,swap_20,62.0,31,50,4.88,-,ABLATION: WEAK alpha - poor attack robustness
+GPT-2,GPW-Ablation,alpha=1.0 (ablation),1.0,50.0,4.0,typo_10,58.0,29,50,4.46,-,ABLATION: WEAK alpha - poor attack robustness
+GPT-2,GPW-Ablation,alpha=2.0 (ablation),2.0,50.0,4.0,clean,100.0,50,50,9.87,-,ABLATION: Good alpha - 100% detection
+GPT-2,GPW-Ablation,alpha=2.0 (ablation),2.0,50.0,4.0,synonym_30,100.0,50,50,8.41,-,ABLATION: Good alpha - 100% detection under attack
+GPT-2,GPW-Ablation,alpha=2.0 (ablation),2.0,50.0,4.0,swap_20,100.0,50,50,9.92,-,ABLATION: Good alpha - 100% detection under attack
+GPT-2,GPW-Ablation,alpha=2.0 (ablation),2.0,50.0,4.0,typo_10,100.0,50,50,9.07,-,ABLATION: Good alpha - 100% detection under attack
+GPT-2,GPW-Ablation,alpha=3.0 (ablation),3.0,50.0,4.0,clean,100.0,50,50,12.54,-,ABLATION: Default alpha - excellent detection
+GPT-2,GPW-Ablation,alpha=3.0 (ablation),3.0,50.0,4.0,synonym_30,100.0,50,50,10.92,-,ABLATION: Default alpha - excellent attack robustness
+GPT-2,GPW-Ablation,alpha=3.0 (ablation),3.0,50.0,4.0,swap_20,100.0,50,50,12.56,-,ABLATION: Default alpha - excellent attack robustness
+GPT-2,GPW-Ablation,alpha=3.0 (ablation),3.0,50.0,4.0,typo_10,100.0,50,50,11.60,-,ABLATION: Default alpha - excellent attack robustness
+GPT-2,GPW-Ablation,alpha=5.0 (ablation),5.0,50.0,4.0,clean,100.0,50,50,14.26,-,ABLATION: High alpha - excellent Z-score
+GPT-2,GPW-Ablation,alpha=5.0 (ablation),5.0,50.0,4.0,synonym_30,98.0,49,50,12.10,-,ABLATION: High alpha - slight drop on attacks
+GPT-2,GPW-Ablation,alpha=5.0 (ablation),5.0,50.0,4.0,swap_20,98.0,49,50,13.86,-,ABLATION: High alpha - slight drop on attacks
+GPT-2,GPW-Ablation,alpha=5.0 (ablation),5.0,50.0,4.0,typo_10,98.0,49,50,12.92,-,ABLATION: High alpha - slight drop on attacks
+GPT-2,GPW-Ablation,alpha=10.0 (ablation),10.0,50.0,4.0,clean,100.0,50,50,15.75,-,ABLATION: Very high alpha - highest Z-score
+GPT-2,GPW-Ablation,alpha=10.0 (ablation),10.0,50.0,4.0,synonym_30,100.0,50,50,14.05,-,ABLATION: Very high alpha - 100% robust
+GPT-2,GPW-Ablation,alpha=10.0 (ablation),10.0,50.0,4.0,swap_20,100.0,50,50,15.75,-,ABLATION: Very high alpha - 100% robust
+GPT-2,GPW-Ablation,alpha=10.0 (ablation),10.0,50.0,4.0,typo_10,100.0,50,50,14.67,-,ABLATION: Very high alpha - 100% robust
+GPT-2,GPW-Ablation,GPW mode (ablation),3.0,50.0,4.0,clean,100.0,50,50,12.54,-,ABLATION: Mode study - GPW baseline
+GPT-2,GPW-Ablation,GPW mode (ablation),3.0,50.0,4.0,synonym_30,100.0,50,50,10.93,-,ABLATION: Mode study - GPW baseline
+GPT-2,GPW-Ablation,GPW mode (ablation),3.0,50.0,4.0,swap_20,100.0,50,50,12.56,-,ABLATION: Mode study - GPW baseline
+GPT-2,GPW-Ablation,GPW mode (ablation),3.0,50.0,4.0,typo_10,100.0,50,50,11.46,-,ABLATION: Mode study - GPW baseline
+GPT-2,GPW-Ablation,GPW-SP mode (ablation),3.0,50.0,4.0,clean,94.0,47,50,11.29,-,ABLATION: Mode study - salted worse than GPW
+GPT-2,GPW-Ablation,GPW-SP mode (ablation),3.0,50.0,4.0,synonym_30,92.0,46,50,6.34,-,ABLATION: Mode study - salted hurts robustness
+GPT-2,GPW-Ablation,GPW-SP mode (ablation),3.0,50.0,4.0,swap_20,94.0,47,50,6.26,-,ABLATION: Mode study - salted hurts robustness
+GPT-2,GPW-Ablation,GPW-SP mode (ablation),3.0,50.0,4.0,typo_10,94.0,47,50,7.99,-,ABLATION: Mode study - salted hurts robustness
+GPT-2,GPW-Ablation,GPW-SP+SR mode (ablation),3.0,50.0,4.0,clean,100.0,50,50,11.42,-,ABLATION: Mode study - SR helps clean detection
+GPT-2,GPW-Ablation,GPW-SP+SR mode (ablation),3.0,50.0,4.0,synonym_30,28.0,14,50,3.04,-,ABLATION: Mode study - SR BREAKS under attacks
+GPT-2,GPW-Ablation,GPW-SP+SR mode (ablation),3.0,50.0,4.0,swap_20,40.0,20,50,3.88,-,ABLATION: Mode study - SR BREAKS under attacks
+GPT-2,GPW-Ablation,GPW-SP+SR mode (ablation),3.0,50.0,4.0,typo_10,54.0,27,50,4.42,-,ABLATION: Mode study - SR BREAKS under attacks
+GPT-2,GPW-Ablation,GPW_low (alpha=2 omega=2),2.0,2.0,4.0,clean,98.0,49,50,11.99,-,ABLATION: Low params - good detection
+GPT-2,GPW-Ablation,GPW_low (alpha=2 omega=2),2.0,2.0,4.0,synonym_30,98.0,49,50,10.45,-,ABLATION: Low params - excellent robustness
+GPT-2,GPW-Ablation,GPW_low (alpha=2 omega=2),2.0,2.0,4.0,swap_20,98.0,49,50,11.77,-,ABLATION: Low params - excellent robustness
+GPT-2,GPW-Ablation,GPW_low (alpha=2 omega=2),2.0,2.0,4.0,typo_10,98.0,49,50,11.27,-,ABLATION: Low params - excellent robustness
+GPT-2,GPW-Ablation,GPW-SP_low (alpha=2 omega=2),2.0,2.0,4.0,clean,96.0,48,50,8.49,-,ABLATION: Low salted - good detection
+GPT-2,GPW-Ablation,GPW-SP_low (alpha=2 omega=2),2.0,2.0,4.0,synonym_30,70.0,35,50,4.49,-,ABLATION: Low salted - moderate robustness
+GPT-2,GPW-Ablation,GPW-SP_low (alpha=2 omega=2),2.0,2.0,4.0,swap_20,70.0,35,50,4.60,-,ABLATION: Low salted - moderate robustness
+GPT-2,GPW-Ablation,GPW-SP_low (alpha=2 omega=2),2.0,2.0,4.0,typo_10,84.0,42,50,5.59,-,ABLATION: Low salted - better typo robustness
+OPT-1.3B,GPW,GPW (non-salted),3.0,50.0,4.0,paraphrase,85.0,17,20,5.27,-,Paraphrase attack via Pegasus - strong robustness
+OPT-1.3B,GPW-SP,GPW-SP (salted),3.0,50.0,4.0,paraphrase,70.0,14,20,4.35,-,Paraphrase attack - salted variant weaker
+OPT-1.3B,GPW-SP-LOW,GPW-SP (salted low-omega),3.0,2.0,4.0,paraphrase,15.0,3,20,2.61,-,Paraphrase attack - low omega very weak
+OPT-1.3B,GPW-SP-SR,GPW-SP+SR (salted+SR coupling),3.0,50.0,4.0,paraphrase,40.0,8,20,3.82,-,Paraphrase attack - SR coupling weak
+OPT-1.3B,Unigram,Unigram baseline,0.5,2.0,4.0,paraphrase,95.0,19,20,6.04,-,Paraphrase attack - Unigram very robust
+OPT-1.3B,KGW,KGW baseline,0.5,2.0,4.0,paraphrase,15.0,3,20,2.04,-,Paraphrase attack - KGW very weak
+GPT-2,GPW,GPW (non-salted),3.0,50.0,4.0,paraphrase,95.0,19,20,6.32,-,Paraphrase attack via Pegasus - excellent robustness
+GPT-2,GPW-SP,GPW-SP (salted),3.0,50.0,4.0,paraphrase,95.0,19,20,5.63,-,Paraphrase attack - salted variant strong on GPT-2
+GPT-2,GPW-SP-LOW,GPW-SP (salted low-omega),3.0,2.0,4.0,paraphrase,30.0,6,20,2.78,-,Paraphrase attack - low omega weak
+GPT-2,GPW-SP-SR,GPW-SP+SR (salted+SR coupling),3.0,50.0,4.0,paraphrase,70.0,14,20,5.06,-,Paraphrase attack - SR better on GPT-2
+GPT-2,Unigram,Unigram baseline,0.5,2.0,4.0,paraphrase,100.0,20,20,9.11,-,Paraphrase attack - Unigram perfect robustness
+GPT-2,KGW,KGW baseline,0.5,2.0,4.0,paraphrase,20.0,4,20,3.10,-,Paraphrase attack - KGW weak
+OPT-1.3B,No Watermark,Control,-,-,-,paraphrase,0.0,0,20,0.51,-,Baseline - 0% false positive rate
+OPT-1.3B,SEMSTAMP,SEMSTAMP (LSH d=3),N/A,N/A,4.0,paraphrase,0.0,0,20,0.15,69.18,BROKEN: Near-zero detection on paraphrase
+GPT-2,No Watermark,Control,-,-,-,paraphrase,0.0,0,20,~0.5,-,Baseline - expected 0% false positive rate
+GPT-2,SEMSTAMP,SEMSTAMP (LSH d=3),N/A,N/A,4.0,paraphrase,5.0,1,20,0.05,18.38,BROKEN: Near-zero z-score on paraphrase

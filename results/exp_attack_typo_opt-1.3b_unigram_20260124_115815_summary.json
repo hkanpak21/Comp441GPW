@@ -1,0 +1,14 @@
+{
+  "experiment": "typo_attack",
+  "model": "opt-1.3b",
+  "watermark": "unigram",
+  "typo_rate": 0.05,
+  "num_samples": 2,
+  "total_time": 3.9949679374694824,
+  "original_mean_z_score": 5.203364296299078,
+  "original_detection_rate": 1.0,
+  "attacked_mean_z_score": 4.109547681355481,
+  "attacked_detection_rate": 0.5,
+  "z_score_drop": 1.0938166149435968,
+  "detection_rate_drop": 0.5
+}

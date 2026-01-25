@@ -1,0 +1,77 @@
+======================================================================
+KGW WATERMARK EXPERIMENTS
+======================================================================
+Model: opt-1.3b | Samples: 200
+Attacks: ['clean', 'synonym', 'swap', 'typo', 'copypaste']
+======================================================================
+
+[1/4] Loading dataset...
+Loading C4 RealNewsLike dataset...
+This may take a few minutes for the first download...
+Attempting to load C4 realnewslike dataset...
+/home/hkanpak21/.cache/huggingface/modules/datasets_modules/datasets/c4/584d57ebe81c209b6c7f31727066d2c4b4bba37cb7092cdd83083d5ec11207db/c4.py:53: FutureWarning: Dataset 'c4' is deprecated and will be deleted. Use 'allenai/c4' instead.
+  warnings.warn(
+Dataset loaded successfully!
+Collecting 200 samples...
+
+✓ Loaded 200 C4 samples
+  Example prompt: Google has announced that it will be shutting down its smart-messaging service Allo which it launche...
+✓ Loaded 200 samples
+
+[2/4] Loading model...
+Loading model: facebook/opt-1.3b...
+✓ Model loaded: 1315.8M parameters
+✓ Model loaded
+
+[3/4] Loading KGW watermarker...
+✓ KGW loaded: gamma=0.5, delta=2.0
+
+[4/4] Running experiments...
+  Generating watermarked texts...
+    Gen: 0/200
+    Gen: 20/200
+    Gen: 40/200
+    Gen: 60/200
+    Gen: 80/200
+    Gen: 100/200
+    Gen: 120/200
+    Gen: 140/200
+    Gen: 160/200
+    Gen: 180/200
+
+  Attack: clean
+    Progress: 0/200
+    Progress: 50/200
+    Progress: 100/200
+    Progress: 150/200
+
+  Attack: synonym
+    Progress: 0/200
+    Progress: 50/200
+    Progress: 100/200
+    Progress: 150/200
+
+  Attack: swap
+    Progress: 0/200
+    Progress: 50/200
+    Progress: 100/200
+    Progress: 150/200
+
+  Attack: typo
+    Progress: 0/200
+    Progress: 50/200
+    Progress: 100/200
+    Progress: 150/200
+
+  Attack: copypaste
+    Progress: 0/200
+    Progress: 50/200
+    Progress: 100/200
+    Progress: 150/200
+
+======================================================================
+KGW EXPERIMENTS COMPLETE
+======================================================================
+Total: 995 | Z-score: 4.231 | Det: 82.3%
+Results: ../results/results_kgw_opt-1.3b_20260124_125440.csv
+======================================================================

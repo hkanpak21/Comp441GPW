@@ -1,0 +1,16 @@
+config,config_name,alpha,omega,attack,detection_rate,mean_z_score,num_samples
+gpw_sp_orig,"Original (α=2, ω=2)",2.0,2.0,clean,0.84,6.643616591153103,50
+gpw_sp_orig,"Original (α=2, ω=2)",2.0,2.0,synonym,0.46,3.65749679156759,50
+gpw_sp_orig,"Original (α=2, ω=2)",2.0,2.0,swap,0.3,3.4411990064195335,50
+gpw_sp_orig,"Original (α=2, ω=2)",2.0,2.0,typo,0.6,4.513754559015206,50
+gpw_sp_orig,"Original (α=2, ω=2)",2.0,2.0,copypaste,0.02,1.8339392470081441,50
+gpw_sp_tuned,"Tuned (α=3, ω=1)",3.0,1.0,clean,0.92,6.804448277171208,50
+gpw_sp_tuned,"Tuned (α=3, ω=1)",3.0,1.0,synonym,0.36,3.485865328288898,50
+gpw_sp_tuned,"Tuned (α=3, ω=1)",3.0,1.0,swap,0.42,3.6108857944063835,50
+gpw_sp_tuned,"Tuned (α=3, ω=1)",3.0,1.0,typo,0.64,4.662843888749626,50
+gpw_sp_tuned,"Tuned (α=3, ω=1)",3.0,1.0,copypaste,0.04,1.7890767935077514,50
+gpw_sp_robust,"Robust (α=4, ω=0.5)",4.0,0.5,clean,0.3,3.404899267549675,50
+gpw_sp_robust,"Robust (α=4, ω=0.5)",4.0,0.5,synonym,0.02,1.9278725284736082,50
+gpw_sp_robust,"Robust (α=4, ω=0.5)",4.0,0.5,swap,0.06,2.0589778394669476,50
+gpw_sp_robust,"Robust (α=4, ω=0.5)",4.0,0.5,typo,0.1,2.483868600490541,50
+gpw_sp_robust,"Robust (α=4, ω=0.5)",4.0,0.5,copypaste,0.0,0.7114689858325332,50

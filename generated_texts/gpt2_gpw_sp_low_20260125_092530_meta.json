@@ -1,0 +1,14 @@
+{
+  "model": "gpt2",
+  "watermarker": "gpw_sp_low",
+  "config": {
+    "type": "gpw",
+    "variant": "GPW-SP",
+    "alpha": "3.0",
+    "omega": "2.0",
+    "z_threshold": "4.0"
+  },
+  "n_samples": 200,
+  "timestamp": "20260125_092530",
+  "pickle_file": "/scratch/hkanpak21/Comp441GPW/generated_texts/gpt2_gpw_sp_low_20260125_092530.pkl"
+}

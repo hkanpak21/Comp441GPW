@@ -1,0 +1,11 @@
+{
+  "model": "gpt2",
+  "watermarker": "gpw_sp_low",
+  "detector": "gpw_sp_low",
+  "attack": "clean",
+  "n_samples": 200,
+  "detection_rate": 97.5,
+  "mean_z_score": 11.535621137488265,
+  "is_baseline": false,
+  "timestamp": "20260125_100618"
+}

@@ -162,22 +162,36 @@ class PegasusAttack(BaseAttack):
     
     def _paraphrase_sentence(self, sentence: str) -> str:
         """Paraphrase a single sentence."""
-        inputs = self.tokenizer(
-            sentence,
-            return_tensors="pt",
-            max_length=256,
-            truncation=True
-        ).to(self.device)
-        
-        outputs = self.model.generate(
-            **inputs,
-            max_length=256,
-            num_beams=self.num_beams,
-            temperature=self.temperature,
-            do_sample=True,
-        )
-        
-        return self.tokenizer.decode(outputs[0], skip_special_tokens=True)
+        # Truncate very long sentences
+        if len(sentence) > 500:
+            sentence = sentence[:500]
+
+        # Clean the sentence - remove problematic characters
+        sentence = sentence.encode('ascii', 'ignore').decode('ascii')
+
+        if not sentence.strip():
+            return sentence
+
+        try:
+            inputs = self.tokenizer(
+                sentence,
+                return_tensors="pt",
+                max_length=128,  # Shorter max length
+                truncation=True
+            ).to(self.device)
+
+            outputs = self.model.generate(
+                **inputs,
+                max_length=128,
+                num_beams=self.num_beams,
+                temperature=self.temperature,
+                do_sample=False,  # Deterministic for stability
+            )
+
+            return self.tokenizer.decode(outputs[0], skip_special_tokens=True)
+        except Exception as e:
+            # Return original if paraphrase fails
+            return sentence
     
     def attack(self, text: str, **kwargs) -> AttackResult:
         """Apply PEGASUS paraphrase attack.

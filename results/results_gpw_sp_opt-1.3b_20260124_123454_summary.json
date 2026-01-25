@@ -1,0 +1,10 @@
+{
+  "watermark": "GPW-SP",
+  "model": "opt-1.3b",
+  "params": "alpha=2.0, omega=2.0, variant=GPW-SP",
+  "num_samples": 2,
+  "total_experiments": 12,
+  "mean_z_score": 3.228,
+  "detection_rate": 0.5833,
+  "mean_perplexity": 11.99
+}

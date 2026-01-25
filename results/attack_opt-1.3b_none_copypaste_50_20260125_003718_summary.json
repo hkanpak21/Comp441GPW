@@ -1,0 +1,11 @@
+{
+  "model": "opt-1.3b",
+  "watermarker": "none",
+  "detector": "kgw",
+  "attack": "copypaste_50",
+  "n_samples": 200,
+  "detection_rate": 0.0,
+  "mean_z_score": -0.02828032202742039,
+  "is_baseline": true,
+  "timestamp": "20260125_003718"
+}

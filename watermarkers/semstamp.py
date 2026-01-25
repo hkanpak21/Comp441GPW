@@ -76,7 +76,7 @@ class SEMSTAMPWatermark(SentenceLevelWatermarker):
         margin: float = 0.0,  # Disabled margin check for maximum speed
         z_threshold: float = 4.0,
         hash_key: int = 15485863,
-        max_rejections: int = 3,  # Very aggressive: only 3 attempts per sentence
+        max_rejections: int = 10,  # Increased for better watermark embedding
         detection_mode: str = "lsh",
         device: str = "cuda",
         gamma: float = 0.25,  # For LSH with d=3, gamma = 1/2^3 = 0.125, but we use 0.25
@@ -223,10 +223,12 @@ class SEMSTAMPWatermark(SentenceLevelWatermarker):
             # Get required signature for next sentence
             required_sig = self._get_valid_signature(prev_signature)
             
-            # Ultra-fast mode: try only 1-2 times, accept first reasonable match
+            # Try to find a sentence with matching signature
             valid_sentence = None
+            best_sentence = None
+            best_match_score = -1
             
-            # Try only max_rejections times (default: 3, but we'll accept early)
+            # Try max_rejections times to find exact or good match
             for attempt in range(self.max_rejections):
                 # Generate a candidate sentence
                 candidate = self._generate_sentence(
@@ -238,33 +240,32 @@ class SEMSTAMPWatermark(SentenceLevelWatermarker):
                 if not candidate.strip():
                     continue
                 
-                # Get embedding and signature (skip margin check for speed)
+                # Get embedding and signature
                 emb = self._get_sentence_embedding(candidate)
                 sig, _ = self._get_lsh_signature(
                     emb.cpu().numpy(), 
-                    check_margin=False  # Skip margin check for speed
+                    check_margin=False
                 )
                 
-                # Accept if exact match
-                if sig == required_sig:
-                    valid_sentence = candidate
-                    prev_signature = sig
-                    break
-                
-                # Accept if close match (at least 2 out of 3 bits match for lsh_dim=3)
+                # Count matching bits
                 match_score = sum(1 for a, b in zip(sig, required_sig) if a == b)
-                if match_score >= max(1, self.lsh_dim - 1):  # Accept if only 1 bit off
+                
+                # Track best candidate
+                if match_score > best_match_score:
+                    best_match_score = match_score
+                    best_sentence = candidate
+                    best_sig = sig
+                
+                # Accept if exact match (all bits match)
+                if match_score == self.lsh_dim:
                     valid_sentence = candidate
                     prev_signature = sig
                     break
-                
-                # Keep first candidate as fallback
-                if valid_sentence is None:
-                    valid_sentence = candidate
-                    prev_signature = sig
             
-            # Use the sentence we found (or first candidate)
-            if valid_sentence is None:
+            # Use best sentence found (exact match or closest)
+            if valid_sentence is None and best_sentence is not None:
+                valid_sentence = best_sentence
+                prev_signature = best_sig
                 # Last resort: generate without checking
                 valid_sentence = self._generate_sentence(
                     current_prompt,
@@ -355,8 +356,11 @@ class SEMSTAMPWatermark(SentenceLevelWatermarker):
                 num_tokens_scored=len(sentences),
             )
         
-        # Count valid sentence transitions
-        num_valid = 0
+        # Count valid sentence transitions using bit-level scoring
+        # This gives more granular signal than exact match only
+        total_matching_bits = 0
+        total_bits = 0
+        num_exact_matches = 0
         num_checked = 0
         
         # Start with target signature or first sentence
@@ -368,19 +372,25 @@ class SEMSTAMPWatermark(SentenceLevelWatermarker):
             
             if i > 0:  # Check transition from previous
                 expected_sig = self._get_valid_signature(prev_signature)
-                if sig == expected_sig:
-                    num_valid += 1
+                
+                # Count matching bits
+                matching = sum(1 for a, b in zip(sig, expected_sig) if a == b)
+                total_matching_bits += matching
+                total_bits += self.lsh_dim
+                
+                if matching == self.lsh_dim:
+                    num_exact_matches += 1
                 num_checked += 1
             
             prev_signature = sig
         
-        # Compute z-score
-        # Under null hypothesis, each sentence has 1/2^d chance of matching
-        gamma = 1.0 / (2 ** self.lsh_dim)
-        if num_checked > 0:
-            expected = gamma * num_checked
-            std = np.sqrt(num_checked * gamma * (1 - gamma))
-            z_score = (num_valid - expected) / std if std > 0 else 0.0
+        # Compute z-score based on bit-level matching
+        # Under null hypothesis, each bit has 50% chance of matching
+        if total_bits > 0:
+            observed_fraction = total_matching_bits / total_bits
+            expected_fraction = 0.5  # Random would match 50% of bits
+            std = np.sqrt(0.5 * 0.5 / total_bits)  # Std of sample proportion
+            z_score = (observed_fraction - expected_fraction) / std if std > 0 else 0.0
         else:
             z_score = 0.0
         
@@ -391,15 +401,17 @@ class SEMSTAMPWatermark(SentenceLevelWatermarker):
             is_watermarked=is_watermarked,
             z_score=z_score,
             p_value=p_value,
-            green_fraction=num_valid / num_checked if num_checked > 0 else 0.0,
+            green_fraction=total_matching_bits / total_bits if total_bits > 0 else 0.0,
             num_tokens_scored=len(sentences),
             confidence=1 - p_value if is_watermarked else 0.0,
             metadata={
                 "num_sentences": len(sentences),
-                "num_valid_transitions": num_valid,
+                "num_exact_matches": num_exact_matches,
                 "num_checked": num_checked,
+                "total_matching_bits": total_matching_bits,
+                "total_bits": total_bits,
+                "bit_match_fraction": total_matching_bits / total_bits if total_bits > 0 else 0.0,
                 "lsh_dim": self.lsh_dim,
-                "expected_gamma": gamma,
             }
         )
     

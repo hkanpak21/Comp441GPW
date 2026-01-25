@@ -1,0 +1,28 @@
+sample_id,prompt,original_text,attacked_text,z_score_original,z_score_attacked,is_watermarked_original,is_watermarked_attacked,num_tokens,generation_time,attack_time,detection_time_original,detection_time_attacked
+0,Google has announced that it will be shutting down its smart-messaging service Allo which it launche," this product,” a spokeswoman for the company said in an email to the AP. She did not disclose any reasons behind the shutdown, but explained that the service is winding down.
+
+Allo, a version of Mess","A spokeswoman for the company said in an email to the AP that they had this product. She didn't give any reasons for the shut down, but said that the service is winding down. Allo, a version of Messen",4.74692883171144,2.913857587071792,True,False,120,2.252803087234497,10.645598888397217,0.0028116703033447266,0.0020837783813476562
+1,Two bedrooms home on a corner lot. Two car detached garage. Nice covered front porch. Seller will no,"
+
+Price
+
+Price:$249,000
+
+Subdivision: Litchfield
+
+County:
+Rocky Mountain
+
+Beds: 2
+
+Baths: 1 Full/1 Three-Qtr
+
+Sq ft:1,634 (approx)
+
+MLS#: 29647600
+
+Status: Active
+
+Description
+
+Two bedrooms home on a ","Two bedrooms home on a corner lot with a price of $249,000. Two cars are detached from the garage. It's a nice covered porch. The seller will not repair the property for either lender or buyer. Ridge.",5.294651389216606,0.8846517369293828,True,False,120,1.7861816883087158,0.8653011322021484,0.002029895782470703,0.0009870529174804688

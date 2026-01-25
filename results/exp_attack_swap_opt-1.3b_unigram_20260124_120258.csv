@@ -1,0 +1,630 @@
+sample_id,prompt,original_text,attacked_text,z_score_original,z_score_attacked,is_watermarked_original,is_watermarked_attacked,num_tokens,generation_time,detection_time_original,detection_time_attacked
+0,Google has announced that it will be shutting down its smart-messaging service Allo which it launche," this product,” a spokeswoman for the company said in an email to the AP. She did not disclose any reasons behind the shutdown, but explained that the service is winding down.
+
+Allo, a version of Mess","this product,” a for spokeswoman the company said in an email to the AP. did She not disclose any reasons behind the shutdown, but explained that the service is winding down. Allo, a version of create",5.294651389216606,4.642383454426297,True,True,120,3.2258598804473877,0.0014400482177734375,0.0005323886871337891
+1,Two bedrooms home on a corner lot. Two car detached garage. Nice covered front porch. Seller will no," The property needs paint, interior and exterior carpet and floor, some interior painting and light fixtures.
+
+School Information
+
+Description
+
+Two bedrooms home on a corner lot. Two car detached gara","The property needs paint, interior and exterior carpet and floor, some interior painting light and fixtures. School Description Information Two bedrooms home on a corner lot. Two car garage. detached ",3.468909530866052,2.47900273203854,False,False,120,2.864482879638672,0.0012621879577636719,0.0005030632019042969
+2,Hi. Does Asus ever plan to update the intel and nvidia display drivers on the UL30VT laptop? The onl," back. I have a ASUS XG270HK and am looking forward to installing the latest display drivers with a usb driver.   Thanks.
+Sadly I have not seen any updates on that front. I've tried asking the XG user",back. I have a ASUS XG270HK and am looking forward to the installing latest display drivers with a usb driver. Thanks. Sadly I have not seen any updates on that front. I've tried asking the XG users o,6.691899028305943,5.926541470816662,True,True,119,2.8840699195861816,0.0010328292846679688,0.00048470497131347656
+3,Do you remember the game from this fragment of box art? Leave your answer in the comments! For those," was a sequel to The Godfather Part I.
+
+Advertisement
+
+Back in 2005, The Godfather Part I beat The Godfather Part II into first place on the Best Seller list. The next year, The Godfather Part I was r","was a sequel Godfather to The Part I. Advertisement Back in 2005, The Godfather Part I beat The Godfather Part II into first place on the Best Seller list. The next year, The Godfather Part I was reis",8.580986734247602,8.241955141918908,True,True,120,2.8828721046447754,0.0012619495391845703,0.00048065185546875
+4,"4 NICE LOTS READY TO BUILD YOUR DREAM HOME or MULTI UNITS. INCLUDES LOTS 5, 6, 7, & 8. EACH LOT CAN "," PART OF AN INTERSECTION.
+
+LOT #1
+
+PRICE $5,000.00
+
+RIGHT TO RENEW. This section is already being worked on and will have 4 lots. Buyer will have the right to renew.
+
+LOT #2
+
+PRICE $1,000.00
+
+PRIVATE ","PART OF AN INTERSECTION. LOT #1 PRICE $5,000.00 RIGHT TO RENEW. section This is already being worked on and will have 4 lots. Buyer will have the to right LOT renew. #2 PRICE $1,000.00 PRIVATE TO BUY.",7.12039324756716,4.6,True,True,120,3.0198991298675537,0.000789642333984375,0.0004305839538574219
+5,"Bob ""Bus Bob"" Krause, 59, of Waikiki, an Oahu Transit System bus driver, died at home. He was born i"," Adele Krause.
+In lieu of flowers, donations may be made in Bob's name to Heartland Hospice.
+Funeral arrangements are in the care of Konecranes Kapahulu Chapel.","Adele Krause. In lieu of flowers, donations may be made in Bob's name to Heartland Hospice. arrangements Funeral are in the care of Konecranes Kapahulu Chapel.",2.7136021011998728,1.543033499620919,False,False,44,0.9892487525939941,0.0007052421569824219,0.0003209114074707031
+6,"At a “Street Speakout Against U.S. War & Racism,” organizations representing struggles against U.S. "," labor, student, and Palestinian groups, are holding a national conference in Washington, D.C. The event, organized by Grassroots Ecology and War Resistance in Defense of Palestinian Rights in an Occu","labor, student, and groups, Palestinian are holding a national conference in Washington, D.C. The event, organized by Grassroots Ecology and War Resistance in Defense of Rights Palestinian in an Occup",7.6681158050723255,7.363636363636363,True,True,120,3.015773057937622,0.0011963844299316406,0.00043892860412597656
+7,Super Bowl LIII will be played between the New England Patriots and Los Angeles Rams on Sunday. The ," the Super Bowl, defeating the Seattle Seahawks in a thriller on Sunday afternoon.
+
+For many fans, the Los Angeles native’s performance was considered phenomenal. One viewer tweeted a video of Tom Bra","the Super Bowl, defeating the Seattle Seahawks in a thriller on Sunday afternoon. For many fans, the Los Angeles native’s performance was considered phenomenal. One viewer tweeted a of video Tom Brady",5.8423739467217715,5.385164807134505,True,True,120,2.9248878955841064,0.0011417865753173828,0.000499725341796875
+8,"It's our longest ever edition of Football Weekly - but you know what they say, size ain't everything"," hotseat.
+
+Listen below - and for a full, unproduced script, please follow the instruction provided on your welcome packet.
+
+Show Notes:
+
+This podcast episode was filmed back in December. The above li","Listen hotseat. below - and for a full, unproduced script, please follow the instruction provided on your welcome packet. Show This Notes: podcast episode was filmed back in December. The above links ",9.128709291752768,8.158801243801019,True,True,120,2.959137201309204,0.0010256767272949219,0.00048732757568359375
+9,"Virtuoso’s Luxe Report surveyed 1,071 of its advisors and found travelers are increasingly looking t"," a private helicopter with a driver that will take guests around Dubai.
+
+The resort also offers a spa that features a hammam, sauna and steam room that are connected to a hot pool and steam room. It a","a private helicopter with a driver that will take guests around Dubai. The resort also offers a spa that features a hammam, sauna and steam room that are connected to a hot pool and steam It room. als",7.850689990907381,6.800566625070174,True,True,120,2.983214855194092,0.0011320114135742188,0.00045299530029296875
+10,"If you want to succeed, don’t look back. skills in drawing and painting, I took notice. game, is the"," and that’s also an example, for example, that I have that, the first.
+
+The first step, in the real-life process, is to know yourself.
+
+1. I have never seen the word “credibility” in any scientific or","and that’s also an example, for example, that I have that, the first. first The step, in the real-life is process, to know yourself. 1. I have seen never the word “credibility” in any scientific or ph",6.572670690061993,6.236413804652249,True,True,120,2.9411356449127197,0.0010523796081542969,0.0004291534423828125
+11,"CAPE CANAVERAL, Fla. (AP)  SpaceX has launched a used supply ship on a used rocket to the Internati"," a shuttle shuttle, and the first for a Russian-owned, Russian-built resupply ship. The first resupply flight took off from Cape Canaveral in April 2010.
+
+Lift-off took off 11:48 a.m. EST. Friday with","a shuttle shuttle, and the first for a Russian-owned, Russian-built resupply The first ship. resupply flight took off from Cape Canaveral in April 2010. Lift-off took off 11:48 a.m. EST. Friday with t",7.12039324756716,6.434283176858165,True,True,120,2.993746042251587,0.0008702278137207031,0.0005142688751220703
+12,"Well, it looks like the Golden State Warriors will just have to make due with four All-Stars on thei"," Kemba Walker isn&apos;t likely to return on Monday against the Philadelphia 76ers.
+
+Coach Terry Stotts announced on Friday that Walker won&apos;t play after he was injured in the fourth quarter of Fr",Kemba Walker isn&apos;t likely to on return Monday against the Philadelphia 76ers. Coach Terry Stotts announced on Friday that Walker won&apos;t play after he was injured in the fourth quarter of Frid,4.381780460041329,4.00977067543335,True,True,120,2.9571313858032227,0.0009331703186035156,0.0005035400390625
+13,"Google Music hasn’t been making a lot of noise lately and is, in some ways, in danger of being overs"," announced that they will start working on a streaming video service in the coming weeks.
+
+According to a post on the company’s official Android Blog, Google will begin rolling out a beta video servic","announced that they will start working on a streaming video service in the coming weeks. to According a post on the company’s official Android Blog, Google will begin rolling out a beta video service ",7.302967433402215,6.9963670960272575,True,True,120,2.9208285808563232,0.001047372817993164,0.0004813671112060547
+14,... as the iPhone chips away at RIM dominance | City A.M. STANDARD Chartered is replacing the BlackB," will pave the way for RIM to sell its smart phones through its own online stores.
+
+The deal allows RIM, which now sells a version of BlackBerry through Apple’s online store, and Apple to tap into a m","will pave the way for to RIM sell its smart phones through its own online stores. The deal allows RIM, which now sells a of version BlackBerry through Apple’s online store, and Apple to tap into a mas",3.556003556005334,2.888741522913896,False,False,62,1.3894965648651123,0.0006442070007324219,0.0003724098205566406
+15,EXCLUSIVE: 100 Questions creator Christopher Moynihan has inked a two-script deal with ABC Studios t," with Universal Television and Universal Television Alternative Studio.
+
+The first comedy project will be a half-hour anthology drama focusing on 10 different families in the midst of real-life crises","with Universal Television and Universal Television Alternative Studio. The first comedy project will be a half-hour anthology drama focusing on 10 different families in the midst of real-life crises, ",5.659799760886717,5.385164807134505,True,True,120,2.9803085327148438,0.0011234283447265625,0.0005123615264892578
+16,"The body of a woman has been found in a river at a boatyard in Woodbridge, Suffolk. Suffolk Police w"," alerted to the discovery.
+
+Police are now trying to locate an unidentified woman who was reported missing from Woodbridge on 30 August, and was last seen at around 9.15pm on 29 August, walking along ","alerted to the discovery. Police are now trying locate to an unidentified woman who was reported missing from Woodbridge on 30 August, and was seen last at around 9.15pm on 29 August, walking along Th",6.207522318391883,5.874780291913977,True,True,120,2.961862325668335,0.00087738037109375,0.0005154609680175781
+17,Who are even trying to kid?! Kanye West is - without a shadow of a doubt - THE reason Twitter's wher,", who actually do sell a camera, are getting into this whole rap beef, too.
+
+Sigma, in a bid to get on top of Kanye West's Twitter game, have released a new Photoshop competition. Apparently, if you c",", who actually do sell camera, a are getting into this whole rap beef, too. Sigma, in a bid to get on top of Kanye West's Twitter game, have a released new Photoshop competition. Apparently, if you ge",5.659799760886717,5.128776445321726,True,True,120,2.9164059162139893,0.0008120536804199219,0.000492095947265625
+18,Top performances from Tuesday's high school action. Avery Dyer (Lexington volleyball) – Dyer had 34 , 3-1 in the bi-district round. Taylor Clark (Lexington boys cross country) – Clark had the top individual performance of any boys runner in a 17.5 mile meet. The senior crossed the finish line in 10:4,3-1 in the bi-district round. Taylor Clark (Lexington boys cross – country) had Clark the top individual performance of any boys runner in a 17.5 mile meet. The senior the crossed finish line in 10:47,4.199206274206274,4.016632088371218,True,True,120,2.9925270080566406,0.0008409023284912109,0.00042748451232910156
+19,TAYCHEEDAH - Two men were seriously injured Thursday night in a head-on crash in the town of Taychee, on County W intersection with a Ford Fusion. The car crossed over County W and struck a southbound car driven by a 27-year-old man from Appleton. The man driving the car that crossed over also was in,on County W intersection with a Ford Fusion. The car crossed over County W and struck a southbound car driven by a 27-year-old man from Appleton. The man driving the car that crossed over also injured,6.390096504226938,6.390096504226938,True,True,120,3.0988497734069824,0.0008001327514648438,0.00043272972106933594
+20,"Following recent upgrades in other markets, Comcast announced this week that it has boosted the spee"," The company also announced that it will add 10 Mbps upload speed tier in Indianapolis, Oklahoma City, and Nashville, Tennessee.
+
+Comcast also says that it will now offer 100 Mbps upload speed tier in","The company also announced that it will add 10 Mbps upload speed tier in Indianapolis, Oklahoma City, and Nashville, Tennessee. also Comcast says that it will offer now 100 Mbps upload speed tier in I",8.763560920082657,8.672294716634918,True,True,120,2.9290544986724854,0.0010638236999511719,0.0004324913024902344
+21,A Charlotte cancer patient and his Oncologist just finished one of the most iconic marathons in the ,"
+Please enable Javascript to watch this video
+CHARLOTTE, N.C. – One of Charlotte and the world's top marathon runners made an incredible run across the United States.
+On October 11, 2019, Team RWK Can","Please enable Javascript to watch this video CHARLOTTE, N.C. – One of Charlotte and the world's top marathon runners made an incredible run across the United States. On October 11, 2019, Team RWK Canc",5.659799760886717,4.828078792603349,True,True,120,2.9439339637756348,0.001153707504272461,0.0005178451538085938
+22,"According to the relevant laws and regulations, search results for “constitutional government” canno"," Chinese characters): “people power,” “freedom,” “civil rights,” “people’s rights,” “civil rights,” “people power,” “people power,” “freedom,” and “civil rights.”
+
+Sina Weibo: The blocked terms
+
+The c","Chinese characters): “people power,” “civil “freedom,” rights,” “people’s rights,” “civil rights,” “people power,” “people power,” “freedom,” and “civil rights.” Sina Weibo: The blocked terms The cont",4.199206274206274,3.322052985133747,True,False,120,2.9835307598114014,0.0007503032684326172,0.00045037269592285156
+23,"RANGERS general manager Doug Melvin, whose team has been in last place since June 11, said he is mor"," bringing in a big-name free agent.
+
+The Rangers are seeking a relief reliever in a bullpen that lacks depth. Melvin said in a conference call on Sunday, while Wetteland and Scott Feldman are being wo","bringing in a big-name free agent. The Rangers are seeking a relief reliever in a bullpen that lacks depth. Melvin said a in conference call on Sunday, while Wetteland and Scott Feldman are being work",5.294651389216606,4.870246220224809,True,True,120,2.952235221862793,0.000835418701171875,0.0005583763122558594
+24,"Singer Carrie Underwood, former American Idol champ and Almay makeup spokesperson, posted an Instagr",","" she captioned the photo.
+
+Fans couldn't help but shower Carrie with compliments.
+
+The 34-year-old entertainer also shared another photo a day later, on Feb. 10, in which she showed off her toned le",","" she captioned the photo. Fans couldn't help but shower Carrie with compliments. The 34-year-old entertainer also shared another photo day a later, on Feb. 10, in which she showed off toned her legs",6.390096504226938,5.858449331643022,True,True,120,2.986043930053711,0.0008044242858886719,0.0004642009735107422
+25,O2 chief executive Ronan Dunne is exploring a debt-fuelled £8.5bn management buyout attempt followin,"
+
+Hutchison was competing with BT and Vodafone for O2’s 4G spectrum, which had been priced in excess of £5bn. Hutchison, which already owns 3G and 4G licences in the United States, was looking for an ","Hutchison was competing with BT and Vodafone for O2’s 4G spectrum, which had been priced in excess of £5bn. Hutchison, which already owns 3G and 4G licences in United the States, was looking for inves",6.7552448758970485,6.247782215210102,True,True,120,3.111313819885254,0.0009098052978515625,0.00048422813415527344
+26,"An average of five lakh Indians die every year, hoping, praying and waiting for organs. Even though "," have to die.
+
+There are a total of 13.8 Lakh registered donors in the national pool, says a health ministry report. There are a total of 33,000 registered organ donors every year. The National Associ","have to die. There a are total 13.8 of Lakh registered donors in the national pool, says a health ministry report. There are a total of 33,000 registered organ every donors year. The National Associat",8.215838362577491,7.181324987175317,True,True,120,2.95778751373291,0.000896453857421875,0.0005114078521728516
+27,"MEMPHIS, Tenn. — One person is in critical condition after a shooting Monday in the Goodwill Village"," just after 10:00 a.m.
+
+The victim was rushed to Regional One Hospital, which was also impacted by the gunfire. The victim was a man, and authorities believe he was there for a friend’s birthday and t","just after 10:00 a.m. The victim was rushed Regional to One Hospital, which was also impacted by the gunfire. The victim was a man, and authorities believe he was there for a friend’s birthday took an",6.937819061732104,6.368783518755519,True,True,120,3.005575656890869,0.001005411148071289,0.0004894733428955078
+28,Boots advent calendar is so popular it has a waiting list! This £40 Boots advent calendar is so popu," fix, rather than buy a box, there are also advent calendars with just goodies, or simply a calendar with lots of things.
+
+Whether you’re on a quest for a perfect outfit, a perfect home, a perfect bab","fix, rather than buy a box, there are also advent calendars with just goodies, or simply a calendar with lots of things. Whether you’re on a quest a for perfect outfit, a perfect home, a perfect baby,",7.48554161923727,6.556100681071857,True,True,120,2.955233335494995,0.0008106231689453125,0.00048351287841796875
+29,The May 20-22 American Renaissance conference in Tennessee (registration details here) is reportedly," and speaking in a special panel on Friday afternoon and will also be working with a conference-proceeding publication.
+
+I am already working on a talk for Sunday morning, and I will give a presentati","and speaking in a special panel on Friday afternoon and will also be working with a conference-proceeding publication. I am already working on a talk for Sunday morning, and I will give a presentation",7.6681158050723255,7.181324987175317,True,True,120,2.9740214347839355,0.0009937286376953125,0.0004858970642089844
+30,Turkey on Friday said Syrian government forces should not be allowed in Manbij as US troops withdraw," entity by Turkey.
+
+On Wednesday, US President Donald Trump announced that Washington would have US troops back in Syria to begin withdrawing immediately.
+
+The announcement was made after meeting with","entity by Turkey. On Wednesday, US President Donald Trump announced that Washington would have US troops back to in Syria begin withdrawing immediately. The announcement was made after meeting with na",6.390096504226938,5.480484858633795,True,True,120,2.9608747959136963,0.0010209083557128906,0.0005407333374023438
+31,"For her visit to Greece, Angela Merkel's soft green jacket should have been just the right colour ch"," colour green.
+
+An emissary in the visiting leader's outfit of a drapey, blue and yellow silk shirt and black slacks was a little unexpected.
+
+It gave an inkling that someone might choose to make a di","colour green. An emissary in the visiting leader's outfit of a drapey, blue and yellow silk shirt and black slacks was a little unexpected. It gave an inkling that someone might choose to a make dig a",6.207522318391883,5.619514869490164,True,True,120,2.963824510574341,0.0008704662322998047,0.0005185604095458984
+32,A county council by-election for Northgate and West Green will be held on the same day as Crawley Bo," died. The Northgate and West Green Ward for Crawley Borough Council is being vacated. The poll will be held on 3rd October 2017, 7am-8pm.
+
+As a first step in planning for the work necessary in respon","died. The Northgate and West Green Ward for Crawley Borough Council is being vacated. The poll will be held on 3rd October 2017, 7am-8pm. As a first step in planning for the work necessary in response",6.207522318391883,5.824352060364905,True,True,120,3.0210585594177246,0.0008702278137207031,0.0005383491516113281
+33,Entries are now open for the well loved and much anticipated Helen’s Trust 10k and 3k fun run at Cha," with the full event offering a generous prize bag.
+
+Runners will get a real taste for just how much running is a part of Chatsworth in a family friendly setting.
+
+Rounding off an exceptional 2019, He","with the full event offering a generous prize bag. Runners will get a real taste for just much how running is a part of Chatsworth in a family setting. friendly Rounding off an exceptional 2019, Helen",7.6681158050723255,7.181324987175317,True,True,120,3.033003330230713,0.00081634521484375,0.0005099773406982422
+34,"Against Michigan State last season, McSorley threw an uncharacteristic three interceptions — but the"," was in coverage, and the other, an errant pass, was tipped. McSorley also was intercepted twice in the second half, including once in overtime, in a 38–38 tie.
+
+This season, McSorley is 13th in the n","was in coverage, and the other, errant an pass, was tipped. also McSorley was twice intercepted in the second half, including once in overtime, in a 38–38 tie. This season, McSorley is 13th in the nat",4.74692883171144,4.456688116249245,True,True,120,3.0828394889831543,0.0009369850158691406,0.0005183219909667969
+35,Buy Dr. Reddy's Laboratories Ltd. at a price target of Rs 2555.0 and a stop loss at Rs 2430 from ent," Neutral recommendation on the stock. It is a buy in multiples of 3.8x. The sell would be triggered if the stock dips below Rs 2403, says Chandan Taparia. The long-term targets are above Rs 2600. The ","Neutral recommendation on the stock. It is a buy in multiples of 3.8x. The sell would be triggered if stock dips the below Rs 2403, says Chandan Taparia. The long-term targets are above Rs 2600. The s",4.381780460041329,3.8996021017180893,True,False,120,3.084596633911133,0.0008091926574707031,0.0005097389221191406
+36,"""Yes but in another 15-20 years time, a well made Swiss watch that has been looked after will still "," most of today's shit. Yes, that watch is my favourite, even if I won't buy a new one for 10 years. My love for the watch shows through my behaviour.
+I have an Orient that I took to a watch show a cou","most of today's shit. Yes, that watch is favourite, my even if I won't buy a new one for 10 years. My love for the watch shows through my behaviour. I have an Orient that I took to a watch show a coup",5.8423739467217715,5.639451994956496,True,True,120,2.9728739261627197,0.0009849071502685547,0.000514984130859375
+37,Commercial development site on Sharon Avenue and with access off of Evergreen Street. Great exposure," development site located within close walking distance to a new shopping center, restaurants and schools. This property is being developed and/or will shortly start construction. Property size 4,500 ","development located site within close walking distance to a new shopping center, restaurants and This schools. property is being developed and/or will shortly start construction. Property size 4,500 S",8.215838362577491,6.138914766455381,True,True,120,2.980152130126953,0.0008537769317626953,0.0005269050598144531
+38,The Navodaya Vidyalaya Samiti (NVS) has released the notification for the recruitment to posts such ," and assistant engineer. The recruitment drive will be conducted for a total number of 4,065 vacancies.
+
+On August 25, 2019, the union ministry of Human Resource Development, Ministry of Education, Mi","and assistant engineer. The recruitment drive will be conducted for a total number of 4,065 vacancies. On August 25, 2019, the union ministry of Human Resource Development, Ministry of Education, Mini",5.8423739467217715,5.52344770738994,True,True,120,3.1498563289642334,0.0008654594421386719,0.0005109310150146484
+39,OLD PIKE PLANTATION – COUNTRY LIVING AT ITS FINEST. This remarkable 5 BR / 3 BA home sits on 3.78 tr," spacious and inviting setting in which to enjoy a variety of family events. The main level offers a large living room, kitchen with a butler’s pantry, formal dining room and spacious family room with","spacious and inviting setting in which to enjoy a variety of family events. The level main offers a large living kitchen room, with a butler’s pantry, formal dining room and spacious family room with ",8.580986734247602,8.454545454545455,True,True,120,3.096722364425659,0.0009799003601074219,0.0005214214324951172
+40,"Ljubljana, 9 January - Leader of the opposition Positive Slovenia (PS) Zoran Janković again rebuffed"," had were declared on tax records.
+
+PS member and anti-corruption crusader Ove Radek also rebuffed the claims.
+
+According to Radek, there are a number of cases that have been closed that in fact are a","were had declared on tax records. PS member and anti-corruption crusader Ove Radek also rebuffed the claims. According to Radek, there are a number of cases that have been closed that in fact allegati",6.572670690061993,5.911468053322673,True,True,120,3.0902276039123535,0.0008475780487060547,0.0004851818084716797
+41,The best way to save money on food is to quit throwing it away. Find ways to recycle “old” food rath,", add a slice or two of mozzarella cheese, or use a little olive oil instead of frying.
+
+6. Look for Freebies.
+
+If a store has something on sale, buy it. Most times there is something that stores need",", add a slice or two of mozzarella cheese, or use a little oil olive instead of frying. 6. Look for Freebies. a If store has something on sale, buy it. Most times there is something that stores need, ",6.024948132556827,5.2448805448574864,True,True,120,3.004221200942993,0.0007841587066650391,0.00047588348388671875
+42,"CFO, Secretary, Treasurer, Director & Executive VP, BigString Corp. Mr. Robert S. DeMeulemeester is "," Directors, Audit Committee and Compensation Committee. Mr. DeMeulemeester received his MBA in Finance & Accounting, and Finance Management in the year 1981. He was a member of Business and Accounting","Directors, Audit Committee and Compensation Committee. Mr. DeMeulemeester received his MBA in Finance & Accounting, and Finance Management in the year 1981. He was a member of Business and Accounting ",7.48554161923727,6.8707275125509195,True,True,120,3.16326904296875,0.0007727146148681641,0.0004260540008544922
+43,"Who says college doesn’t prepare you for the real world? Sometimes they do, right down to the final "," about students whose college degrees are in math, sciences, economics, computer science, statistics, journalism and related subjects. At least that’s what I discovered in my first year, studying for ","about students whose college degrees are in math, sciences, economics, computer science, statistics, journalism and related subjects. At least what I that’s discovered in my year, first studying for a",8.215838362577491,8.28517156108491,True,True,120,3.061542510986328,0.000797271728515625,0.0004885196685791016
+44,"ARIES (March 21-April 19): ""Everything is complicated,"" wrote poet Wallace Stevens. ""If that were no"," agree.
+TAURUS (April 20-May 20): During a conversation with a mentor, actor and writer Kevin Kline confessed that a close friend was dying of cancer. He did not want to talk about it for a number of ","TAURUS agree. (April 20-May 20): During a conversation with a mentor, actor and writer Kevin Kline confessed that a close friend was dying of cancer. He did not want to talk about it for a number of r",4.929503017546495,4.786988013071282,True,True,120,3.0614266395568848,0.0007827281951904297,0.0004723072052001953
+45,Free Shipping On All Beauty Products or Supplies Orders Over $34.00 at Planet Beauty in Santa Barbar," & bumble, Hada Labo. This discount applies on online orders only.
+
+Get $15 off any order when you create an account at Planet Beauty and enter the code PLANET10. Valid on all online orders excluding:","& bumble, Labo. Hada This discount applies on online orders only. Get $15 off order any when you create an account at Planet Beauty and enter the code PLANET10. Valid on all online orders excluding: M",6.207522318391883,5.570860145311556,True,True,120,3.1468772888183594,0.0009272098541259766,0.0004773139953613281
+46,"More social website jostling, as AOL upgrades and launches a beta version of AOL Pictures as a direc"," the past six months, is a photo sharing and collaboration site for anyone with a web camera. Now, AOL wants in. Yahoo, whose users are already flocking to Flickr in droves, may just get an upgrade. A","the past six months, is a photo and sharing collaboration site for anyone with a web camera. Now, AOL wants in. Yahoo, whose users are already flocking to Flickr in may droves, just get an upgrade. An",6.572670690061993,6.247782215210102,True,True,120,3.023975372314453,0.0008172988891601562,0.0004401206970214844
+47,FLAGGED. A man who drives his wife to work on their motorcycle says he often gets stopped by enforce," displayed a placard with the words, “MANAGED SERVICES,” when passing through an automated fare collection system.
+
+The husband, a resident of Tiong Bahru, said: “I usually drive my wife to work. I al","displayed a placard with the words, “MANAGED SERVICES,” when passing an through automated fare collection system. The husband, a resident of Tiong Bahru, said: “I usually drive my wife to I work. alwa",6.7552448758970485,6.563952321998544,True,True,120,3.0175395011901855,0.0007798671722412109,0.0004963874816894531
+48,Les Beaucamps school in Guernsey is currently being considered as one of the potential sites for the," Head of Governors for Schools Stephen McQueen, says that a visit will follow shortly, and will involve a visit to both schools.
+
+Following a visit to Château Thiry in St. Pierre sur Seine, a meeting ","Head of Governors for Schools Stephen McQueen, says a that will visit follow shortly, and will involve a visit to both schools. Following a visit to Château Thiry in St. Pierre sur Seine, a meeting wi",7.6681158050723255,7.242118188905023,True,True,120,3.066133499145508,0.0010533332824707031,0.0005147457122802734
+49,"St Georges Cathedral of First African Church, Ipaja Town has concluded plans to stage her centenary "," committee for the event, Alhaji Ahmed Alayu, disclosed that in collaboration with the Nigeria Festival Organising Committee, they were already putting arrangements in place for a grand event with ent","committee for the event, Alhaji Ahmed Alayu, disclosed that in collaboration with the Nigeria Festival Organising they Committee, were already putting arrangements in place for a grand event with ente",7.48554161923727,7.6681158050723255,True,True,120,3.1006550788879395,0.0008513927459716797,0.0005040168762207031
+50,"LEXINGTON, Mass., Nov. 03, 2017 (GLOBE NEWSWIRE) -- Curis, Inc. (NASDAQ:CRIS), a biotechnology compa"," today reported preliminary data for six Phase 3 studies for CDK4/6 and CDKL5/6 inhibitor candidates. Three clinical studies, a randomized Phase 3 trial, and two clinical trials, are ongoing for CRIS-","today reported preliminary data for six Phase 3 studies for CDK4/6 and CDKL5/6 inhibitor candidates. Three clinical studies, a randomized Phase trial, 3 and two clinical trials, are ongoing for CRIS-8",6.572670690061993,6.127946159842712,True,True,120,3.260883331298828,0.0008361339569091797,0.00047969818115234375
+51,"Accra, July 20, GNA - The management of Mobile Telecommunications Network (MTN) on Tuesday presented"," challenge,"" held in the Ashanti Regional Capital, Obuasi.
+
+Mr Alex Baah, Director, MTN Marketing and Communications, said MTN in a bid to commemorate and appreciate customers, was conducting a compet","challenge,"" held in the Ashanti Regional Capital, Obuasi. Mr Alex Baah, Director, MTN Marketing and Communications, said MTN in a bid to commemorate and appreciate customers, was a conducting competit",5.8423739467217715,5.501778368617852,True,True,120,3.0310277938842773,0.0010631084442138672,0.0004923343658447266
+52,The first teaser trailer has been unveiled for the upcoming Pirates of the Caribbean: Dead Men Tell , the follow up to Pirates of the Caribbean: At World’s End. The film was developed through a collaboration between Disney and Universal with Will Ferrell and Kate Winslet starring in Pirates. Johnny D,the follow up to Pirates of the Caribbean: At World’s End. The film was developed through a collaboration between Disney and Universal with Will Ferrell Kate and Winslet starring in Pirates. Johnny De,5.408521132466447,5.385164807134505,True,True,119,2.969362497329712,0.0008389949798583984,0.0005004405975341797
+53,You may need to set aside some extra time if you use Metro's Green or Yellow line. Train service was," safety work on track repairs and track work.
+
+The closure affected service for both lines Friday, Sept. 11, but Metro anticipates that service will be back on track by 9:45 p.m. Saturday, Sept. 12.
+
+","safety work on track repairs and track work. The closure affected service for both lines Friday, Sept. 11, but Metro anticipates that service will be back on track by 9:45 p.m. Saturday, Sept. 12. You",7.462778926574919,6.947576354693849,True,True,101,2.3711090087890625,0.0007524490356445312,0.00044226646423339844
+54,MEXICO CITY (AP) — Three children have drowned off Mexico's southern Pacific coast after an immigran," Oaxaca says the bodies were recovered Sunday. The government released photos and video that show a boy and a girl in a large, yellow bag being carried away. The photo of a woman being carried over wa","Oaxaca says the bodies were recovered Sunday. The government released photos and video that show boy a and a girl in a large, yellow bag being carried away. The photo of a woman being carried over wav",6.937819061732104,6.7552448758970485,True,True,120,3.0489041805267334,0.0008020401000976562,0.0004968643188476562
+55,What's The Fastest Boat Ever Made? What you’re looking at above is a sportfishing boat that has a 6.," sits a massive 17.5ft 4.8m monohull. And it costs a fortune.
+
+So what was done? The answer is that a lot was done. The boat in the photo above is named Aluco and it took five years and £5.4m worth of",sits a massive 17.5ft 4.8m monohull. And it a costs fortune. So what was done? The answer is that a lot was done. The boat in the photo is above named and Aluco it took five years and £5.4m worth of w,6.390096504226938,5.824352060364905,True,True,120,3.167174816131592,0.0007100105285644531,0.00039768218994140625
+56,"Wildwood at Keowee... ""Where the living is casual and relaxed"". Today's buyers that plan to build ne"," to find these in cities like Vancouver and Toronto. It will be hard for home buyers today in Toronto to find a home with a pool and deck, lots of room and mature landscaping. So, I'll tell you a coup","to find in these cities like Vancouver and Toronto. It will be hard for home buyers today in Toronto to find a home with a pool and deck, lots room of and mature landscaping. So, I'll tell you a coupl",7.48554161923727,6.7390217698427435,True,True,120,3.0538699626922607,0.0007710456848144531,0.0004813671112060547
+57,BILLINGS- The Montana Rescue Mission announced Monday a familiar face as its new leader in a new par," now working on behalf of The Montana Rescue Mission.
+
+The Friendship House is a residential facility for women and men seeking a second chance in life. This weekend, Lundgren will lead a fundraising ","working now on behalf of The Montana Rescue Mission. Friendship The House is a residential facility for women and men seeking a second chance in life. This weekend, will Lundgren lead a fundraising ev",6.325219629494658,6.114685644493382,True,True,119,3.031913995742798,0.0007915496826171875,0.0004703998565673828
+58,"Hey all, my name is Wollemi... I freestyle rap. I keep it fresh like Yo Gotti because I want to make"," play with my fans. I play with my fans. I play with my fans.
+I love me some Freestyle Rapping.",play my with fans. I play with my fans. I play with my fans. I love me some Freestyle Rapping.,4.426352063787131,4.314554973040049,True,True,27,0.6071062088012695,0.0006330013275146484,0.00026297569274902344
+59,The Middle East Forum's Young Adult Division (YAD) is a network of young professionals between the a,", North Africa, and Central Asia.
+
+This event will explore a range of topical issues in a stimulating and informal manner. The program will be anchored in Q & A sessions with speakers who are expertly",", North Africa, and Asia. Central This event explore a will range of topical issues in a stimulating and informal manner. The program will be anchored in Q & sessions A with speakers who are expertly ",7.6681158050723255,7.305369330337213,True,True,120,2.992434024810791,0.0008742809295654297,0.0005095005035400391
+60,Today Sony unveiled a new 2-in-1 USB Flash Drive that features both micro and normal USB 2.0 connect," and organize information for sharing online.
+
+The New USB Drives
+
+The new drive features both a USB Micro and USB Mini connector, giving consumers the flexibility to choose between a convenient USB M","and organize information for sharing online. The New USB Drives The new drive features both a USB Micro and USB Mini connector, giving consumers the flexibility to choose between a USB convenient Micr",7.6681158050723255,7.427813527082075,True,True,120,3.0619454383850098,0.0008566379547119141,0.0004899501800537109
+61,"English Premier League Burnley v Newcastle (Singtel TV Ch102 & StarHub Ch227, tomorrow, 4am). Socied",", tomorrow, 4am). Football in Singapore: The Premier League on Friday and Sunday. The FA Cup, The Challenge Cup, The Football League, The Conference National, Singapore Premier League on Sat. The Sing",", tomorrow, 4am). Football in Singapore: The Premier League on Friday and Sunday. The FA Cup, Challenge The Cup, The Football League, The Conference National, Singapore Premier on League Sat. The Sing",6.572670690061993,6.444022325288263,True,True,120,3.337256908416748,0.0007672309875488281,0.0004780292510986328
+62,Start your MINI FARM! NO HOA & NO RESTRICTIONS! Gorgeous 6.7+- acres with 2 ponds and mountain view!," completely updated.
+
+Located in scenic East Jordan, just south of I-85 in a well maintained, low cost family community. Large home with updated flooring, kitchen and baths in main level. Additional o","completely updated. Located in scenic East Jordan, just south of I-85 in a well maintained, low cost family community. Large home with updated flooring, kitchen and baths in main level. Additional spa",8.398412548412548,8.101056637505247,True,True,120,3.244572877883911,0.0008590221405029297,0.0005166530609130859
+63,Enjoy the beautiful sunset view from this nice deep lot on St. Martins Point with a westerly big wat," and are in close proximity to the water tower. Come in and see, it is a very nice, clean, well maintained home. Close to shopping, restaurants and schools. Close to Port Wentworth Beach.
+
+Price
+
+Pric","and are in close proximity to the water tower. Come in and see, it is a very nice, clean, well maintained home. Close to shopping, restaurants and schools. Close to Wentworth Port Beach. Price Price:$",6.937819061732104,4.616902584383194,True,True,120,3.022965431213379,0.0007238388061523438,0.0004596710205078125
+64,�A Moon Township man faces a slew of charges stemming from a drunken-driving arrest last Wednesday i," Ave., was stopped for speeding in the 100 block of Main St. just after 11 p.m. Police also said Bronson failed several sobriety tests. Bronson also failed a field sobriety test after being arrested a","Ave., was stopped for speeding in the 100 block of Main St. after just 11 p.m. Police also said Bronson failed several sobriety tests. also Bronson failed a field sobriety test after being arrested an",5.8423739467217715,5.7272727272727275,True,True,120,3.0624189376831055,0.0010318756103515625,0.0005154609680175781
+65,The two Marlborough men hurt in a bicycle vs. motorcycle accident on Friday were listed in good cond," westbound on Main Street and was crossing Main Street just east of Jackson Street at 4 p.m. When traffic stopped on a red light and Shahood failed to stop, a Yamaha motorcycle and car struck each oth","westbound on Main Street and was crossing Main Street just east of Jackson Street at 4 p.m. When traffic stopped on a red light and Shahood failed to stop, a Yamaha motorcycle and car struck each othe",5.294651389216606,5.128776445321726,True,True,120,3.0524239540100098,0.0008072853088378906,0.0004994869232177734
+66,EDINBURG — The Hidalgo County call center is activated and answering residents calls for assistance ," 915-754-2211.
+
+The weather alert for Hidalgo County, which begins 10 p.m. Friday, Sept. 11, continues until 3 p.m. Monday, Sept. 14. It contains information and warnings about gusty winds, isolated p","915-754-2211. The weather alert for Hidalgo which County, begins 10 p.m. Friday, 11, Sept. continues until 3 p.m. Monday, Sept. 14. It contains information and warnings about gusty winds, isolated pow",6.9937860618023535,6.158402871356008,True,True,115,2.9241390228271484,0.0007939338684082031,0.0004818439483642578
+67,"GREER, SC-- Dustin Dewayne Anders, 21, of 124 Skyland Circle, died August 24, 2007. A native of Gree"," Anders all of Greer, he was a 2001 graduate of Greer Academy. Mr. Anders attended South Carolina Central Technical College and worked for K & M Paving. He was a US Army Veteran. He was a member of Th","Anders all of Greer, he was a graduate 2001 of Greer Academy. Mr. attended Anders South Carolina Central Technical College and worked for K & M Paving. He was a US Army Veteran. He was a member of The",5.8423739467217715,5.775200531277732,True,True,120,3.1295559406280518,0.0007851123809814453,0.0004870891571044922
+68,"WEST DES MOINES, Iowa -- A family-run business in West Des Moines is celebrating a big anniversary S"," opened a year after it was owned by a family.
+
+The store started off in a storage building and today, is a retail outlet with clothes, home décor and gifts. It also features a coffee shop and a secon","opened a year after it was owned by a family. The store started off in a storage building and today, is a retail outlet clothes, with home décor and gifts. It features also a coffee shop and a second ",8.033264176742437,7.559289460184544,True,True,120,3.0559170246124268,0.0010027885437011719,0.0005154609680175781
+69,"Bill Maher delivered a scathing review of President Donald Trump's Rose Garden speech Friday, brandi"," &quot;Good Morning America.&quot; &quot;Here, Trump says that even a Muslim would be willing to fight for the United States if we gave free healthcare, free college, free housing. &quot;There's no wo","&quot;Good Morning America.&quot; &quot;Here, Trump says that even a Muslim would be willing to fight for the States United if we gave free free healthcare, college, free housing. &quot;There's no wor",4.929503017546495,4.74692883171144,True,True,120,3.1719233989715576,0.0007588863372802734,0.0004761219024658203
+70,"John Elworthy, editor of sister titles the Wisbech Standard and Cambs Times, takes over as editor of"," “After six years at the Standard, and 10 years editing our sister titles, I have signed a new contract with Herts & Cambs. I am a Hertfordshire born and bred girl and Hertfordshire is my home. I am e","“After six years at the Standard, and 10 years our editing sister titles, I have signed a new contract with Herts & Cambs. I am a Hertfordshire born and bred girl Hertfordshire and is my I home. am es",6.024948132556827,6.024948132556827,True,True,120,3.141594409942627,0.0007653236389160156,0.00048041343688964844
+71,What time VSKP-KRPU BI-WEEKLY INTER depart from VISAKHAPATNAM Railway Station? VSKP-KRPU BI-WEEKLY I," KANDHAPATNAM railway Station? VSKP-KRPU BI-WEEKLY INTER will reach KANDHAPATNAM railway Station in 46.41 hours.
+
+I am travelling from VIZAGHAR with VSKP-KRPU BI-WEEKLY INTER. What are the approximate",KANDHAPATNAM railway Station? VSKP-KRPU BI-WEEKLY INTER will reach KANDHAPATNAM railway Station in 46.41 hours. I am travelling from VIZAGHAR with VSKP-KRPU BI-WEEKLY INTER. What are the approximate r,3.2863353450309964,2.9711254108328298,False,False,120,3.6248245239257812,0.0006320476531982422,0.0004127025604248047
+72,Beautiful 4 bedroom 2 bath Cape Cod style home located in the desirable Northwoods Park neighborhood," drive to shopping and restaurants. The gourmet kitchen features granite countertops, stainless steel appliances and a large breakfast room with a vaulted ceiling. The downstairs living room offers pl","drive shopping to and restaurants. The kitchen gourmet features granite countertops, stainless appliances steel and a large breakfast room with a vaulted ceiling. The downstairs living room offers ple",6.390096504226938,6.390096504226938,True,True,120,2.9818012714385986,0.0008139610290527344,0.0005064010620117188
+73,A waitress in Arizona – who is nine months pregnant and is expecting some big medical bills – was to," monetary benefit – for $10,000 – for being an organ donor.
+
+Bethany Rose, a waitress and a medical assistant, applied for a medical grant in order to pay back a loan that she took on and to help pay ","monetary benefit – for $10,000 – for being an organ donor. Rose, Bethany a waitress and a medical assistant, applied for medical a grant in order to pay back a that loan she took on and to help pay fo",9.311283477587823,8.748704075967455,True,True,120,2.9525134563446045,0.0007457733154296875,0.000499725341796875
+74,This is great. The geniuses at People Magazine stitched together pictures of celebrities posing with," Well, here’s proof.
+
+I know that I am a late entry in the conversation, but I just have to tell you that, in my humble opinion, Scarlett Johansson is the best actress on planet Earth. Just look at th","Well, here’s proof. I know that I am a late entry in the conversation, but I just have to tell you that, in my humble opinion, Scarlett is Johansson the best actress on planet Earth. Just look at that",6.572670690061993,6.313641498019764,True,True,120,3.0605719089508057,0.0007588863372802734,0.0004258155822753906
+75,FRANKFURT (Reuters) - E.ON expects a planned British retail energy joint venture between Innogy’s np,"
+
+FILE PHOTO: The logo of Innogy AG is seen in Stuttgart, Germany, November 15, 2019. REUTERS/Andreas Gebert/File Photo
+
+The tie-up, which is expected to be the biggest in the sector, needs antitrust ","FILE PHOTO: The logo of Innogy AG seen is in Stuttgart, Germany, November 15, 2019. REUTERS/Andreas Gebert/File Photo The tie-up, which expected is to be the biggest in the sector, needs antitrust and",3.8340579025361627,3.1843917593777595,False,False,120,3.2079689502716064,0.0007927417755126953,0.0004754066467285156
+76,Paradise will see an influx of Beavers today for the Scouts Canada Eastern Avalon 2018 Beaveree. Som," and participate in a day and half of exploration.
+
+Beavers in the community will get a free breakfast and a tour of the Park.
+
+The Beaver Scouts will work on a community service project on Friday, an","participate and in a day and half of exploration. Beavers in the community will get a free breakfast and a tour of the Park. The Beaver Scouts will work on a community service on project Friday, on an",7.48554161923727,6.86726233920026,True,True,120,3.0391037464141846,0.0008466243743896484,0.0004565715789794922
+77,Sometime algorithms just don't cut it. YouTube says it's hiring more people to help curb videos that," an algorithm that allows videos to automatically get higher in search.
+
+Sometime algorithms just don't cut it.
+
+YouTube CEO Susan Wojcicki says “some bad actors are exploiting” an algorithm that allo",an algorithm that allows videos to automatically get higher in search. Sometime algorithms just don't cut it. YouTube CEO Susan Wojcicki says “some bad actors are exploiting” an algorithm that allows ,4.199206274206274,3.559026084010437,True,False,120,3.103909969329834,0.0007419586181640625,0.0004913806915283203
+78,(entertainmentwise.com) - Beyonce and Jay-Z have reportedly hit a rocky patch in their four-month ma," first announced their split in February in a lengthy statement and while both Beyonce and Jay-Z have claimed that they are on good terms, according to a new report, a fight over money and an unruly h","first announced their split in February in a lengthy statement and while both Beyonce and Jay-Z have claimed that are they on good terms, to according a report, new a fight over money and an unruly ho",6.207522318391883,5.432197707173825,True,True,120,3.1880369186401367,0.0007545948028564453,0.0004260540008544922
+79,Be the bearer of good - and delicious - tidings with these gifts. 7. Sweet Love. The Ritz-Carlton's ,", and now serves an intriguing menu that looks and sounds delicious. 10. Love & Happiness. This special box includes a basket of lavender sweets and, in addition, a box full of gifts with a note: ""I l",", and now serves an intriguing menu looks that and sounds delicious. 10. Love & Happiness. This special box includes a basket of lavender sweets and, in addition, a box full of gifts with a note: ""I l",8.580986734247602,8.469286484664575,True,True,120,3.104757308959961,0.000995635986328125,0.0004980564117431641
+80,"Central European Media Enterprises Ltd. CETV, -0.25% said Monday its board has decided to review its",", which owns TV station RTV and a portfolio of TV and Internet services in Hungary and Serbia, said its management, in consultation with independent directors, will now assess ""all options related to ",", which owns TV station RTV portfolio and a of TV and Internet services in Hungary and Serbia, said its management, in consultation with independent directors, will now assess ""all options related to ",6.207522318391883,6.207522318391883,True,True,120,3.0754611492156982,0.0008158683776855469,0.0004546642303466797
+81,The owner of a Lexington Domino's says he expects to do three or four times his normal business on S," about getting a free Domino's?
+
+James Miller, owner of Domino's, says a domino box sells for around $12 and the box will have to be opened for a voucher. He says he will even cover any delivery fees.","about getting a free Domino's? James Miller, of owner Domino's, says a domino box sells for around $12 and the will box have to be opened for a voucher. He says he will even cover any delivery fees. D",6.7552448758970485,6.236413804652249,True,True,120,3.0333497524261475,0.0007193088531494141,0.000446319580078125
+82,An FBI agent issuing a search warrant for a man wanted for murder was shot in an apartment in Las Ve," was wearing a bulletproof vest, was struck in the abdomen, while a second agent was struck in the torso.
+
+“I heard a shot. It wasn’t a loud gunshot, but I heard a gunshot and that was a close shot,” ","was wearing a bulletproof vest, was struck in abdomen, the a while second agent was struck in the torso. “I heard a shot. wasn’t It a loud gunshot, but I heard a gunshot and that was a close shot,” wi",5.294651389216606,5.057563382541147,True,True,120,3.0121872425079346,0.0007555484771728516,0.00048422813415527344
+83,News items related to DMD DataTrac Suite as issued by the Send2Press Newswire service on behalf of t, Systems is pleased to announce that it has been named a Finalist for the prestigious Gold DataExpert Small Business Award. The Gold DataExpert Small Business Awards are presented in recognition of ou,Systems is pleased to announce that it has named been a Finalist for the prestigious Gold DataExpert Small Business Award. The Gold DataExpert Small Business Awards are presented in recognition outsta,6.937819061732104,6.636363636363637,True,True,120,3.249696969985962,0.0011324882507324219,0.0005116462707519531
+84,"Would you kiss a dog? Heart Breakfast - answering the big questions... like, ""Would you kiss a dog?"""," a real dog. Instead, he gets a dog as a pet. You know, a pet.
+
+As if that weren't enough, this lovey dovey show picks up with Charlie's Boyfriend being shown how to kiss a dog - on an apple. I'm not ","a real dog. Instead, he gets a dog as a pet. You know, a pet. if As that weren't enough, this lovey dovey show picks up with Charlie's Boyfriend being shown to how kiss a dog - on an apple. I'm not su",6.572670690061993,5.9422508216656595,True,True,120,3.1165645122528076,0.0007741451263427734,0.0004801750183105469
+85,Let’s be Brilliant in 2018! Do you live & breathe travel? Do you want the freedom and flexibility of," people around the world?
+
+If you answered yes and yes, if you love meeting new people and talking with lots of different types of travelers around the world, if you love running and meeting incredibl","people around the world? If answered you yes and yes, you if love meeting new people and talking with lots of different types of travelers around the world, if you love running and meeting incredible,",7.48554161923727,6.743417843388197,True,True,120,3.042180299758911,0.0007112026214599609,0.0004990100860595703
+86,The women’s U.S. gymnastic team is expected to bring home the gold from the Olympic Games in Rio de ," cause. This morning, hundreds of women are creating thousands of posts with #OlympicGirl, #TeamUSA and #TeamGreatness to show solidarity with these women.
+
+In addition to posting photos and stories, ","cause. This morning, hundreds of women are creating thousands of posts with #OlympicGirl, #TeamUSA and #TeamGreatness to show solidarity with these women. In addition to posting photos and stories, th",7.12039324756716,6.685032174373868,True,True,120,3.068114757537842,0.000804901123046875,0.0004870891571044922
+87,of The Drew Carey Show at 8 p.m. and Whose Line Is It Anyway? at 8:30 p.m. usual Monday-night comedy,".
+
+Monday, September 29, 2003
+
+This week's best episodes
+
+The Drew Carey Show
+
+With a week to go in the show, The Drew Carey Show continues to make a name for itself. Last week was even better, thanks",". Monday, September 29, 2003 This week's best episodes The Drew Carey Show With a week to go in the show, The Drew Carey Show continues make to a name for itself. Last was week even better, thanks mai",7.302967433402215,6.4835456068700275,True,True,120,3.1557319164276123,0.0008003711700439453,0.0004978179931640625
+88,Oxford United Women have signed midfielder Lauren Haynes from Aston Villa ahead of the WSL 2 season.," loan spells, playing for Bristol City and Mansfield Town.
+
+Oxford United Women head coach Andy Wilkins was delighted to sign a well-regarded midfielder.
+
+“We are thrilled to sign a young, talented an","loan spells, playing for Bristol City and Mansfield Town. Oxford United Women head coach Andy Wilkins was delighted to sign a well-regarded midfielder. “We are thrilled to sign a young, and talented a",6.141879930089016,5.720775535473554,True,True,119,3.0304548740386963,0.0007314682006835938,0.0004284381866455078
+89,Los Angeles ABC O&O KABC-TV has launched a Tumblr page. “We’ll give you some insight to the newsroom,"/KABC.com for a full, in-depth coverage,” explains KABC.
+
+The KABC page will serve as a first-line newsroom blog. Posts will appear on Tumblr and will go into production weekly.
+
+The KABC site will al","/KABC.com for a full, in-depth coverage,” explains KABC. The KABC page will serve as a first-line blog. newsroom Posts will appear on Tumblr and will go into production weekly. The KABC site will also",7.850689990907381,7.370307223679931,True,True,120,3.150287628173828,0.0007190704345703125,0.0004696846008300781
+90,"Fueled by her zeal for the ancient art of glassblowing, artisan Leigh Taylor Wyatt creates distinct "," unique workshops.
+
+Leigh teaches students how to make unique, functional pieces and also gives them an appreciation for an artist whose work embodies a spirit of community, a tradition, and a deep lo","unique Leigh workshops. teaches students how to make unique, pieces functional and also gives them an appreciation for an artist whose work embodies a spirit of community, a tradition, and a deep love",7.6681158050723255,7.180287023450417,True,True,120,3.0087966918945312,0.0007565021514892578,0.00049591064453125
+91,The Court of Appeal yesterday upheld convictions levied against a former top aide of Senate Presiden," jail for corruption and theft, with a fine. The appeal ruling was based on the issue of an instruction that a Senate official had given to Sim, through a close family member, who was tasked with appo","jail for corruption and theft, with a fine. The ruling appeal was on based the issue of an instruction that a Senate official had given to Sim, through a close family member, who was tasked with appoi",7.302967433402215,6.563952321998544,True,True,120,2.98671555519104,0.0009195804595947266,0.0005044937133789062
+92,Proposals to use lie detectors to search for spies and to impose the death penalty for espionage wou," Civil Liberties Union, calling for reforms.
+
+""I think these kinds of reforms have serious legal and practical problems. The real world may have far greater constraints on these technologies than law ","Civil Liberties Union, calling for reforms. ""I think these kinds of reforms have serious legal and problems. practical The real world may have far greater constraints on technologies these than law en",7.48554161923727,6.930735005704535,True,True,120,3.0449466705322266,0.0009188652038574219,0.0005109310150146484
+93,Labyrinths of Memory (Matahat El-Zakirah) play will be performed several times over three days at Os," Rasha Abdel-Fattah and featuring a libretto by Mahmoud Kallamah, The Lab offers an exploration into the artist’s experiences and memories. At times, these are accompanied by improvisations. In additi","Rasha Abdel-Fattah and featuring a libretto by Mahmoud The Kallamah, Lab offers an exploration into the artist’s experiences and memories. At times, these are accompanied by improvisations. In additio",7.12039324756716,6.9963670960272575,True,True,120,3.1606605052948,0.0008218288421630859,0.00047326087951660156
+94,The stock of State-owned manganese-ore mining company MOIL is down by about 12 per cent in the last ," in September and a lower average realisation. The company also said that its quarterly production, a key measure of a company's efficiency, was lower than the estimates. Exports continue to remain ro","in September and a lower average realisation. The company also said that its quarterly production, a key measure of a efficiency, company's was lower than the estimates. Exports continue to remain rob",6.024948132556827,5.570860145311556,True,True,120,3.1449499130249023,0.0007805824279785156,0.0004558563232421875
+95,This dashcam video shows what can go wrong if you’re lazy and you don’t clear that huge block of sno," lead to a crushed headlight and worse.
+
+In this video by Ken McRae, McRae shows the aftermath of a man’s car falling off of a bridge after being crushed in a snow bank.
+
+“I was in shock,” McRae tells","lead a to crushed headlight and worse. In this video by Ken McRae, McRae shows the aftermath of a man’s car falling off of a bridge after being crushed in a snow bank. “I was in shock,” McRae NBC tell",6.207522318391883,5.806832031806502,True,True,120,3.0776009559631348,0.0009725093841552734,0.0004379749298095703
+96,"San Francisco, as everyone who lives there knows, is a city desperate for more space. But making due",", 3,600-square-foot house, in which a woman made a tiny home work for living in. It features a kitchen, a bedroom, and a home theater, and sits on a half acre with a pool.
+
+You may recognize the home ",", 3,600-square-foot house, in which a woman made a tiny home work for living in. It features a kitchen, a bedroom, and a home theater, and sits on a half acre with a pool. You may recognize the in hom",7.6681158050723255,7.548711866766252,True,True,120,3.112175703048706,0.0007638931274414062,0.0005052089691162109
+97,"Over the Cool & Dre production, Joey Crack references his 2002 hit “What’s Luv?” and raps about Dona"," raps, “I ain’t wanna hear that Trump shit with Kanye next to him. I wanna hear Trump. I wanna hear that shit. I wanna hear that shit. I wanna hear that shit with Dre. I wanna hear that shit with Dre.","raps, “I ain’t wanna hear that Trump shit with Kanye next to him. wanna hear I Trump. wanna I hear that shit. I wanna hear that shit. I wanna hear that shit with I Dre. wanna hear that shit with Dre. ",8.763560920082657,8.469286484664575,True,True,120,3.269167423248291,0.0006754398345947266,0.00043487548828125
+98,"The robbers, precise as they were about meeting the two Brinks security guards on the 11th floor of "," surprised by the quick, fierce escape and caught off guard when Brinks employees, now in plainclothes, rushed to the rescue.
+
+The suspects appeared on a street camera with a police escort, which may ","surprised by the quick, fierce escape and caught off guard when Brinks employees, in now plainclothes, rushed to the The rescue. suspects appeared on a street camera with a police escort, which may ha",6.141879930089016,5.619514869490164,True,True,119,3.0729479789733887,0.0007677078247070312,0.00048422813415527344
+99,Someone taped a Kim Kardashian selfie to a treadmill in Bushwick. We&apos;re not sure why. RELATED: ,"
+
+The photo was spotted on a treadmill in Bushwick. It features a Kim K face with a puffed out abdomen, long, black hair, and a pair of red glasses. One user wrote, ""I bet that woman looks like Kim K,","The photo was spotted on a treadmill in Bushwick. It features a Kim K face with a puffed out abdomen, long, black hair, and a pair red of glasses. One user wrote, ""I bet that woman like looks Kim K, I",8.398412548412548,7.867320817286229,True,True,120,3.0430819988250732,0.0009410381317138672,0.0004837512969970703
+100,MTS has flicked the switch on 4G LTE wireless service at Grand Beach and Victoria Beach. Two of six ," enjoy faster Internet with the addition of a 4G LTE connection.
+
+The addition of MTS’ latest technologies allows users to enjoy streaming video over Internet speeds up to 300 Mbps and faster voice ca",enjoy faster Internet with the addition of a 4G LTE connection. The addition of MTS’ latest technologies allows users to enjoy streaming video over Internet speeds to up 300 Mbps and faster voice call,7.12039324756716,6.3028298181701015,True,True,120,3.0539908409118652,0.0007984638214111328,0.0004935264587402344
+101,"Although the question of European nationals in the UK has been addressed, the fate of UK nationals w"," citizens, and we'll continue to track these developments, but if you have any additional updates, please add a post to the comments.
+
+As always, if you have any questions, please get in touch.","citizens, and we'll continue to track these developments, but if you have any additional updates, please a add post to the comments. As always, if you have any questions, please get in touch.",4.422458539645535,4.216691570992364,True,True,43,0.9627761840820312,0.0005090236663818359,0.0003108978271484375
+102,"A martyr with his brothers Narcissus and Marcellus at Tomi, in Pontus along the southern Black Sea. ",", son of Eclogius, also a son of Marius, was a Roman poet and an active friend of Licinius. The martyr's name is unidentified. He died in 70.
+
+His head has been destroyed and his whole body cast into ",", son of Eclogius, also a son of Marius, was a Roman poet and an active friend of Licinius. The martyr's name is unidentified. He died in 70. His head has been and destroyed his whole body cast into t",5.659799760886717,3.333974297349129,True,False,120,3.2163922786712646,0.0007536411285400391,0.0004546642303466797
+103,From the moment the first model walked down the runway at Calvin Klein Collection’s resort show Thur," runway models in a pale cream print, I knew I was in for a wild ride.
+
+When I was approached a year ago by the company to write an article on a show in which I wore no clothes and did what I felt lik","runway models in a pale cream I print, knew I was for in a wild ride. When I was approached a year ago by the company to write an article on a show in which wore I no clothes and did what I felt like ",7.12039324756716,6.434283176858165,True,True,120,3.1014397144317627,0.0007460117340087891,0.0004899501800537109
+104,Regulator warns Global-GMG radio deal may hit competition | City A.M. GLOBAL Radio’s £70m deal to bu," that listeners may have less choice over both brands.
+
+The regulator said: “Our analysis has shown that there will be fewer choice for a number of specific stations, and for a number of other genres,","listeners that may have less over choice both brands. The regulator said: “Our analysis has shown there that will be fewer choice for a number of specific stations, and for a number of other genres, a",6.390096504226938,5.738397297139943,True,True,120,3.1910746097564697,0.0007472038269042969,0.0004253387451171875
+105,(c)2006 Gravity Corp. & Lee Myoungjin(studio DTDS). All Rights Reserved. (c)2006 GungHo Online Enter, Web Site and Services created in Japan,Web Site and Services created Japan in,2.6457513110645903,2.6457513110645903,False,False,7,0.17075753211975098,0.0004868507385253906,0.0002009868621826172
+106,P&O Ferries is using software from Compuware to help it identify performance bottlenecks in its core," on a system that P&O owns, a maintenance engineer had to go to that system and try and replicate what was causing the issue, says Colin Pogue, director information systems.
+
+The first sign of trouble","on a system that P&O owns, a maintenance engineer had to go to that system and try and replicate what causing was the issue, says Colin Pogue, director information systems. The first sign trouble: of ",6.390096504226938,6.127946159842712,True,True,120,3.137239456176758,0.0007491111755371094,0.00046324729919433594
+107,Find useful information for MIP current students below. The MIP Student Association (IPSA) is an ent, offers graduate and professional development courses in international development. The Stanford International Policy Review offers a number of programs that complement graduate or professional school,offers and graduate professional development courses in international development. The Stanford International Policy Review offers a number of programs that complement graduate or professional schools,7.302967433402215,7.24191812652287,True,True,120,3.1290032863616943,0.0007457733154296875,0.0005052089691162109
+108,"Police have arrested a suspect in the murder of a man found dead this week in Manchester, New Hampsh"," with second-degree murder in the death of 31-year-old Andrew Ostrovsky.
+
+The New Hampshire AG and Manchester Police have reportedly identified a second person in Ostrovsky's death, but have not relea","with second-degree murder in the death of 31-year-old Andrew The Ostrovsky. New Hampshire AG Manchester and Police have reportedly a identified second person in Ostrovsky's death, but have not release",6.937819061732104,6.18146635643918,True,True,120,3.0650136470794678,0.0008342266082763672,0.0004658699035644531
+109,"Aren't we supposed to be over this sort of thing? Am I attractive? Well, that partly depends on your"," 500,000 women that recently appeared in Nature, a scientific publication that tends to be rather conservative.
+
+Researchers have long been aware that women aren't attracted to men solely on looks — w","500,000 women that recently in appeared Nature, a scientific publication that tends to be rather conservative. Researchers have long been aware that women aren't attracted to men solely on looks — whi",7.850689990907381,7.427813527082075,True,True,120,3.0255229473114014,0.0007932186126708984,0.0004496574401855469
+110,"You've gotta watch this impressive Super Mario Bros. playthrough by speedrunner ""Blubbler."" Blubbler"," was also 4:56.46, but there are plenty of tricks Blubbler uses to make every level less annoying, and even to help a bit with strategy.
+
+Blubbler isn't a speedrunner anymore, but he made a run for it","was also 4:56.46, but there plenty are of tricks Blubbler uses to make every level less and annoying, to even help a bit with strategy. Blubbler isn't a speedrunner anymore, but he made a run for it. ",7.850689990907381,7.305369330337213,True,True,120,3.216266632080078,0.0007581710815429688,0.00046825408935546875
+111,"Family and friends of Capt. Elizabeth Hagner, the officer in charge of the Female Engagement Team, R"," Maryland, on Thursday.
+
+Lt. Col. Scott T. Roper, commander, Combat Outpost Southwest, and Capt. Erika E. Hagner, commanding officer, have resigned. Roper has also become a special duty captain. The B","Maryland, on Thursday. Lt. Col. T. Scott Roper, commander, Combat Outpost Southwest, and Capt. Erika E. Hagner, commanding officer, have resigned. Roper has also become a special duty captain. The Bal",8.033264176742437,6.8072851001542904,True,True,120,3.083526849746704,0.0007402896881103516,0.0004544258117675781
+112,We missed this one on Friday… Universal has released a new trailer for The Mummy: Tomb of the Dragon," says that something will have a Papa John’s Pizza logo, I get hopeful. It seems like a smart marketing strategy.
+
+The Mummy: Tomb of the Dragon Emperor stars Tom Cruise as the classic Hollywood villa","says that something will have a Papa John’s Pizza logo, I get hopeful. It seems like a smart marketing strategy. The Mummy: Tomb of the Dragon stars Emperor Tom Cruise as classic the Hollywood villain",6.207522318391883,5.824352060364905,True,True,120,3.063091278076172,0.0009911060333251953,0.0004887580871582031
+113,A New York Times reporter appeared as a guest on MSNBC Thursday but unfortunately spent quite a bit ,", a reporter for the paper, was asked a question in French, and in response, began speaking in French. Then, Hirschfeld Davis changed her accent, which took over.
+
+Hirschfeld Davis was asked why a Fre",", a reporter for the paper, was asked a question in French, and response, in began speaking in French. Then, Hirschfeld Davis changed her accent, which took over. Hirschfeld Davis was asked why a Fren",5.8423739467217715,5.550253123463223,True,True,120,3.0065605640411377,0.0007417201995849609,0.0004248619079589844
+114,CANTON The deadline to apply for the Stark County Mental Health & Addiction Recovery Workforce Devel, increase their abilities and develop additional skills for a successful and rewarding long term employment. The funds will be dispersed to a Stark County resident for up to 10 years. The Stark County,increase their abilities and develop additional skills for a successful and rewarding long term employment. The funds will be to dispersed a Stark County resident for up to 10 years. Stark The County ,6.937819061732104,7.0,True,True,120,3.0148420333862305,0.0008485317230224609,0.0005333423614501953
+115,A little over 5 acres of land in a prime area of Western North Carolina. Upon arrival to the home si," winding paths leading down into a forest. This land and views are within walking distance to several schools and historic sites.
+
+There are plenty of serene spots and an open barn in the back. It is ",winding paths leading into down a forest. This land and views are within walking distance to several schools and historic There sites. plenty are of serene spots and an open barn in the back. It is th,8.033264176742437,7.180287023450417,True,True,120,3.039160966873169,0.0007221698760986328,0.0004813671112060547
+116,"MANCHESTER UNITED stars Ryan Giggs, Darren Fletcher and Chris Smalling followed up their Champions L"," Les Ferdinand and Rio Ferdinand.
+
+The trio suffered an awful 3-0 humiliation by Newcastle United in the Premier League on Sunday.
+
+Former Manchester United defender Kevin Sinfield scored twice in the",Les Ferdinand and Rio Ferdinand. The trio suffered an awful 3-0 humiliation by Newcastle United in the Premier League on Sunday. Former United Manchester defender Kevin Sinfield scored twice in the ga,6.937819061732104,6.359358571541744,True,True,120,3.1306333541870117,0.0010037422180175781,0.0004994869232177734
+117,"This free, weekly program shows students in kindergarten through 5th grade how to make unique items "," Nature Center with free daily programs that teach kids how to create unique, interesting, and colorful works of art.
+
+This free, weekly program shows students in kindergarten through 5th grade how to","Nature Center with free daily programs that teach kids how to create unique, interesting, and colorful works of art. This weekly free, program shows students in kindergarten through 5th grade how make",6.207522318391883,5.756555483488608,True,True,120,3.091297149658203,0.0008006095886230469,0.0004761219024658203
+118,"If you're a regular commuter or tourist in New York City, here's some exciting news: Earlier this we"," bug, which isn't particularly harmful, was reported on Monday, but until now, the transit agency couldn't pinpoint exactly where the infestation was. That is, until now.
+
+According to the New York Da","bug, which isn't particularly was harmful, reported on Monday, but until now, the agency transit couldn't pinpoint exactly where the infestation was. That is, until now. According to the New York Dail",5.659799760886717,5.0137741307804005,True,True,120,3.0836212635040283,0.0008230209350585938,0.0005056858062744141
+119,"You long for someone to return your affection, but it just isn't happening. Instead of going into an"," favourite video games, make some hot chocolate, read a nice book, put on some good music.
+
+Advertisement
+
+If nothing else, you'll likely feel a bit more positive.
+
+There are also apps like Self Care ","favourite video games, make some hot chocolate, read a nice book, put on some good music. Advertisement If nothing else, you'll likely feel a bit positive. more There also are apps like Self Care that",7.302967433402215,6.102160571171791,True,True,120,3.0640499591827393,0.0007855892181396484,0.0004792213439941406
+120,"Latter & Blum Insurance Services, Inc. What the community has to say about Latter & Blum Insurance S"," in the St. Louis Market, with a primary office in St.
+
+Latter & Blum Insurance Services, Inc. What the community has to say about Latter & Blum Insurance Services, Inc. Latter & Blum Inc. Realtors of","in the St. Market, Louis with a primary office in St. Latter & Blum Insurance Services, Inc. What the community has to say about Latter & Blum Insurance Latter Services, Inc. & Blum Inc. Realtors offe",1.4605934866804429,-0.0949157995752499,False,False,120,3.1268508434295654,0.0006656646728515625,0.0004379749298095703
+121,The family of a 3-year-old girl who died in October after falling into a grease trap outside an ice ," press conference in Birmingham.
+
+Rajni Davis was killed in October after getting caught in a grease trap behind Jimmy Hite's Ice Cream on Auburn Ave. She was rushed to a Birmingham hospital but died ",press conference in Birmingham. Rajni Davis was killed in October after getting caught in a grease trap behind Jimmy Hite's Ice Cream on Auburn She Ave. was rushed to a Birmingham hospital but died a ,7.6681158050723255,7.243550686553699,True,True,120,3.0437417030334473,0.000728607177734375,0.00048661231994628906
+122,Yet more members of law enforcement have made the acquaintance of Lindsay Lohan. Lohan was arrested ,". She reportedly admitted to getting in her Porsche after consuming narcotics, and was transported by the New York Police Department to The Jackson Memorial Hospital in North Miami, Florida for evalua",". She reportedly admitted to getting in her after Porsche consuming narcotics, and was transported by the New York Police Department to The Jackson Memorial Hospital in North Miami, Florida for evalua",5.8423739467217715,5.199469468957452,True,True,120,3.002941846847534,0.0007767677307128906,0.0004947185516357422
+123,"Kissinger, echoing the recommendations of the Iraq Study Group, also called for diplomatic talks wit"," Clinton, who was secretary of state at the time.
+
+The Iraq Study Group, in conjunction with a separate panel chaired by Republican Sen. Dan Coats, released a summary in October that found that a pre-","Clinton, who was secretary of state at the time. The Iraq Study Group, in conjunction with a separate panel chaired by Republican Sen. Dan Coats, released a summary in October that found that a pre-em",5.659799760886717,4.870246220224809,True,True,120,3.0434610843658447,0.000827789306640625,0.0004925727844238281
+124,Today was a good day. A package from San Francisco artist Doctor Popular arrived in the mail. Inside," in a post on Instagram, that he put together a playlist inspired by the releases. As someone who listens to a lot of indie comics, I was pleased. This is a genre I like, and while I do read a fair am","in a post Instagram, on that he put together a playlist inspired by the As releases. someone who listens to a lot of indie comics, I was pleased. This is a genre I and like, while I do read a fair amo",5.8423739467217715,5.52344770738994,True,True,120,3.0789999961853027,0.0008950233459472656,0.0005044937133789062
+125,CHICAGO — Newly released U.S. Census Bureau figures show the percentage of Illinois children with he," uninsured during that same period — up from 3.1 percent in 2007.
+
+Federal law requires health insurance for children in family plans. The data show that Illinois ranks in 16th in total children with ",uninsured during that same — period up from 3.1 percent in 2007. Federal law requires health insurance for children in family plans. data The show that Illinois ranks in 16th in total children health ,5.477225575051661,4.942275483673663,True,True,120,3.0617332458496094,0.0007960796356201172,0.0004851818084716797
+126,An Atlanta librarian who appeared on “Jeopardy!” Wednesday was unable to beat a Colorado music teach," Public Library System.
+
+For eight years, Moore, 29, has visited schools across Georgia on a monthly basis for a program that allows students to practice for the national quiz show, which features cel","Public Library System. For eight years, Moore, 29, has visited schools across Georgia a on monthly basis for a program that allows students to practice for the national quiz show, which features celeb",6.7552448758970485,5.9941491941228415,True,True,120,3.1396899223327637,0.0007715225219726562,0.0004837512969970703
+127,"Mukesh Ambani plans to sell Reliance Gas Transportation Infrastructure Ltd (RGTIL), a company that b"," monetize these assets, reported Mumbai Mirror.
+
+Sources familiar with the development confirmed that RITL, a wholly owned subsidiary of RIL, is for sale. RGTIL will fetch a valuation in a 10-12 billi","monetize these assets, reported Mumbai Mirror. Sources familiar with the development confirmed that RITL, a wholly owned subsidiary of RIL, is for sale. RGTIL will fetch a valuation in a 10-12 billion",6.207522318391883,5.639451994956496,True,True,120,3.1123812198638916,0.0007712841033935547,0.0004379749298095703
+128,"Pharrell Williams married his girlfriend of 10 years, Helen Lasichanh, in Miami this weekend. The pr"," and Justin Bieber’s ‘I Like It,’ and won an Oscar for the film ‘Girl.’
+
+But in a candid interview with E! News, Phillips admitted that he and his sweetheart have been through a tough time in the past","and Justin Bieber’s ‘I Like It,’ and won an Oscar for the film ‘Girl.’ in But a candid interview with E! News, Phillips admitted he that and his sweetheart have been through a tough time in the past y",6.024948132556827,5.362108949786505,True,True,120,3.2159423828125,0.0010218620300292969,0.0004696846008300781
+129,"Son of former D.C. mayor claimed he had been ""self-medicating"" The son of former District of Columbi"," assaulting his stepfather during a violent attack in a DC street. Barry was a congressman and a member of the national law enforcement leadership.
+
+Barack Hussein Obama: ""All I did was step in, try a","assaulting his stepfather during a attack violent in a DC street. Barry was a congressman and a member of the national law enforcement leadership. Barack Hussein Obama: ""All I did was step try in, and",7.6681158050723255,6.9963670960272575,True,True,120,3.1009271144866943,0.0007312297821044922,0.00048828125
+130,"star, who suffered a myocardial infarction, has been ""moved from the Intensive Care Unit, but remain"," that you continue praying for his health and well being,"" a rep for star read in a statement.
+
+Though a message on the star's website stated that star had a ""major medical emergency,"" and that he was","you that continue praying for his health and well being,"" a rep for star read in a statement. Though a message on the star's website stated that star had a ""major medical emergency,"" and that he was """,6.572670690061993,6.444022325288263,True,True,120,3.1507627964019775,0.000698089599609375,0.0004899501800537109
+131,"TRINIDAD AND TOBAGO star Kevon Carter, 30, has died of a suspected heart attack after training with "," defender collapsed and died after suffering an arrhythmia.
+
+Carter was in a car accident in Trinidad a year ago but was never seriously injured and was playing for a club that qualified for the Confe",defender collapsed and died after suffering an arrhythmia. Carter was in a car accident in Trinidad a year ago but was never seriously injured and playing was for a club that qualified for the Confede,7.12039324756716,6.434283176858165,True,True,120,3.1451609134674072,0.0008080005645751953,0.0004904270172119141
+132,Notegraphy lets users create and publish notes in beautiful formats and layouts. If you’ve ever marv," app is for you. NOTEgraphy automatically converts an image into a beautiful graph, and also allows users to style and customize the font, colors, and any background colors for each note. NOTEgraphy w","app is for you. NOTEgraphy automatically converts an into image a beautiful graph, and also allows users to style and customize the font, colors, and any background colors for each note. NOTEgraphy wi",6.7552448758970485,6.812252172447593,True,True,120,3.0923867225646973,0.0009744167327880859,0.0004661083221435547
+133,"Just when you thought you&apos;d seen every variation of moc-toed boot possible, Yuketen comes throu"," less familiar for most women (and men), these have a completely unique, contemporary feel.
+
+The shoe styles range from casual, neutral, and casual/floral in styles that feel like a completely differe","less familiar for most women (and men), these have a completely unique, contemporary feel. The styles shoe range from casual, neutral, and casual/floral in styles that feel like a completely different",7.48554161923727,6.8707275125509195,True,True,120,3.193131446838379,0.0008237361907958984,0.00045228004455566406
+134,"Ida Reolfi will celebrate her 103rd birthday on March 31, 2013. She is the widow of Eugene (Bill) Re"," and John Reolfi.
+Ida, born in Youngstown, Ohio, was a graduate of Youngstown Polytechnic High School and was an avid golfer, playing in several Women’s Golf Outings. She married her husband, Eugene, ","and John Reolfi. Ida, born in Youngstown, Ohio, was a graduate of Youngstown Polytechnic High School and was an avid golfer, playing in several Women’s Golf Outings. She married her husband, Eugene, o",6.390096504226938,5.385164807134505,True,True,120,3.2353289127349854,0.0007612705230712891,0.0004620552062988281
+135,What time GAYA-JAJ PASS depart from GAYA JN Railway Station? GAYA-JAJ PASS (53624) departs from GAYA,"I? You can also refer the route chart of GAYA-JAJ PASS in which route are JHAJHAI and its route chart.
+
+Arrive and Departure Timings
+
+GAYA-JAJ PASS
+
+Departs
+
+Arrive
+
+05:05
+
+JHAJHAI
+
+05:45
+
+GAYA-JAJ
+
+0",I? You can also refer the route chart of GAYA-JAJ PASS in which route are JHAJHAI and its route chart. Arrive and Departure Timings GAYA-JAJ PASS Arrive Departs 05:05 JHAJHAI 05:45 GAYA-JAJ 05:45 GAYA,2.556038601690775,-2.2936585546278225,False,False,120,3.4353208541870117,0.0006580352783203125,0.00039768218994140625
+136,Photo: © Donna Ward/Retna Ltd. Nicki Minaj‘s hairstyle inspiration is cartoon character Marge Simpso," that her latest hairdo, a short faux braids hairstyle, will make even Marge jealous. The 25-year-old star made the revelation during an interview with The Hollywood Reporter, during which she also sh","that her latest hairdo, a short faux braids hairstyle, will make even Marge jealous. The 25-year-old star made the revelation during an interview with The Hollywood Reporter, during which she also sha",7.48554161923727,7.056422850727971,True,True,120,3.251713752746582,0.0007498264312744141,0.0004343986511230469
+137,Anna O'Flanagan and Katie Mullan scored as Ireland beat 2016 Olympic bronze medallists Germany 2-1 i," Karlie Hahn was on target for the visitors.
+
+Ireland qualified for Friday's semi-final on Monday with a fine 4-1 victory over Italy, but Sunday's match with Germany was a much tougher test for a side","Karlie Hahn was on target for the visitors. Ireland qualified for Friday's semi-final on Monday with fine a 4-1 victory over Italy, but Sunday's with match Germany was a much tougher test for a side l",6.207522318391883,5.619514869490164,True,True,120,3.1720023155212402,0.0007710456848144531,0.0004754066467285156
+138,A letter to the editor published Oct. 16 supported U.S. Sen. Jim DeMint's recent comments on gay sch," and I find these comments and opinions offensive and inhumane. It sounds like DeMint is speaking in a vacuum and that his views are simply too extreme and irrational.
+
+The debate over school teaching",and I find these comments and opinions offensive and inhumane. It sounds like DeMint is speaking in a vacuum and that his views are simply too extreme and irrational. The debate over school teaching s,7.12039324756716,6.9963670960272575,True,True,120,3.085325002670288,0.0007498264312744141,0.0004718303680419922
+139,Dancing With the Stars pros Val Chmerkovskiy and Jenna Johnson said their I do’s at a seaside Califo,".
+
+As Johnson and Chmerkovskiy bid adieu to each other, there was a brief, impromptu dance in a grotto, and it wasn’t planned.
+
+“I didn’t know until today, but I never thought I was doing a dance,” Ch",". As Johnson and Chmerkovskiy bid adieu to each other, there was a brief, impromptu dance in a grotto, and it wasn’t “I planned. didn’t know until today, but I never thought I was doing a dance,” Chme",6.390096504226938,6.047431568147635,True,True,120,3.107494592666626,0.00078582763671875,0.0004260540008544922
+140,"Dhaka is celebrating its 400th year and much of the celebration is centred on Old Dhaka, a city imme"," being restored, so too is its heritage and history – a balance that is, thankfully, present in much of Bangladesh.
+
+But as Bangladesh emerges from post-2015 development, it will be looking for a fres","restored, being so too is its heritage and history – a balance that is, thankfully, present in much of Bangladesh. But as Bangladesh emerges from post-2015 development, it will be looking for a fresh ",6.207522318391883,5.874780291913977,True,True,120,3.075066328048706,0.0007176399230957031,0.0005025863647460938
+141,More information has been released about a two-vehicle collision near Ireton that claimed the life o," passenger in a vehicle being driven by her 16 year-old sister, Sydney Bates. Sydney was also killed in the accident.
+
+A 16-year-old girl was killed and six year old was injured after a crash near Ire","passenger in a vehicle being driven by her 16 year-old sister, Sydney Bates. Sydney was also killed in the accident. A 16-year-old girl was killed and year six old was injured after a crash near Ireto",5.294651389216606,4.650874179187245,True,True,120,3.0996155738830566,0.0007283687591552734,0.0004961490631103516
+142,Make your holiday season merrier with these local (and not-so-local) parades and events. Want to che,"
+
+This week on Dec. 9, join the rest of the country for St. Patrick's Day. Here are a list of local events celebrating this day and, well, everything St. Paddy's Day and Paddy's Day Weekend.
+
+The bigg","This week on Dec. 9, join the rest of the country for St. Patrick's Day. Here are a list of local events celebrating this day and, well, St. everything Paddy's Day and Paddy's Day Weekend. The biggest",6.390096504226938,5.480484858633795,True,True,120,3.0913662910461426,0.0007116794586181641,0.00042557716369628906
+143,"The shares, floated at 575p, nearly doubled on the first day and are now £28.68p (up 2 1/ 2p). First"," Shares will now start trading in London on Monday.
+
+SAP chief executive Mark Hurd
+
+Hurd, a 30-year veteran of the software company, took the helm in January last year after spending 11 years at Micro","Shares will now start trading in London on Monday. SAP chief executive Mark Hurd Hurd, a 30-year veteran of the software took company, the helm in January last year after spending 11 years at Microsof",5.659799760886717,4.985820602433066,True,True,120,3.314164161682129,0.0009851455688476562,0.00047206878662109375
+144,Pop star Selena Gomez once again has placed her luxurious mansion on the market. The residence locat," on the market for $19.99 million. Gomez recently had her fourth baby with boyfriend and fellow musician Justin Bieber.
+The seven-bedroom, eight-bathroom compound spans over 30,500 square feet and sit","on the market for $19.99 million. Gomez recently had her baby fourth with boyfriend and fellow musician Justin Bieber. The seven-bedroom, eight-bathroom compound spans over 30,500 square feet and sits",7.302967433402215,7.24191812652287,True,True,120,3.0594863891601562,0.0006973743438720703,0.00047588348388671875
+145,United Bank at the Fair Lakes Shopping Center caught fire just after 4 p.m. May 2 after someone disc," to a nearby parking deck. The fire was contained to that deck, but it was an unmitigated disaster for nearby stores.
+
+According to court records, a fire safety inspection in February determined that ","to a nearby parking deck. The fire was contained to that but deck, it was an unmitigated disaster for nearby stores. According to court records, a fire safety inspection in February determined that a ",6.7552448758970485,5.9941491941228415,True,True,120,3.034038782119751,0.0007271766662597656,0.0004191398620605469
+146,A Terre Haute man will have his initial hearing on Wednesday for an arrest dating back to July. VIGO," initial hearing on Wednesday for an arrest dating back to July.
+
+Authorities say 22 year-old Kevin Brown was arrested back in July for a battery in Terre Haute.
+
+When police responded to a call for a",initial hearing on Wednesday for an arrest dating back to July. Authorities say 22 year-old Kevin Brown was arrested back in July for a battery Terre in Haute. police When to responded a call for a fi,5.491251783869154,5.103103630798288,True,True,104,2.6284899711608887,0.0006887912750244141,0.0004031658172607422
+147,"If we hope to preserve Social Security and Medicare for seniors, younger workers and our children, w"," important topics, but I believe there are a number of areas that I believe are worth exploring, and that are also essential to improving the sustainability of these programs.
+
+I believe that reformin","important topics, but believe I are there a number of areas that I believe are worth exploring, and are that also essential to improving the sustainability of these programs. I believe reforming that ",7.302967433402215,6.685032174373868,True,True,120,3.027869462966919,0.00098419189453125,0.0004589557647705078
+148,"Dog licenses are available in the town clerk's office. The fee is $5 if neutered/spayed, and $12 if ",", along with an additional $10 fee for each additional rabies vaccine that may have been administered within six months.
+
+The dog license will expire within 30 days after purchase, and any fines that ",", along with an additional $10 fee for each rabies additional vaccine that may have been administered within six months. The dog license will expire within 30 days after purchase, and any fines that m",7.6681158050723255,7.305369330337213,True,True,120,3.123547315597534,0.0008254051208496094,0.0005154609680175781
+149,Get the Web as screensaver. NESSIE displays as screen saver the links of an Internet Explorer favori," the Web itself a screen saver.
+
+Web Screensaver is a professional screensaver and Internet Explorer 9 based program. It supports full version Microsoft Internet Explorer. The software supports:
+
+You ",the Web itself a screen saver. Web Screensaver is a professional screensaver and Internet Explorer 9 based program. It supports full version Microsoft Internet The Explorer. software supports: You can,8.033264176742437,5.838403593598094,True,True,120,3.079951524734497,0.0008084774017333984,0.0004851818084716797
+150,"Completing BT’s Complete WiFi solution is the digital set-top box. Manufactured by Humax, this compa"," disk drive.
+
+Designed for home entertainment, BT’s Complete WiFi will play all content from BT’s on-demand and Catchup TV services, including iPlayer, catchup services and web services. This unit all","disk drive. Designed for home entertainment, BT’s Complete WiFi will play all content from BT’s on-demand and Catchup services, TV including iPlayer, catchup services and web services. This unit allow",6.572670690061993,6.434283176858165,True,True,120,3.1248810291290283,0.0007684230804443359,0.0005130767822265625
+151,"Mr. Susumu Miyoshi has been serving as Independent Director in Kaga Electronics Co., Ltd. since June"," graduated with an engineering degree from Tokyo Institute of Technology. He joined Kaga Electronics in 2005 as a quality control engineer and a manager, and worked in various functions in production.","with graduated an engineering degree from Tokyo Institute of Technology. He joined Kaga in Electronics 2005 as a quality control engineer and a manager, and worked in various functions in production. ",8.033264176742437,8.033264176742437,True,True,120,3.127441644668579,0.0007429122924804688,0.0004775524139404297
+152,This stunning hand-crafted home is situated in a secluded location perched above San Miguel. With so," home feels like a resort with views for miles. The main living space features a hardwood floor, wood burning fireplace, an open kitchen with a large breakfast bar, 3 bedrooms with en suite baths and ","home feels like a resort with views for miles. The main living space features a hardwood floor, wood burning fireplace, an open with kitchen a large breakfast bar, bedrooms 3 with en suite baths and a",6.937819061732104,6.8707275125509195,True,True,120,3.134490728378296,0.000774383544921875,0.00043320655822753906
+153,"EXCLUSIVE: Fox Searchlight, which distributed the Natalie Portman-starrer Black Swan, is courting Po"," based on a nonfiction book about the 1963 María E. Forlan, also starring Cuba Gooding Jr.
+
+The movie hails from Anonymous Content, which is producing, and Anonymous Content Film with Gooding, William","based on a nonfiction book about 1963 the María E. Forlan, also starring Cuba Gooding Jr. The movie hails from Anonymous Content, which is producing, and Anonymous Content Film with Gooding, Goldman, ",5.8423739467217715,5.385164807134505,True,True,120,3.223963975906372,0.0008091926574707031,0.00047588348388671875
+154,A new Coast Guard cutter commissioned Friday honors a petty officer who was killed in a confrontatio," honors a petty officer who was killed in a confrontation with suspected smugglers.
+
+The USCG Cutter R.S. Cole was introduced Friday, Sept. 6, 2019 during a ceremony off L.A. Harbor.
+
+Lt. Blake H. Lin","honors a petty officer who was killed in a confrontation with suspected smugglers. The USCG R.S. Cutter was Cole introduced Friday, Sept. 6, 2019 during a ceremony off L.A. Harbor. Lt. Blake H. Linsco",7.302967433402215,6.748852387406954,True,True,120,3.010953903198242,0.0007379055023193359,0.000484466552734375
+155,"Pic Stitch offers and easy way to create attractive layouts for groups of photos. 13 Jun 2018, 10:37"," number of pre-defined layouts and have up to 20 frames applied. There are three basic layouts, Stroll, Lanes and Park: a. Lanes and Park allows you to create a fixed size page and add up to 10 photos","number of pre-defined layouts and have up to 20 frames applied. There are three basic layouts, Stroll, Lanes and Park: a. Lanes and Park allows you to create a fixed size page and add up to 10 photos ",6.390096504226938,5.89167755454927,True,True,120,3.1045429706573486,0.0008091926574707031,0.00047397613525390625
+156,"Lane was charged with one count each of manufacture, delivery or possession, conspiracy and criminal"," bail, on an indictment for second-degree sexual assault, a Misdemeanor, for which prosecutors do not believe a trial is necessary.
+
+Cummings was released on an order of dismissal.
+
+Tiffany Brunk
+
+The","bail, on an indictment for second-degree sexual assault, a Misdemeanor, for which prosecutors do not believe a trial is necessary. Cummings was released on an order of dismissal. Tiffany Brunk The pol",7.12039324756716,6.034305596893254,True,True,120,3.107278823852539,0.0007731914520263672,0.0004723072052001953
+157,She already set the record once. Now she's going to do it again. Hall of Famer Nancy Lieberman set t," regular season. At 46.
+
+Lieberman was inducted into the Women's Basketball Hall of Fame in 2007, but now she is just a notch above that. The L.A. Sparks guard took a breather from playing and getting","regular season. At 46. Lieberman was inducted into the Women's Basketball Hall of Fame in 2007, but now she is a just notch above that. The L.A. Sparks guard took a breather from playing and getting r",6.937819061732104,6.236413804652249,True,True,120,3.0371577739715576,0.000743865966796875,0.0004584789276123047
+158,The backlash against the comedian Louis C.K. was swift after the Times reported on Thursday that sev," Friday, his comedy tour was canceled.
+
+In addition, several women told HuffPost that they feel that the Times story may have been politically motivated. The publication's allegations included an asse","Friday, his comedy tour was canceled. In addition, several women told HuffPost that they feel that the Times story may have been politically motivated. The publication's allegations included an assert",6.024948132556827,5.385164807134505,True,True,120,3.0253493785858154,0.0007832050323486328,0.0004858970642089844
+159,Lifeguards and police were using personal watercraft and aerial surveillance Sunday to continue thei," Saturday.
+
+The boy was bitten on the back and face, but was alert and talking in a nearby emergency room.
+
+The shark, estimated to be more than 10 feet long, was seen approximately 10 yards off the w","Saturday. The boy was bitten on the back and face, but was alert and talking in a nearby emergency room. The shark, estimated to be more than 10 feet long, was seen approximately 10 yards the off wate",7.48554161923727,6.992342750670703,True,True,120,3.1272530555725098,0.0009655952453613281,0.0004298686981201172
+160,"The publish date for Glenn Beck’s new novel, “The Overton Window,” is fast approaching (June 15th) b"," image with a big red X on the left border, which stands for “NOT OFFICIAL.”
+
+There are no other details available. It’s not a prequel and there are no other details. I checked. I even tried googling ","image with a big red X on the left border, which stands for “NOT OFFICIAL.” There are no other details available. It’s not a prequel and there are no other I details. checked. I even googling tried th",6.207522318391883,5.756555483488608,True,True,120,3.210078477859497,0.0007238388061523438,0.0004303455352783203
+161,The opening day of the UIL baseball championships ended with Georgetown Gateway Prep falling to Wall," over 7 1/3 innings in a battle with two Texas commitments.
+Gully and first-year head coach Andrew Taylor both have Texas ties. Taylor, a first-year assistant at Wall, was a first-year assistant at Tr","over 7 1/3 innings in a battle with two commitments. Texas Gully and first-year head coach Andrew Taylor both have Texas ties. Taylor, a first-year assistant at Wall, was a assistant first-year at Tri",5.477225575051661,4.642383454426297,True,True,120,3.0799355506896973,0.0007388591766357422,0.0004515647888183594
+162,Thailand’s prime minister said April 30 his country had agreed in principle to form a rice price-fix," rise in an agriculture crisis over drought and floods.
+
+The six countries in Southeast Asia have agreed on a regional scheme to lift rice export quotas and set a fixed price, Thailand’s prime ministe","rise in an agriculture crisis over drought and floods. The countries six in Southeast Asia have agreed on a regional scheme to lift rice export quotas and set a fixed price, Thailand’s prime minister ",5.477225575051661,5.173964776109785,True,True,120,3.090186357498169,0.0008397102355957031,0.0005133152008056641
+163,Amy Winehouse's family is putting her house up for sale to the tune of £2.7 million (about $4.2 mill," fans with several murals on the walls and even a tribute sign made to her on the roof of the house.
+
+The late Amy's mom, Janis, also died on February 27, 2009, and a police dog, Bailey, also passed a","fans with several murals on the walls and even a tribute sign made to her on the of roof house. the The late Amy's mom, Janis, also died on 27, February 2009, and a police dog, Bailey, also passed awa",6.572670690061993,6.1941521911817246,True,True,120,3.1258318424224854,0.0009083747863769531,0.00047898292541503906
+164,Littlehampton Pier has been closed temporarily over safety concerns. A tweet from Arun District Coun," will fix the boardwalk and open it back up in a week. The council also said a large puddle on the boardwalk, which was causing delays, will also be drained.
+
+The council has also confirmed that The W","will fix the boardwalk and open it back in up a week. The council also said a large puddle the on boardwalk, which was causing delays, will be also drained. The council has also confirmed that The Wat",6.024948132556827,5.2448805448574864,True,True,120,3.045602560043335,0.0007619857788085938,0.00048279762268066406
+165,"FRANKFORT, Ky. (WKYT) - Kentucky health leaders have confirmed 16 people have tested positive for sa"," December 2019 through July.
+State epidemiology and agriculture inspectors did find signs of sanitation and sanitation practices during an inspection, according to Kentucky's chief veterinary officer.","December 2019 through July. State epidemiology and agriculture inspectors did find signs of sanitation and sanitation practices during an inspection, according to Kentucky's chief veterinary officer. ",6.024948132556827,5.639451994956496,True,True,120,3.1934709548950195,0.0008699893951416016,0.0004878044128417969
+166,Christian schools in Israel have ended a month-long strike after reaching a funding agreement with t," and their presence at the meeting with ministry representatives was kept strictly confidential.
+
+The agreement, which will increase funding for several hundred schools by 3% over a period of 10 years","and their presence at the meeting with representatives ministry was kept strictly confidential. The agreement, which will increase funding for several hundred schools by 3% over period a of 10 years, ",6.572670690061993,6.127946159842712,True,True,120,3.1272051334381104,0.0007395744323730469,0.00043773651123046875
+167,"Claude Jutra is the filmmaker who wrote and directed Mon Oncle Antoine (1971), considered by many cr"," while working for the CBC. He was also a producer on films like La Petite Heure, The Sun in February, and The Man in the Gray Flannel Suit.
+
+After a short period working in television in Canada, he b","while working the for CBC. He was also a producer on films like La Petite Heure, The Sun in February, and The Man in the Gray Flannel Suit. After a short period working in television in Canada, he beg",5.8423739467217715,5.199469468957452,True,True,120,3.0718326568603516,0.0008118152618408203,0.0004909038543701172
+168,"""It was a nice win,"" captain Greig Laidlaw told the BBC. ""We scored 43 points and a lot of good trie"," what I am playing like and I feel we are looking up in world rankings and I am playing well. It is a good place to be.
+
+""We knew we couldn't afford to sit back and do nothing.
+
+""We were in the drivin","I what am playing like and I feel we are looking up in world rankings and I am playing well. It is a good place to be. ""We knew we couldn't afford to sit back and do nothing. ""We were in the driving s",5.294651389216606,4.72455591261534,True,True,120,3.081664562225342,0.0007126331329345703,0.00046634674072265625
+169,"border control on to ports and airports, and airlines and their passengers. governing the costs. But"," Mexico already has a system in place to do just that.
+
+And while that won't help the people, will help border and airport workers and border authorities work, for now. It is a start, anyway.
+
+Sally N","Mexico already has a system in place to do just that. And while that won't help the people, will help border and airport workers and border authorities work, for now. It is a start, anyway. Sally Nels",8.580986734247602,8.067842963896242,True,True,120,3.0741376876831055,0.0007176399230957031,0.0004401206970214844
+170,Italy will adopt emergency budget cuts worth 20 billion euros next year and 25 billion euros in 2013," close to Berlusconi's centre-right, Democratic Party (PD), which will head a technocratic government in coming months, said that Berlusconi gave no details of any planned austerity measures but that ","close to Berlusconi's centre-right, Democratic Party (PD), which will head a technocratic government in coming months, said that Berlusconi gave no details of any planned austerity measures but that h",4.199206274206274,4.016632088371218,True,True,120,3.045102596282959,0.0007913112640380859,0.0004916191101074219
+171,Sherry Black funeral today at 11 a.m. The funeral for slain bookseller Sherry Black will take place ," a Portland Booksellers store in a small strip mall along Northeast Division St. in the Central District. She was 37.
+
+The funeral service will be held at St. Andrew Parish, 905 E. Division St. in Por","a Portland Booksellers store in a small strip mall along Northeast Division St. in the Central District. She was 37. The funeral service will be held at St. Parish, Andrew 905 E. Division St. Portland",7.12039324756716,6.236413804652249,True,True,120,3.111466646194458,0.0008733272552490234,0.00047779083251953125
+172,Homes have been without power today after a car crashed into a telegraph pole. Police were called to," a car hit a wire close to the telephone pole.
+
+The driver, a man in his 70s, was rushed to Chippenham Town Hospital with a dislocated shoulder.
+
+The driver suffered a dislocated shoulder after being ","a car hit wire a close to the telephone pole. The driver, a man in his 70s, was rushed to Chippenham Town Hospital with a dislocated shoulder. The driver suffered a dislocated shoulder after being inv",6.024948132556827,5.102520385624567,True,True,120,3.110941171646118,0.0007219314575195312,0.0004801750183105469
+173,"BAKERSFIELD, Calif. — The Holiday Lights at CALM are out tonight, Christmas Eve according to a Faceb"," to fire conditions and will be open tomorrow.
+
+The Facebook post says CALM Zoo Director, Kevin Lewis, and Mammal Keeper, Tasha Marquez will be available tomorrow morning at 9am.
+
+This is a breaking n","to fire conditions and will be open tomorrow. The Facebook post says CALM Zoo Director, Kevin Lewis, and Mammal Keeper, Tasha will Marquez be available tomorrow morning at 9am. This is a breaking news",6.130730673081194,5.555909634626167,True,True,99,2.4095351696014404,0.0007252693176269531,0.0004515647888183594
+174,Amtico hallway flooring hallways flr group. Installing laminate flooring in hallway nouveau amtico v, amtico hallway floor vinyl. Amtico hall floor vinyl in a hallway.,amtico hallway vinyl. floor Amtico hall floor vinyl in a hallway.,1.697749375254331,1.697749375254331,False,False,17,0.40245962142944336,0.0005979537963867188,0.000244140625
+175,This is a brave man. Despite the fact that the engine on his circa 1980 Ford Fairmont sounds like a ," the drive.
+
+Just imagine a car like that:
+
+And now, imagine a man:
+
+This isn't a car. It isn't a man. It certainly isn't a man.
+
+This isn't a man, man.
+
+This isn't a man. It certainly isn't a man.
+
+T","the drive. Just a imagine car like that: And now, imagine a man: This isn't a car. It isn't a man. It certainly isn't a man. This isn't a man, man. This isn't a man. It certainly isn't a man. This isn",10.771876964268266,9.901475429766744,True,True,120,2.991725444793701,0.0006093978881835938,0.0003857612609863281
+176,"HUNTINGTON, W. Va. — Western Kentucky will host Louisiana Tech at 11 a.m. Saturday at Houchens-Smith","
+
+The Hilltoppers, coached by Skip Holtz, defeated Western Mennonite 27-24 on Nov. 16.
+
+Lamar Jackson accounted for two touchdown tosses and a total of 221 rushing yards for Western Kentucky. Jackson ","The Hilltoppers, coached Skip by Holtz, defeated Western Mennonite 27-24 on Nov. 16. Lamar Jackson accounted for two touchdown tosses and a total of 221 rushing yards for Western Kentucky. Jackson rus",6.508559328900301,5.720775535473554,True,True,119,3.141833782196045,0.0009915828704833984,0.0004897117614746094
+177,"Purdue's season has been a little rocky to this point, but Sunday's game against Michigan State coul"," they beat Texas Tech and are coming off a big win over Tennessee on Friday. It'll be up to the defense, along with its new leader, Taulia Tagovailoa, to put Purdue on a short week after a home win.
+
+","they beat Texas Tech and are coming off a big over win Tennessee on Friday. It'll be to up the defense, along with its new leader, Taulia Tagovailoa, to put Purdue on a short week after a home win. 5.",6.7552448758970485,6.313641498019764,True,True,120,3.052107334136963,0.0007321834564208984,0.0004734992980957031
+178,Can You Guess Which City Is Bigger? Tampa is 170.6 square miles and Orlando is 110.7 square miles. N," square miles. I recently visited both of these cities and was blown away. The population in New York is 7.4 billion. The population in Orlando is 16.6 billion.
+
+Forbes magazine recently released an a",square miles. I recently visited both these of cities and was blown away. The population in New York is 7.4 billion. The population Orlando in is 16.6 billion. Forbes magazine recently released an on ,8.033264176742437,7.431694860230418,True,True,120,3.0768043994903564,0.0007081031799316406,0.0004563331604003906
+179,Vanderbilt and Middle Tennessee will play their season opener Saturday. Here is how to watch and lis," Here is how to watch and listen to the game. Photo: Tim Campbell, The Tennessean Buy photo Photo: Tim Campbell, The Tennessean Image 1 of / 24 Caption Close Vanderbilt, Middle Tennessee will play the","Here is how to watch and listen to the game. Photo: Tim Campbell, The Tennessean Buy photo Photo: Tim Campbell, The Tennessean Image 1 of / 24 Close Caption Vanderbilt, Middle Tennessee will play thei",4.016632088371218,3.5282114253639856,True,False,120,3.0199813842773438,0.0009419918060302734,0.0005047321319580078
+180,Jeb Butler and Tobin were law school classmates at the University of Georgia. Jeb Butler outlined hi,".
+
+There will always be a special place in my heart for the people I spent a short and sweet seven years with. I will miss spending every second with my teammates and competing on the court, but I hav",". There will always be a special place in my heart for the people I spent a short and sweet seven years with. I will miss spending every second with my teammates and competing on court, the but I have",6.7552448758970485,6.047431568147635,True,True,120,3.009666681289673,0.0007922649383544922,0.0004928112030029297
+181,Teen was found safe and sound on Monday. EDITOR'S NOTE: CBC has removed the name and photo from this," will remain anonymous.
+
+Update: The 18-year-old woman described by police as a runaway was located Sunday morning.
+
+The police investigation into a young woman reported missing over the weekend turne",will remain anonymous. Update: The 18-year-old woman described by police a as runaway was located Sunday morning. The police investigation into a young woman reported missing over the weekend turned u,6.937819061732104,6.047431568147635,True,True,120,3.0519402027130127,0.0007853507995605469,0.0005028247833251953
+182,"Gayle, who debuted for Liverpool in 1977, said via Facebook that “unfortunately I had to decline the",. I know that my family are proud of my achievements for my achievements are not important enough for my ancestors but my real family and the history behind me are. I did my best and I am proud that I,. I that know my family proud are of my achievements for my achievements are not important enough for my ancestors but my real family and the history behind me are. I did my best and I am proud that I,7.850689990907381,7.427813527082075,True,True,120,3.0256636142730713,0.0007140636444091797,0.00046133995056152344
+183,Prodigy has invested in an online music industry information service called SonicNet. The service wi," 10% shares in the company back on April 30.
+
+The content will be related to content that Prodigy releases, but with a slightly more broad reach, according to a SonicNet official.
+
+Prodigy has investe","10% shares in the company on back April The 30. content will be related to content that Prodigy releases, but with a slightly more broad reach, according to SonicNet a official. Prodigy has invested i",5.477225575051661,4.72455591261534,True,True,120,3.0343146324157715,0.0007131099700927734,0.0004868507385253906
+184,"Archives|OFFERS NEW THEORY FOR ALL MEDICINE; Sir James Mackenzie, Just Before Death, Said He Had Hit"," _The Lancet_, August 9, 1886
+
+H.N.
+
+[Transcribers note: The full version that was read for the first time in 1886 was marked by a circle around a key, indicating that it was marked as being a first p","_The Lancet_, 1886 August 9, H.N. [Transcribers note: The full version that was read for the first time in 1886 was marked by a circle a around key, indicating that it marked was as being a first prin",8.215838362577491,7.98489954161323,True,True,120,3.1810760498046875,0.0007266998291015625,0.0004589557647705078
+185,CHELSEA legend Didier Drogba will play his last game for the club today. The Ivory Coast striker ret," expected to play a full 90 minutes in today's clash with Hull City. He came off just after half an hour against Liverpool in the Premier League on Sunday, and the Blues are believed to be in talks wi","expected to play a full 90 minutes in today's clash with Hull City. He came off after just half hour an against Liverpool in the Premier League on Sunday, and Blues the are believed to be in talks wit",4.016632088371218,3.9753514062808084,True,False,120,3.0533173084259033,0.0007727146148681641,0.0004978179931640625
+186,Apple’s events are getting predictable. Time for a refresh? Were Apple's iPad sales really as bad as,"
+
+Are Apple products getting worse and worse, in a world where smartphones are getting more and more affordable?
+
+The latest Apple product announcement was that iPad shipments shrank in half in the se","Are Apple products getting worse and worse, in a world where smartphones are getting and more more affordable? The latest Apple product announcement was that iPad shipments in shrank half in the secon",6.937819061732104,6.685032174373868,True,True,120,2.8994977474212646,0.0007398128509521484,0.0004584789276123047
+187,The Crescenta Valley Community Assn. on Wednesday will meet to discuss a number of development issue," will be removed and chopped down on Almaden Road near Almaden Expressway.
+
+The discussion will start at 4:15 p.m. at Almaden Community Center, 1150 Almaden Road, and will be followed by a Q&A period.","will be removed and chopped down on Almaden Road near Almaden Expressway. The discussion will start at 4:15 p.m. at Almaden Center, Community 1150 Almaden Road, and will be followed by a period. Q&A C",6.572670690061993,5.806832031806502,True,True,120,3.0331273078918457,0.0008533000946044922,0.00046825408935546875
+188,Bible Lite is an easy to navigate offline Bible Application for Mac. It has got a beautiful design w," your Bible verses on a regular basis. The application supports Hebrew and Greek language. It also allows you to add, add and delete words and paragraphs. Additionally, it allows you to insert a page ","your Bible verses on a regular basis. The application supports Hebrew and Greek language. also It allows you to add, add and delete words and paragraphs. Additionally, it allows you to insert a page n",6.7552448758970485,6.628137248867929,True,True,120,2.993713617324829,0.0007846355438232422,0.00044846534729003906
+189,East Brunswick Buick Pontiac & Gmc Truck is located at the address 1120 State Route 18 in East Bruns," 946-5223 for pricing, hours and directions. East Brunswick Buick Pontiac & Gmc Truck specializes in Used Cars, Trucks, Vans, Suvs, Light Trucks for sale.
+
+The average consumer rating for Buick Pontia","946-5223 for pricing, hours and directions. East Brunswick Buick Pontiac & Gmc Truck in specializes Used Cars, Trucks, Vans, Suvs, Trucks Light for sale. The average consumer rating for Buick Pontiac ",3.468909530866052,3.156820749009882,False,False,120,3.1013097763061523,0.0007410049438476562,0.0004627704620361328
+190,"This year will mark the 40th year of this exhibition. Organized and hosted by the Art League, this j"," across the country.
+
+This year, for the first time, the exhibition will also include works made in conjunction with the National Museum of Women in the Arts in New York, which will display the work c","across the country. year, This for the first time, the exhibition will also include works made in conjunction with the National Museum of Women in the Arts in New York, which will display the work cre",5.477225575051661,5.084751798731267,True,True,120,3.0194215774536133,0.0007538795471191406,0.0005159378051757812
+191,An all-out strike by state sector teachers in Nigeria has ended after four weeks with a government r," according to a formula calculated based on years in service and years in college. The current system in Nigeria, which is a signatory to the United Nations Framework Convention on Climate Change, awa","according to a formula calculated based on years in service and years in college. The current system in Nigeria, which is a signatory to the Nations United Framework Convention on Climate Change, awar",6.7552448758970485,6.444022325288263,True,True,120,3.0633111000061035,0.0010323524475097656,0.0004837512969970703
+192,Robert Aldrich’s What Ever Happened to Baby Jane? has done more to define later generation’s ideas a," And perhaps that speaks for itself.
+
+RIGHT TO KNOW?
+
+Like Crawford’s famous words, What Ever Happened to Baby Jane was a controversial film. One that had a profound impact on film history, and remain","And perhaps that speaks for itself. RIGHT TO KNOW? Crawford’s Like famous words, What Ever Happened to Baby Jane was a controversial film. One that had a profound impact on film and history, remains a",8.033264176742437,6.992131882114405,True,True,120,3.0867366790771484,0.0007600784301757812,0.0004291534423828125
+193,Now is the time to build your dream home and hangar at the prestigious Mogollon Airpark (AZ82). This," in, roads and utilities out, and a water and septic system in. The home site has a full complement of features. This will be a great opportunity to build or buy and work on a dream home. Property con","in, roads and utilities out, and a water and septic system in. The site home a has full complement of features. This will be a great opportunity to build or buy and work on a dream home. Property of c",7.850689990907381,6.992342750670703,True,True,120,3.1051511764526367,0.0007202625274658203,0.0004687309265136719
+194,West Ham manager Manuel Pellegrini has confirmed he hopes to sign Samir Nasri in January and insiste," City, was linked with a return to West Ham and signed on deadline day but failed to pass a medical.
+
+The 31-year-old, also a record £42m signing for Manchester City in 2011, won the Premier League ti","City, was linked with a to return West Ham and signed on deadline day but failed to pass a medical. The 31-year-old, also a record £42m signing for Manchester City in 2011, won the Premier League titl",5.8423739467217715,5.2448805448574864,True,True,120,3.1694111824035645,0.0006978511810302734,0.0004608631134033203
+195,Serie A leaders Juventus went 11 points clear today after they escaped with a 2-1 victory over Milan,"
+
+The Rossoneri, who were playing a depleted side, led through Mario Balotelli’s first half effort, but Daniele Rugani scored a consolation for Andrea Pirlo’s men with an 86th minute penalty.
+
+With Ju","The Rossoneri, who were playing a depleted side, through led Mario Balotelli’s first half effort, but Daniele Rugani scored a consolation for Andrea Pirlo’s men with an 86th minute penalty. With Juven",5.11207720338155,4.118653026450951,True,True,120,3.1412432193756104,0.0009424686431884766,0.0004856586456298828
+196,"In 1992, the acquittal of four LAPD officers in the videotaped beating of Rodney King set off one of"," past 22 years, six police officers have been murdered and hundreds have lost limbs. The same men and women now on trial for the police-involved shootings of unarmed black men Philando Castile and Alt","past years, 22 six police officers have been murdered and hundreds have lost limbs. The same men and women now on trial for the police-involved shootings of unarmed black men Philando Castile and Alto",7.12039324756716,6.9963670960272575,True,True,120,3.05250883102417,0.0008373260498046875,0.00044274330139160156
+197,The art of embedding video into a website is a question brought up by a user over at slashdot and th," in order to create a video that works with a particular browser. So, in order to show a video, in a manner that will play on a web page, it looks like I have to have a video plug in installed. Is the","in order to create a video that works with a particular browser. So, order in to show a video, in a manner that will play on a web page, it looks like I have to have a video plug in installed. Is ther",8.033264176742437,7.548711866766252,True,True,120,2.9801318645477295,0.0007352828979492188,0.00048661231994628906
+198,"MONTGOMERY, Ala. (AP) _ D.J. Fluker has quite a tale to share when he talks to young people. The San"," grandparents in South Carolina during his college football career in college. He once was in a serious car accident with his best friend and another man and was once assaulted on a flight.
+
+Now, afte","grandparents in South Carolina during his college football career in college. He once was in a serious car accident his with best friend and another man and was once assaulted on a flight. Now, after ",6.207522318391883,5.570860145311556,True,True,120,3.1428000926971436,0.0007789134979248047,0.0005142688751220703
+199,"L.B. MARINA SPORTFISHING (Alamitos Bay) – 8 anglers on 1 boat caught 2 sand bass, 7 rockfish, 2 whit"," Pedro) – 4 anglers on 4 boats caught a 3/8 oz. and 4 bass on 7 fish over 27″.
+HISTORIC ROUNDUP:
+The following catch occurred after a full week off and on from fishing.
+FISHERMANSHIP:
+Fisherman in Mar",Pedro) – 4 anglers on 4 boats caught a 3/8 oz. and 4 bass on 7 fish over 27″. HISTORIC ROUNDUP: The catch following occurred after a full week off and on from fishing. Fisherman FISHERMANSHIP: in Mari,7.302967433402215,6.992342750670703,True,True,120,3.4663357734680176,0.0007357597351074219,0.0004911422729492188

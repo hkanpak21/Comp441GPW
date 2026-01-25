@@ -85,9 +85,18 @@ class BaseWatermarker(ABC):
         self.vocab_size = tokenizer.vocab_size
         self.vocab = list(range(self.vocab_size))
         
-        # Move model to device
+        # Move model to device only if not using device_map (accelerate)
         if model is not None:
-            self.model = model.to(device)
+            # Check if model uses device_map (accelerate offloading)
+            if hasattr(model, 'hf_device_map') and model.hf_device_map:
+                # Model already distributed, don't move
+                pass
+            else:
+                try:
+                    self.model = model.to(device)
+                except Exception:
+                    # Model may be on meta device or offloaded
+                    pass
             self.model.eval()
     
     @abstractmethod

@@ -1,0 +1,78 @@
+================================================================================
+EXPERIMENT: Swap Attack on Watermarked Text
+================================================================================
+Model: opt-1.3b
+Watermark: unigram
+Num samples: 200
+Swap rate: 0.1
+Device: cuda
+================================================================================
+
+[1/6] Loading C4 dataset...
+Loading C4 RealNewsLike dataset...
+This may take a few minutes for the first download...
+Attempting to load C4 realnewslike dataset...
+Downloading builder script: 0.00B [00:00, ?B/s]Downloading builder script: 3.46kB [00:00, 22.1MB/s]
+Downloading readme: 0.00B [00:00, ?B/s]Downloading readme: 8.21kB [00:00, 48.7MB/s]
+The repository for c4 contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/c4.
+You can avoid this prompt in future by passing the argument `trust_remote_code=True`.
+
+Do you wish to run the custom code? [y/N] Error loading with 'c4' name: The repository for c4 contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/c4.
+Please pass the argument `trust_remote_code=True` to allow custom code to be run.
+Trying alternative: allenai/c4...
+Traceback (most recent call last):
+  File "/scratch/hkanpak21/Comp441GPW/experiment_scripts/dataset_loader.py", line 45, in load_c4_dataset
+    dataset = load_dataset("allenai/c4", "realnewslike", split="validation", streaming=True)
+  File "/home/hkanpak21/.conda/envs/thor310/lib/python3.10/site-packages/datasets/load.py", line 2594, in load_dataset
+    builder_instance = load_dataset_builder(
+  File "/home/hkanpak21/.conda/envs/thor310/lib/python3.10/site-packages/datasets/load.py", line 2266, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+  File "/home/hkanpak21/.conda/envs/thor310/lib/python3.10/site-packages/datasets/load.py", line 1914, in dataset_module_factory
+    raise e1 from None
+  File "/home/hkanpak21/.conda/envs/thor310/lib/python3.10/site-packages/datasets/load.py", line 1834, in dataset_module_factory
+    dataset_info = hf_api.dataset_info(
+  File "/home/hkanpak21/.conda/envs/thor310/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/hkanpak21/.conda/envs/thor310/lib/python3.10/site-packages/huggingface_hub/hf_api.py", line 2445, in dataset_info
+    r = get_session().get(path, headers=headers, timeout=timeout, params=params)
+  File "/home/hkanpak21/.conda/envs/thor310/lib/python3.10/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+  File "/home/hkanpak21/.conda/envs/thor310/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/hkanpak21/.conda/envs/thor310/lib/python3.10/site-packages/requests/sessions.py", line 746, in send
+    r.content
+  File "/home/hkanpak21/.conda/envs/thor310/lib/python3.10/site-packages/requests/models.py", line 902, in content
+    self._content = b"".join(self.iter_content(CONTENT_CHUNK_SIZE)) or b""
+  File "/home/hkanpak21/.conda/envs/thor310/lib/python3.10/site-packages/requests/models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/home/hkanpak21/.conda/envs/thor310/lib/python3.10/site-packages/urllib3/response.py", line 1060, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/home/hkanpak21/.conda/envs/thor310/lib/python3.10/site-packages/urllib3/response.py", line 949, in read
+    data = self._raw_read(amt)
+  File "/home/hkanpak21/.conda/envs/thor310/lib/python3.10/site-packages/urllib3/response.py", line 873, in _raw_read
+    data = self._fp_read(amt, read1=read1) if not fp_closed else b""
+  File "/home/hkanpak21/.conda/envs/thor310/lib/python3.10/site-packages/urllib3/response.py", line 856, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "/home/hkanpak21/.conda/envs/thor310/lib/python3.10/http/client.py", line 466, in read
+    s = self.fp.read(amt)
+  File "/home/hkanpak21/.conda/envs/thor310/lib/python3.10/socket.py", line 717, in readinto
+    return self._sock.recv_into(b)
+  File "/home/hkanpak21/.conda/envs/thor310/lib/python3.10/ssl.py", line 1307, in recv_into
+    return self.read(nbytes, buffer)
+  File "/home/hkanpak21/.conda/envs/thor310/lib/python3.10/ssl.py", line 1163, in read
+    return self._sslobj.read(len, buffer)
+  File "/home/hkanpak21/.conda/envs/thor310/lib/python3.10/site-packages/datasets/load.py", line 102, in _raise_timeout_error
+    raise ValueError(
+ValueError: Loading this dataset requires you to execute custom code contained in the dataset repository on your local machine. Please set the option `trust_remote_code=True` to permit loading of this dataset.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/scratch/hkanpak21/Comp441GPW/experiment_scripts/exp_attack_swap.py", line 181, in <module>
+    main()
+  File "/scratch/hkanpak21/Comp441GPW/experiment_scripts/exp_attack_swap.py", line 45, in main
+    c4_data = load_c4_dataset(num_samples=args.num_samples, seed=args.seed)
+  File "/scratch/hkanpak21/Comp441GPW/experiment_scripts/dataset_loader.py", line 48, in load_c4_dataset
+    raise RuntimeError(f"Failed to load C4 dataset. Errors: {e}, {e2}") from e2
+RuntimeError: Failed to load C4 dataset. Errors: The repository for c4 contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/c4.
+Please pass the argument `trust_remote_code=True` to allow custom code to be run., Loading this dataset requires you to execute custom code contained in the dataset repository on your local machine. Please set the option `trust_remote_code=True` to permit loading of this dataset.

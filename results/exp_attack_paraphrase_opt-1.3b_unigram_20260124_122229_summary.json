@@ -1,0 +1,15 @@
+{
+  "experiment": "paraphrase_attack",
+  "model": "opt-1.3b",
+  "watermark": "unigram",
+  "paraphrase_model": "tuner007/pegasus_paraphrase",
+  "num_samples": 9,
+  "total_time": 50.188154458999634,
+  "avg_attack_time": 2.1567435529496937,
+  "original_mean_z_score": 5.835963050146629,
+  "original_detection_rate": 0.7777777777777778,
+  "attacked_mean_z_score": 3.0180625277000623,
+  "attacked_detection_rate": 0.3333333333333333,
+  "z_score_drop": 2.8179005224465663,
+  "detection_rate_drop": 0.4444444444444444
+}

@@ -1,3 +1,46 @@
+# Agent files and experimental code
 AGENTS/
 gpw_sp_contextual_cluster_wm.py
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Large data files
+generated_texts/*.pkl
+paraphrased_texts/*.pkl
+
+# Logs
+logs/*.out
+logs/*.err
+logs/efficient/*.out
+logs/efficient/*.err
+
+# Model checkpoints (if any)
+*.pt
+*.pth
+*.ckpt
+checkpoints/
+
+# Temporary files
+*.tmp
+.DS_Store
 

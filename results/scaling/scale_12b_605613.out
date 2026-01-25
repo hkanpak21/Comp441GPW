@@ -1,0 +1,40 @@
+==========================================
+MODEL SCALING EXPERIMENT - PYTHIA 12B
+==========================================
+Job ID: 605613
+Node: ai02
+Start: Sat Jan 24 18:11:06 +03 2026
+
+Sat Jan 24 18:11:07 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 575.57.08              Driver Version: 575.57.08      CUDA Version: 12.9     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla T4                       On  |   00000000:1E:00.0 Off |                    0 |
+| N/A   28C    P8              9W /   70W |       0MiB /  15360MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Running pythia-12b with 50 samples
+Found 1 GPU(s)
+  GPU 0: Tesla T4
+
+Preparing 50 prompts...
+  Prepared 50 prompts
+
+======================================================================
+MODEL: pythia-12b (12.00B)
+======================================================================
+
+Loading pythia-12b from /datasets/NLP/huggingface/hub/models--EleutherAI--pythia-12b/snapshots/3fef353ace0849cccae3f4d5b45a4a962217be9d...
+  Using device_map='auto' for 12.0B model

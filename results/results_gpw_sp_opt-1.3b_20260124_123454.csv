@@ -1,0 +1,33 @@
+experiment_id,model_family,watermark_method,watermark_params,text_type,attack_name,attack_param,sample_length,perplexity_score,detection_z_score,detection_p_value,is_detected,prompt,generated_text,attacked_text
+a7e2fe043353,facebook/opt-1.3b,GPW-SP,"alpha=2.0, omega=2.0, variant=GPW-SP",generated_watermarked,Clean,N/A,122,15.64,7.708,0.0,1,text,"textbox
+
+It's time to move on to our New York city guide with a look at Brooklyn, Manhattan, Queens, Staten Island, and Staten Island, New York. We've got NYC guide details for your trip. New York City Guides We hope this NYC travel guide helped. For now, continue reading to get the full NYC guide i",
+179048918717,facebook/opt-1.3b,GPW-SP,"alpha=2.0, omega=2.0, variant=GPW-SP",generated_watermarked,Clean,N/A,49,12.4,4.9307,0.0,1,prompt,"prompting questions is a good thing.
+This is the only answer. The more you can do, the more you can accomplish. A short and clear answer or even an explanation for a problem is better than no answer at all.",
+9fcd45c74a25,facebook/opt-1.3b,GPW-SP,"alpha=2.0, omega=2.0, variant=GPW-SP",generated_watermarked,Clean,N/A,37,7.93,3.9587,3.8e-05,1,source,"source: www.bioinformatics.org
+
+[1] http://en.m.wikipedia.org/wiki/Hochschwarz_effect.",
+ac7a3112a6c4,facebook/opt-1.3b,GPW-SP,"alpha=2.0, omega=2.0, variant=GPW-SP",generated_watermarked,Synonym,edit_rate=0.3,138,-1,2.5692,0.005097,1,text,"textbox
+
+It's time to move on to our New York city guide with a look at Brooklyn, Manhattan, Queens, Staten Island, and Staten Island, New York. We've got NYC guide details for your trip. New York City Guides We hope this NYC travel guide helped. For now, continue reading to get the full NYC guide i","textbox It's time to motion on to our New York city templet with deoxyadenosine monophosphate expression at Brooklyn, Manhattan, Queens, Staten Island, and Staten Island, New York. We've got NYC usher details for your trip. New House of york City Guides We hope this NYC travel guide helped. For now,"
+5d0c7ac05d28,facebook/opt-1.3b,GPW-SP,"alpha=2.0, omega=2.0, variant=GPW-SP",generated_watermarked,Synonym,edit_rate=0.3,50,-1,1.2344,0.108525,0,prompt,"prompting questions is a good thing.
+This is the only answer. The more you can do, the more you can accomplish. A short and clear answer or even an explanation for a problem is better than no answer at all.","prompting questions is a good thing. This is the only answer. The more you can do, the Thomas More you can accomplish. A shortstop and open answer surgery even an account for a problem is bettor than no answer at all."
+d9b0f02c8210,facebook/opt-1.3b,GPW-SP,"alpha=2.0, omega=2.0, variant=GPW-SP",generated_watermarked,Synonym,edit_rate=0.3,35,-1,2.2042,0.013755,0,source,"source: www.bioinformatics.org
+
+[1] http://en.m.wikipedia.org/wiki/Hochschwarz_effect.",source: www.bioinformatics.org [1] http://en.m.wikipedia.org/wiki/Hochschwarz_effect.
+ca428ca613dd,facebook/opt-1.3b,GPW-SP,"alpha=2.0, omega=2.0, variant=GPW-SP",generated_watermarked,Swap,edit_rate=0.2,119,-1,2.5503,0.005381,1,text,"textbox
+
+It's time to move on to our New York city guide with a look at Brooklyn, Manhattan, Queens, Staten Island, and Staten Island, New York. We've got NYC guide details for your trip. New York City Guides We hope this NYC travel guide helped. For now, continue reading to get the full NYC guide i","textbox It's time to move on to our New York guide city a with look at Brooklyn, Manhattan, Queens, Staten Island, and Staten Island, New York. We've got NYC details guide for your trip. New City York We Guides hope this NYC travel guide helped. For continue now, to reading get the full NYC guide in"
+fbc223edd664,facebook/opt-1.3b,GPW-SP,"alpha=2.0, omega=2.0, variant=GPW-SP",generated_watermarked,Swap,edit_rate=0.2,48,-1,1.8945,0.029079,0,prompt,"prompting questions is a good thing.
+This is the only answer. The more you can do, the more you can accomplish. A short and clear answer or even an explanation for a problem is better than no answer at all.","prompting questions is a good thing. This is the only The answer. more can you do, the more you can accomplish. A clear short and answer or even an explanation for a problem is better than no answer at all."
+9d35c9b6e281,facebook/opt-1.3b,GPW-SP,"alpha=2.0, omega=2.0, variant=GPW-SP",generated_watermarked,Swap,edit_rate=0.2,35,-1,3.338,0.000422,1,source,"source: www.bioinformatics.org
+
+[1] http://en.m.wikipedia.org/wiki/Hochschwarz_effect.",source: www.bioinformatics.org http://en.m.wikipedia.org/wiki/Hochschwarz_effect. [1]
+15e57dbd84a4,facebook/opt-1.3b,GPW-SP,"alpha=2.0, omega=2.0, variant=GPW-SP",generated_watermarked,Typo,edit_rate=0.1,126,-1,3.918,4.5e-05,1,text,"textbox
+
+It's time to move on to our New York city guide with a look at Brooklyn, Manhattan, Queens, Staten Island, and Staten Island, New York. We've got NYC guide details for your trip. New York City Guides We hope this NYC travel guide helped. For now, continue reading to get the full NYC guide i","textbox It's time to move on to our New Yok city guide with a look at Brooklyn, Manhattan, Queens, Staten Island, asnd Staten Island, New York. We've got NYC guide details for your trip. ew York City Guides We hope this NYC travel guide helped. For now, continue reading to get the full NYC guide in "
+ecfad044fd33,facebook/opt-1.3b,GPW-SP,"alpha=2.0, omega=2.0, variant=GPW-SP",generated_watermarked,Typo,edit_rate=0.1,52,-1,2.2278,0.012947,0,prompt,"prompting questions is a good thing.
+This is the only answer. The more you can do, the more you can accomplish. A short and clear answer or even an explanation for a problem is better than no answer at all.","prompting questions is a good thing. This is the olny answer. The more you can do, the more you can accomplish. A short and clear ahswer or even an explanatinn for a problem is better than no answer at all."
+03cae3d9fff4,facebook/opt-1.3b,GPW-SP,"alpha=2.0, omega=2.0, variant=GPW-SP",generated_watermarked,Typo,edit_rate=0.1,35,-1,2.2042,0.013755,0,source,"source: www.bioinformatics.org
+
+[1] http://en.m.wikipedia.org/wiki/Hochschwarz_effect.",source: www.bioinformatics.org [1] http://en.m.wikipedia.org/wiki/Hochschwarz_effect.

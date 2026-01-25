@@ -1,0 +1,11 @@
+{
+  "model": "opt-1.3b",
+  "watermarker": "unigram",
+  "detector": "unigram",
+  "attack": "copypaste_50",
+  "n_samples": 200,
+  "detection_rate": 24.5,
+  "mean_z_score": 2.9880127239607024,
+  "is_baseline": false,
+  "timestamp": "20260125_003707"
+}

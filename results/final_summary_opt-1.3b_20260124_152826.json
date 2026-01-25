@@ -1,0 +1,39 @@
+{
+  "unigram": {
+    "clean": {
+      "detection_rate": 0.97,
+      "mean_z": 8.203553781774643,
+      "n_samples": 200
+    },
+    "synonym_30": {
+      "detection_rate": 0.905,
+      "mean_z": 6.22611148919058,
+      "n_samples": 200
+    },
+    "swap_20": {
+      "detection_rate": 0.955,
+      "mean_z": 7.519345417216163,
+      "n_samples": 200
+    },
+    "typo_10": {
+      "detection_rate": 0.93,
+      "mean_z": 6.724292367590218,
+      "n_samples": 200
+    },
+    "copypaste_50": {
+      "detection_rate": 0.215,
+      "mean_z": 2.9230045910815234,
+      "n_samples": 200
+    },
+    "paraphrase": {
+      "detection_rate": 0.5294117647058824,
+      "mean_z": 4.0535416876322605,
+      "n_samples": 17
+    }
+  },
+  "kgw": {},
+  "gpw": {},
+  "gpw_sp": {},
+  "gpw_sp_low": {},
+  "gpw_sp_sr": {}
+}

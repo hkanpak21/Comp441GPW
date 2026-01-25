@@ -1,0 +1,74 @@
+================================================================================
+EXPERIMENT: Typo Attack on Watermarked Text
+================================================================================
+Model: opt-1.3b
+Watermark: unigram
+Num samples: 200
+Typo rate: 0.05
+Device: cuda
+================================================================================
+
+[1/6] Loading C4 dataset...
+Loading C4 RealNewsLike dataset...
+This may take a few minutes for the first download...
+Attempting to load C4 realnewslike dataset...
+/home/hkanpak21/.cache/huggingface/modules/datasets_modules/datasets/c4/584d57ebe81c209b6c7f31727066d2c4b4bba37cb7092cdd83083d5ec11207db/c4.py:53: FutureWarning: Dataset 'c4' is deprecated and will be deleted. Use 'allenai/c4' instead.
+  warnings.warn(
+Dataset loaded successfully!
+Collecting 200 samples...
+
+✓ Loaded 200 C4 samples
+  Example prompt: Google has announced that it will be shutting down its smart-messaging service Allo which it launche...
+✓ Loaded 200 prompts
+
+[2/6] Loading model: opt-1.3b...
+Loading model: facebook/opt-1.3b...
+✓ Model loaded: 1315.8M parameters
+
+[3/6] Loading watermarker: unigram...
+Detected model vocab size: 50272 (tokenizer vocab size: 50265)
+✓ Watermarker loaded: UnigramWatermark
+
+[4/6] Loading attack: Typo...
+✓ Attack loaded: TypoAttack
+✓ CSV logger setup: ../results/exp_attack_typo_opt-1.3b_unigram_20260124_120241.csv
+
+[5/6] Generating and attacking 200 samples...
+  Progress: 10/200
+  Progress: 20/200
+  Progress: 30/200
+  Progress: 40/200
+  Progress: 50/200
+  Progress: 60/200
+  Progress: 70/200
+  Progress: 80/200
+  Progress: 90/200
+  Progress: 100/200
+  Progress: 110/200
+  Progress: 120/200
+  Progress: 130/200
+  Progress: 140/200
+  Progress: 150/200
+  Progress: 160/200
+  Progress: 170/200
+  Progress: 180/200
+  Progress: 190/200
+  Progress: 200/200
+
+[6/6] Computing aggregate metrics...
+✓ Aggregate metrics saved to: ../results/exp_attack_typo_opt-1.3b_unigram_20260124_120241_summary.json
+
+================================================================================
+EXPERIMENT COMPLETE
+================================================================================
+Total samples: 200
+Total time: 595.7s
+
+Original Detection Rate: 95.0%
+Attacked Detection Rate: 90.5%
+Detection Rate Drop: 4.5%
+
+Results saved to:
+  - ../results/exp_attack_typo_opt-1.3b_unigram_20260124_120241.csv
+  - ../results/exp_attack_typo_opt-1.3b_unigram_20260124_120241_summary.json
+================================================================================

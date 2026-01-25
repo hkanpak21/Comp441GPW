@@ -1,0 +1,3 @@
+/home/hkanpak21/.conda/envs/thor310/lib/python3.10/site-packages/transformers/utils/hub.py:127: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+slurmstepd: error: *** JOB 605611 ON ai02 CANCELLED AT 2026-01-24T18:23:46 ***

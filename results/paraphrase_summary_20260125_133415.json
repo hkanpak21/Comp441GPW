@@ -1,0 +1,98 @@
+[
+  {
+    "model": "gpt2",
+    "watermarker": "gpw",
+    "detected_count": 19,
+    "total_samples": 20,
+    "detection_rate": 95.0,
+    "mean_z_score": 6.321
+  },
+  {
+    "model": "gpt2",
+    "watermarker": "gpw_sp",
+    "detected_count": 19,
+    "total_samples": 20,
+    "detection_rate": 95.0,
+    "mean_z_score": 5.629
+  },
+  {
+    "model": "gpt2",
+    "watermarker": "gpw_sp_low",
+    "detected_count": 6,
+    "total_samples": 20,
+    "detection_rate": 30.0,
+    "mean_z_score": 2.7805
+  },
+  {
+    "model": "gpt2",
+    "watermarker": "gpw_sp_sr",
+    "detected_count": 14,
+    "total_samples": 20,
+    "detection_rate": 70.0,
+    "mean_z_score": 5.0593
+  },
+  {
+    "model": "gpt2",
+    "watermarker": "kgw",
+    "detected_count": 4,
+    "total_samples": 20,
+    "detection_rate": 20.0,
+    "mean_z_score": 3.0962
+  },
+  {
+    "model": "gpt2",
+    "watermarker": "unigram",
+    "detected_count": 20,
+    "total_samples": 20,
+    "detection_rate": 100.0,
+    "mean_z_score": 9.1132
+  },
+  {
+    "model": "opt-1.3b",
+    "watermarker": "gpw",
+    "detected_count": 17,
+    "total_samples": 20,
+    "detection_rate": 85.0,
+    "mean_z_score": 5.271
+  },
+  {
+    "model": "opt-1.3b",
+    "watermarker": "gpw_sp",
+    "detected_count": 14,
+    "total_samples": 20,
+    "detection_rate": 70.0,
+    "mean_z_score": 4.3512
+  },
+  {
+    "model": "opt-1.3b",
+    "watermarker": "gpw_sp_low",
+    "detected_count": 3,
+    "total_samples": 20,
+    "detection_rate": 15.0,
+    "mean_z_score": 2.6071
+  },
+  {
+    "model": "opt-1.3b",
+    "watermarker": "gpw_sp_sr",
+    "detected_count": 8,
+    "total_samples": 20,
+    "detection_rate": 40.0,
+    "mean_z_score": 3.8162
+  },
+  {
+    "model": "opt-1.3b",
+    "watermarker": "kgw",
+    "detected_count": 3,
+    "total_samples": 20,
+    "detection_rate": 15.0,
+    "mean_z_score": 2.0412
+  },
+  {
+    "model": "opt-1.3b",
+    "watermarker": "unigram",
+    "detected_count": 19,
+    "total_samples": 20,
+    "detection_rate": 95.0,
+    "mean_z_score": 6.0357
+  }
+]

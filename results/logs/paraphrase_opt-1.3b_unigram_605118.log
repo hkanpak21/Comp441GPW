@@ -1,0 +1,1286 @@
+================================================================================
+EXPERIMENT: Paraphrase Attack on Watermarked Text
+================================================================================
+Model: opt-1.3b
+Watermark: unigram
+Num samples: 200
+Paraphrase model: tuner007/pegasus_paraphrase
+Device: cuda
+================================================================================
+
+[1/6] Loading C4 dataset...
+Loading C4 RealNewsLike dataset...
+This may take a few minutes for the first download...
+Attempting to load C4 realnewslike dataset...
+/home/hkanpak21/.cache/huggingface/modules/datasets_modules/datasets/c4/584d57ebe81c209b6c7f31727066d2c4b4bba37cb7092cdd83083d5ec11207db/c4.py:53: FutureWarning: Dataset 'c4' is deprecated and will be deleted. Use 'allenai/c4' instead.
+  warnings.warn(
+Dataset loaded successfully!
+Collecting 200 samples...
+
+✓ Loaded 200 C4 samples
+  Example prompt: Google has announced that it will be shutting down its smart-messaging service Allo which it launche...
+✓ Loaded 200 prompts
+
+[2/6] Loading model: opt-1.3b...
+Loading model: facebook/opt-1.3b...
+✓ Model loaded: 1315.8M parameters
+
+[3/6] Loading watermarker: unigram...
+Detected model vocab size: 50272 (tokenizer vocab size: 50265)
+✓ Watermarker loaded: UnigramWatermark
+
+[4/6] Loading attack: Paraphrase (Pegasus)...
+  This may take a few minutes to download the paraphrase model...
+✓ Attack loaded: PegasusAttack
+✓ CSV logger setup: ../results/exp_attack_paraphrase_opt-1.3b_unigram_20260124_120241.csv
+
+[5/6] Generating and attacking 200 samples...
+  NOTE: Paraphrase attack is slow, this will take a while...
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 0: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 1: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 2: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 3: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 5/200 | Elapsed: 0.2min | Est. remaining: 7.7min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 4: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 5: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 6: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 7: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 8: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 10/200 | Elapsed: 0.4min | Est. remaining: 7.9min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 9: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 10: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 11: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 12: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 13: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 15/200 | Elapsed: 0.7min | Est. remaining: 8.2min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 14: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 15: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 16: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 17: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 18: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 20/200 | Elapsed: 0.9min | Est. remaining: 7.9min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 19: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 20: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 21: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 22: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 23: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 25/200 | Elapsed: 1.1min | Est. remaining: 7.9min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 24: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 25: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 26: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 27: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 28: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 30/200 | Elapsed: 1.4min | Est. remaining: 7.9min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 29: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 30: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 31: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 32: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 33: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 35/200 | Elapsed: 1.6min | Est. remaining: 7.7min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 34: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 35: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 36: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 37: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 38: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 40/200 | Elapsed: 1.9min | Est. remaining: 7.6min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 39: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 40: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 41: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 42: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 43: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 45/200 | Elapsed: 2.2min | Est. remaining: 7.5min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 44: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 45: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 46: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 47: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 48: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 50/200 | Elapsed: 2.4min | Est. remaining: 7.3min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 49: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 50: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 51: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 52: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 53: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 55/200 | Elapsed: 2.7min | Est. remaining: 7.1min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 54: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 55: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 56: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 57: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 58: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 60/200 | Elapsed: 2.9min | Est. remaining: 6.8min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 59: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 60: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 61: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 62: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 63: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 65/200 | Elapsed: 3.2min | Est. remaining: 6.6min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 64: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 65: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 66: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 67: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 68: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 70/200 | Elapsed: 3.4min | Est. remaining: 6.4min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 69: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 70: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 71: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 72: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 73: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 75/200 | Elapsed: 3.7min | Est. remaining: 6.2min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 74: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 75: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 76: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 77: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 78: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 80/200 | Elapsed: 4.0min | Est. remaining: 6.0min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 79: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 80: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 81: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 82: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 83: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 85/200 | Elapsed: 4.2min | Est. remaining: 5.7min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 84: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 85: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 86: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 87: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 88: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 90/200 | Elapsed: 4.5min | Est. remaining: 5.5min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 89: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 90: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 91: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 92: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 93: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 95/200 | Elapsed: 4.8min | Est. remaining: 5.3min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 94: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 95: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 96: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 97: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 98: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 100/200 | Elapsed: 5.0min | Est. remaining: 5.0min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 99: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 100: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 101: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 102: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 103: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 105/200 | Elapsed: 5.3min | Est. remaining: 4.8min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 104: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 105: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 106: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 107: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 108: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 110/200 | Elapsed: 5.5min | Est. remaining: 4.5min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 109: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 110: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 111: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 112: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 113: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 115/200 | Elapsed: 5.8min | Est. remaining: 4.3min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 114: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 115: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 116: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 117: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 118: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 120/200 | Elapsed: 6.0min | Est. remaining: 4.0min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 119: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 120: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 121: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 122: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 123: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 125/200 | Elapsed: 6.3min | Est. remaining: 3.8min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 124: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 125: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 126: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 127: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 128: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 130/200 | Elapsed: 6.5min | Est. remaining: 3.5min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 129: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 130: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 131: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 132: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 133: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 135/200 | Elapsed: 6.8min | Est. remaining: 3.3min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 134: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 135: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 136: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 137: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 138: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 140/200 | Elapsed: 7.1min | Est. remaining: 3.0min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 139: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 140: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 141: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 142: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 143: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 145/200 | Elapsed: 7.4min | Est. remaining: 2.8min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 144: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 145: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 146: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 147: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 148: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 150/200 | Elapsed: 7.6min | Est. remaining: 2.5min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 149: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 150: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 151: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 152: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 153: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 155/200 | Elapsed: 7.9min | Est. remaining: 2.3min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 154: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 155: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 156: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 157: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 158: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 160/200 | Elapsed: 8.1min | Est. remaining: 2.0min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 159: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 160: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 161: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 162: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 163: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 165/200 | Elapsed: 8.4min | Est. remaining: 1.8min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 164: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 165: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 166: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 167: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 168: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 170/200 | Elapsed: 8.7min | Est. remaining: 1.5min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 169: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 170: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 171: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 172: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 173: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 175/200 | Elapsed: 8.9min | Est. remaining: 1.3min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 174: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 175: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 176: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 177: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 178: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 180/200 | Elapsed: 9.1min | Est. remaining: 1.0min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 179: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 180: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 181: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 182: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 183: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 185/200 | Elapsed: 9.4min | Est. remaining: 0.8min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 184: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 185: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 186: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 187: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 188: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 190/200 | Elapsed: 9.7min | Est. remaining: 0.5min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 189: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 190: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 191: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 192: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 193: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 195/200 | Elapsed: 9.9min | Est. remaining: 0.3min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 194: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 195: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 196: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 197: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 198: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+  Progress: 200/200 | Elapsed: 10.2min | Est. remaining: 0.0min
+Loading PEGASUS model: tuner007/pegasus_paraphrase
+  ✗ Error on sample 199: 
+PegasusTokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+
+[6/6] Computing aggregate metrics...
+Traceback (most recent call last):
+  File "/scratch/hkanpak21/Comp441GPW/experiment_scripts/exp_attack_paraphrase.py", line 244, in <module>
+    main()
+  File "/scratch/hkanpak21/Comp441GPW/experiment_scripts/exp_attack_paraphrase.py", line 210, in main
+    'avg_attack_time': sum(r['attack_time'] for r in results) / len(results),
+ZeroDivisionError: division by zero

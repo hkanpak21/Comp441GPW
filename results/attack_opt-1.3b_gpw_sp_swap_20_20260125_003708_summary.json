@@ -1,0 +1,11 @@
+{
+  "model": "opt-1.3b",
+  "watermarker": "gpw_sp",
+  "detector": "gpw_sp",
+  "attack": "swap_20",
+  "n_samples": 200,
+  "detection_rate": 62.0,
+  "mean_z_score": 4.7361222200688475,
+  "is_baseline": false,
+  "timestamp": "20260125_003708"
+}

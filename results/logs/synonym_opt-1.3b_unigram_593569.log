@@ -1,0 +1,27 @@
+/home/hkanpak21/.cache/huggingface/modules/datasets_modules/datasets/c4/584d57ebe81c209b6c7f31727066d2c4b4bba37cb7092cdd83083d5ec11207db/c4.py:53: FutureWarning: Dataset 'c4' is deprecated and will be deleted. Use 'allenai/c4' instead.
+  warnings.warn(
+================================================================================
+EXPERIMENT: Synonym Attack on Watermarked Text
+================================================================================
+Model: opt-1.3b
+Watermark: unigram
+Num samples: 200
+Edit rate: 0.3
+Device: cuda
+================================================================================
+
+[1/6] Loading C4 dataset...
+Loading C4 RealNewsLike dataset...
+This may take a few minutes for the first download...
+Attempting to load C4 realnewslike dataset...
+Dataset loaded successfully!
+Collecting 200 samples...
+
+✓ Loaded 200 C4 samples
+  Example prompt: Google has announced that it will be shutting down its smart-messaging service Allo which it launche...
+Traceback (most recent call last):
+  File "/scratch/hkanpak21/Comp441GPW/experiment_scripts/exp_attack_synonym.py", line 189, in <module>
+    main()
+  File "/scratch/hkanpak21/Comp441GPW/experiment_scripts/exp_attack_synonym.py", line 46, in main
+    _, prompts = split_human_ai_data(c4_data, split_ratio=0.0)  # Use all for AI generation
+NameError: name 'split_human_ai_data' is not defined
